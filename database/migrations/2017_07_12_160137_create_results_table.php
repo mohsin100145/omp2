@@ -119,6 +119,12 @@ class CreateResultsTable extends Migration
             $table->float('optional_total')->nullable();
             $table->float('optional_gp')->nullable();
             $table->string('optional_grade')->nullable();
+            $table->string('optional_note')->nullable();
+
+            $table->float('gp_total_except_optional')->nullable();
+            $table->float('gp_total_with_optional')->nullable();
+            $table->float('gpa_except_optional')->nullable();
+            $table->float('gpa_with_optional')->nullable();
 
             $table->integer('fail_subjects')->unsigned()->nullable();
             $table->timestamps();
