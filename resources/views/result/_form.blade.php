@@ -188,7 +188,7 @@
 			<div class="col-sm-4">
 		        {!! Form::text('che_mcq', null, ['class' => 'form-control numeric-field', 'placeholder' => 'Chemistry MCQ', 'autocomplete' => 'off']) !!}
 		        <span class="text-danger">
-				    {{ $errors->first('phy_mcq') }}
+				    {{ $errors->first('che_mcq') }}
 			    </span>
 			</div>
 			<div class="col-sm-4">

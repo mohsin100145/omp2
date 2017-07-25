@@ -79,6 +79,7 @@ class ResultController extends Controller
     	$validator = Validator::make($input, $rules, $messages);
 
         if ($validator->fails()) {
+        	flash()->error('Something Wrong!');
             return redirect()->back()
                         ->withErrors($validator)
                         ->withInput();
@@ -313,6 +314,323 @@ class ResultController extends Controller
     	}
     	$result->phy_gp = $phyGP;
     	$result->phy_grade = $phyGrade;
+
+    	$result->che_wrt = $request->che_wrt;
+    	$result->che_mcq = $request->che_mcq;
+    	$result->che_prac = $request->che_prac;
+    	$cheTotal = $request->che_wrt + $request->che_mcq + $request->che_prac;
+    	$result->che_total = $cheTotal;
+    	if ($cheTotal < 33) {
+    		$cheGP = 0;
+    		$cheGrade = 'F';
+    	} else if ( ($request->che_wrt == null) || ($request->che_mcq == null) || ($request->che_prac == null) || ($request->che_wrt < 17) || ($request->che_mcq < 8) || ($request->che_prac < 8) ) {
+    		$cheGP = 0;
+    		$cheGrade = 'F';
+    	} else if (($cheTotal >= 80) && ($cheTotal <= 100)) {
+    		$cheGP = 5;
+    		$cheGrade = 'A+';
+    	} else if (($cheTotal >= 70) && ($cheTotal <= 79)) {
+    		$cheGP = 4;
+    		$cheGrade = 'A';
+    	} else if (($cheTotal >= 60) && ($cheTotal <= 69)) {
+    		$cheGP = 3.5;
+    		$cheGrade = 'A-';
+    	} else if (($cheTotal >= 50) && ($cheTotal <= 59)) {
+    		$cheGP = 3;
+    		$cheGrade = 'B';
+    	} else if (($cheTotal >= 40) && ($cheTotal <= 49)) {
+    		$cheGP = 2;
+    		$cheGrade = 'C';
+    	} else if (($cheTotal >= 33) && ($cheTotal <= 39)) {
+    		$cheGP = 1;
+    		$cheGrade = 'D';
+    	} else {
+    		$cheGP = 0;
+    		$cheGrade = 'F';
+    	}
+    	$result->che_gp = $cheGP;
+    	$result->che_grade = $cheGrade;
+
+    	$result->bio_wrt = $request->bio_wrt;
+    	$result->bio_mcq = $request->bio_mcq;
+    	$result->bio_prac = $request->bio_prac;
+    	$bioTotal = $request->bio_wrt + $request->bio_mcq + $request->bio_prac;
+    	$result->bio_total = $bioTotal;
+    	if ($bioTotal < 33) {
+    		$bioGP = 0;
+    		$bioGrade = 'F';
+    	} else if ( ($request->bio_wrt == null) || ($request->bio_mcq == null) || ($request->bio_prac == null) || ($request->bio_wrt < 17) || ($request->bio_mcq < 8) || ($request->bio_prac < 8) ) {
+    		$bioGP = 0;
+    		$bioGrade = 'F';
+    	} else if (($bioTotal >= 80) && ($bioTotal <= 100)) {
+    		$bioGP = 5;
+    		$bioGrade = 'A+';
+    	} else if (($bioTotal >= 70) && ($bioTotal <= 79)) {
+    		$bioGP = 4;
+    		$bioGrade = 'A';
+    	} else if (($bioTotal >= 60) && ($bioTotal <= 69)) {
+    		$bioGP = 3.5;
+    		$bioGrade = 'A-';
+    	} else if (($bioTotal >= 50) && ($bioTotal <= 59)) {
+    		$bioGP = 3;
+    		$bioGrade = 'B';
+    	} else if (($bioTotal >= 40) && ($bioTotal <= 49)) {
+    		$bioGP = 2;
+    		$bioGrade = 'C';
+    	} else if (($bioTotal >= 33) && ($bioTotal <= 39)) {
+    		$bioGP = 1;
+    		$bioGrade = 'D';
+    	} else {
+    		$bioGP = 0;
+    		$bioGrade = 'F';
+    	}
+    	$result->bio_gp = $bioGP;
+    	$result->bio_grade = $bioGrade;
+
+    	$result->gs_wrt = $request->gs_wrt;
+    	$result->gs_mcq = $request->gs_mcq;
+    	$gsTotal = $request->gs_wrt + $request->gs_mcq;
+    	$result->gs_total = $gsTotal;
+    	if ($gsTotal < 33) {
+    		$gsGP = 0;
+    		$gsGrade = 'F';
+    	} else if ( ($request->gs_wrt == null) || ($request->gs_mcq == null) || ($request->gs_wrt < 23) || ($request->gs_mcq < 10) ) {
+    		$gsGP = 0;
+    		$gsGrade = 'F';
+    	} else if (($gsTotal >= 80) && ($gsTotal <= 100)) {
+    		$gsGP = 5;
+    		$gsGrade = 'A+';
+    	} else if (($gsTotal >= 70) && ($gsTotal <= 79)) {
+    		$gsGP = 4;
+    		$gsGrade = 'A';
+    	} else if (($gsTotal >= 60) && ($gsTotal <= 69)) {
+    		$gsGP = 3.5;
+    		$gsGrade = 'A-';
+    	} else if (($gsTotal >= 50) && ($gsTotal <= 59)) {
+    		$gsGP = 3;
+    		$gsGrade = 'B';
+    	} else if (($gsTotal >= 40) && ($gsTotal <= 49)) {
+    		$gsGP = 2;
+    		$gsGrade = 'C';
+    	} else if (($gsTotal >= 33) && ($gsTotal <= 39)) {
+    		$gsGP = 1;
+    		$gsGrade = 'D';
+    	} else {
+    		$gsGP = 0;
+    		$gsGrade = 'F';
+    	}
+    	$result->gs_gp = $gsGP;
+    	$result->gs_grade = $gsGrade;
+
+    	$result->his_wrt = $request->his_wrt;
+    	$result->his_mcq = $request->his_mcq;
+    	$hisTotal = $request->his_wrt + $request->his_mcq;
+    	$result->his_total = $hisTotal;
+    	if ($hisTotal < 33) {
+    		$hisGP = 0;
+    		$hisGrade = 'F';
+    	} else if ( ($request->his_wrt == null) || ($request->his_mcq == null) || ($request->his_wrt < 23) || ($request->his_mcq < 10) ) {
+    		$hisGP = 0;
+    		$hisGrade = 'F';
+    	} else if (($hisTotal >= 80) && ($hisTotal <= 100)) {
+    		$hisGP = 5;
+    		$hisGrade = 'A+';
+    	} else if (($hisTotal >= 70) && ($hisTotal <= 79)) {
+    		$hisGP = 4;
+    		$hisGrade = 'A';
+    	} else if (($hisTotal >= 60) && ($hisTotal <= 69)) {
+    		$hisGP = 3.5;
+    		$hisGrade = 'A-';
+    	} else if (($hisTotal >= 50) && ($hisTotal <= 59)) {
+    		$hisGP = 3;
+    		$hisGrade = 'B';
+    	} else if (($hisTotal >= 40) && ($hisTotal <= 49)) {
+    		$hisGP = 2;
+    		$hisGrade = 'C';
+    	} else if (($hisTotal >= 33) && ($hisTotal <= 39)) {
+    		$hisGP = 1;
+    		$hisGrade = 'D';
+    	} else {
+    		$hisGP = 0;
+    		$hisGrade = 'F';
+    	}
+    	$result->his_gp = $hisGP;
+    	$result->his_grade = $hisGrade;
+
+    	$result->civ_wrt = $request->civ_wrt;
+    	$result->civ_mcq = $request->civ_mcq;
+    	$civTotal = $request->civ_wrt + $request->civ_mcq;
+    	$result->civ_total = $civTotal;
+    	if ($civTotal < 33) {
+    		$civGP = 0;
+    		$civGrade = 'F';
+    	} else if ( ($request->civ_wrt == null) || ($request->civ_mcq == null) || ($request->civ_wrt < 23) || ($request->civ_mcq < 10) ) {
+    		$civGP = 0;
+    		$civGrade = 'F';
+    	} else if (($civTotal >= 80) && ($civTotal <= 100)) {
+    		$civGP = 5;
+    		$civGrade = 'A+';
+    	} else if (($civTotal >= 70) && ($civTotal <= 79)) {
+    		$civGP = 4;
+    		$civGrade = 'A';
+    	} else if (($civTotal >= 60) && ($civTotal <= 69)) {
+    		$civGP = 3.5;
+    		$civGrade = 'A-';
+    	} else if (($civTotal >= 50) && ($civTotal <= 59)) {
+    		$civGP = 3;
+    		$civGrade = 'B';
+    	} else if (($civTotal >= 40) && ($civTotal <= 49)) {
+    		$civGP = 2;
+    		$civGrade = 'C';
+    	} else if (($civTotal >= 33) && ($civTotal <= 39)) {
+    		$civGP = 1;
+    		$civGrade = 'D';
+    	} else {
+    		$civGP = 0;
+    		$civGrade = 'F';
+    	}
+    	$result->civ_gp = $civGP;
+    	$result->civ_grade = $civGrade;
+
+    	$result->geo_wrt = $request->geo_wrt;
+    	$result->geo_mcq = $request->geo_mcq;
+    	$geoTotal = $request->geo_wrt + $request->geo_mcq;
+    	$result->geo_total = $geoTotal;
+    	if ($geoTotal < 33) {
+    		$geoGP = 0;
+    		$geoGrade = 'F';
+    	} else if ( ($request->geo_wrt == null) || ($request->geo_mcq == null) || ($request->geo_wrt < 23) || ($request->geo_mcq < 10) ) {
+    		$geoGP = 0;
+    		$geoGrade = 'F';
+    	} else if (($geoTotal >= 80) && ($geoTotal <= 100)) {
+    		$geoGP = 5;
+    		$geoGrade = 'A+';
+    	} else if (($geoTotal >= 70) && ($geoTotal <= 79)) {
+    		$geoGP = 4;
+    		$geoGrade = 'A';
+    	} else if (($geoTotal >= 60) && ($geoTotal <= 69)) {
+    		$geoGP = 3.5;
+    		$geoGrade = 'A-';
+    	} else if (($geoTotal >= 50) && ($geoTotal <= 59)) {
+    		$geoGP = 3;
+    		$geoGrade = 'B';
+    	} else if (($geoTotal >= 40) && ($geoTotal <= 49)) {
+    		$geoGP = 2;
+    		$geoGrade = 'C';
+    	} else if (($geoTotal >= 33) && ($geoTotal <= 39)) {
+    		$geoGP = 1;
+    		$geoGrade = 'D';
+    	} else {
+    		$geoGP = 0;
+    		$geoGrade = 'F';
+    	}
+    	$result->geo_gp = $geoGP;
+    	$result->geo_grade = $geoGrade;
+
+    	$result->acc_wrt = $request->acc_wrt;
+    	$result->acc_mcq = $request->acc_mcq;
+    	$accTotal = $request->acc_wrt + $request->acc_mcq;
+    	$result->acc_total = $accTotal;
+    	if ($accTotal < 33) {
+    		$accGP = 0;
+    		$accGrade = 'F';
+    	} else if ( ($request->acc_wrt == null) || ($request->acc_mcq == null) || ($request->acc_wrt < 23) || ($request->acc_mcq < 10) ) {
+    		$accGP = 0;
+    		$accGrade = 'F';
+    	} else if (($accTotal >= 80) && ($accTotal <= 100)) {
+    		$accGP = 5;
+    		$accGrade = 'A+';
+    	} else if (($accTotal >= 70) && ($accTotal <= 79)) {
+    		$accGP = 4;
+    		$accGrade = 'A';
+    	} else if (($accTotal >= 60) && ($accTotal <= 69)) {
+    		$accGP = 3.5;
+    		$accGrade = 'A-';
+    	} else if (($accTotal >= 50) && ($accTotal <= 59)) {
+    		$accGP = 3;
+    		$accGrade = 'B';
+    	} else if (($accTotal >= 40) && ($accTotal <= 49)) {
+    		$accGP = 2;
+    		$accGrade = 'C';
+    	} else if (($accTotal >= 33) && ($accTotal <= 39)) {
+    		$accGP = 1;
+    		$accGrade = 'D';
+    	} else {
+    		$accGP = 0;
+    		$accGrade = 'F';
+    	}
+    	$result->acc_gp = $accGP;
+    	$result->acc_grade = $accGrade;
+
+    	$result->fin_wrt = $request->fin_wrt;
+    	$result->fin_mcq = $request->fin_mcq;
+    	$finTotal = $request->fin_wrt + $request->fin_mcq;
+    	$result->fin_total = $finTotal;
+    	if ($finTotal < 33) {
+    		$finGP = 0;
+    		$finGrade = 'F';
+    	} else if ( ($request->fin_wrt == null) || ($request->fin_mcq == null) || ($request->fin_wrt < 23) || ($request->fin_mcq < 10) ) {
+    		$finGP = 0;
+    		$finGrade = 'F';
+    	} else if (($finTotal >= 80) && ($finTotal <= 100)) {
+    		$finGP = 5;
+    		$finGrade = 'A+';
+    	} else if (($finTotal >= 70) && ($finTotal <= 79)) {
+    		$finGP = 4;
+    		$finGrade = 'A';
+    	} else if (($finTotal >= 60) && ($finTotal <= 69)) {
+    		$finGP = 3.5;
+    		$finGrade = 'A-';
+    	} else if (($finTotal >= 50) && ($finTotal <= 59)) {
+    		$finGP = 3;
+    		$finGrade = 'B';
+    	} else if (($finTotal >= 40) && ($finTotal <= 49)) {
+    		$finGP = 2;
+    		$finGrade = 'C';
+    	} else if (($finTotal >= 33) && ($finTotal <= 39)) {
+    		$finGP = 1;
+    		$finGrade = 'D';
+    	} else {
+    		$finGP = 0;
+    		$finGrade = 'F';
+    	}
+    	$result->fin_gp = $finGP;
+    	$result->fin_grade = $finGrade;
+
+    	$result->bus_wrt = $request->bus_wrt;
+    	$result->bus_mcq = $request->bus_mcq;
+    	$busTotal = $request->bus_wrt + $request->bus_mcq;
+    	$result->bus_total = $busTotal;
+    	if ($busTotal < 33) {
+    		$busGP = 0;
+    		$busGrade = 'F';
+    	} else if ( ($request->bus_wrt == null) || ($request->bus_mcq == null) || ($request->bus_wrt < 23) || ($request->bus_mcq < 10) ) {
+    		$busGP = 0;
+    		$busGrade = 'F';
+    	} else if (($busTotal >= 80) && ($busTotal <= 100)) {
+    		$busGP = 5;
+    		$busGrade = 'A+';
+    	} else if (($busTotal >= 70) && ($busTotal <= 79)) {
+    		$busGP = 4;
+    		$busGrade = 'A';
+    	} else if (($busTotal >= 60) && ($busTotal <= 69)) {
+    		$busGP = 3.5;
+    		$busGrade = 'A-';
+    	} else if (($busTotal >= 50) && ($busTotal <= 59)) {
+    		$busGP = 3;
+    		$busGrade = 'B';
+    	} else if (($busTotal >= 40) && ($busTotal <= 49)) {
+    		$busGP = 2;
+    		$busGrade = 'C';
+    	} else if (($busTotal >= 33) && ($busTotal <= 39)) {
+    		$busGP = 1;
+    		$busGrade = 'D';
+    	} else {
+    		$busGP = 0;
+    		$busGrade = 'F';
+    	}
+    	$result->bus_gp = $busGP;
+    	$result->bus_grade = $busGrade;
 
     	$result->save();
 
