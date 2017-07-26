@@ -15,4 +15,12 @@
 
 @section('script')
 	<script src="{{ asset('js/text-only-number.js') }}"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#student_id_search").click(function() {
+				var studentId = $("#student_id").val();
+				console.log(studentId);
+			});
+		});
+	</script>
 @endsection
