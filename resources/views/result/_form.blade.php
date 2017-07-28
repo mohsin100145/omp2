@@ -3,14 +3,15 @@
 @else
     {!! Form::open(['url' => 'result', 'method' => 'post', 'class' => 'form-horizontal']) !!}
 @endif
+
 <div class="form-group {{ $errors->has('student_id') ? ' has-error' : '' }}">
     {!! Form::label('student_id', 'Student ID', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
     	<div class="col-sm-6">
 	        <div class="input-group">
-	            {!! Form::text('student_id',null, ['id' => 'student_id', 'class' =>'form-control', 'autocomplete' => 'off', 'placeholder' => 'Enter Student ID', 'onkeypress' => 'return event.charCode >= 48 && event.charCode <= 57']) !!}
+	            {!! Form::text('student_id',null, ['id' => 'student_id', 'class' =>'form-control', 'autocomplete' => 'off', 'placeholder' => 'Enter Student ID', 'onkeypress' => 'return event.charCode >= 48 && event.charCode <= 57', 'autofocus']) !!}
 	            <span class="input-group-btn">
-	                <button type="button" id="student_id_search" data-url="{{url('/result/student-name-show')}}" class="btn btn-success"><i class="fa fa-search"></i> Search</button>
+	                <button type="button" id="student_id_search" data-url="{{url('/result/student-name-show')}}" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
 	            </span>
 	        </div>
 	        <span class="text-danger">
@@ -18,7 +19,7 @@
 	        </span>
         </div>
         <div class="col-sm-6">
-		    <span id="student_name_show"></span>
+		    <span id="student_info_show"></span>
 		</div>
     </div>
 </div>
@@ -32,6 +33,11 @@
 	            {{ $errors->first('term_id') }}
 	        </span>
         </div>
+        <div class="col-sm-6">
+		    <button class="btn btn-success" type="button" id="science_btn">Science</button>
+		    <button class="btn btn-info" type="button" id="humanities_btn">Humanities</button>
+		    <button class="btn btn-danger" type="button" id="business_btn">Business Studies</button>
+		</div>
     </div>
 </div>
 
@@ -131,7 +137,7 @@
     </div>
 </div>
 
-<div class="thumbnail">
+<div class="thumbnail" id="science_div">
 	<div class="text-center bg-success"><b><i>For Science Students</i></b></div>
 	<!-- <div class="center-block" style="background-color:yellow; width: 200px;">This div will be centered.</div> -->
 	<div class="form-group {{ $errors->has(['bwi_wrt', 'bwi_mcq']) ? 'has-error' : ''}}">
@@ -225,7 +231,7 @@
 	</div>
 </div>
 
-<div class="form-group {{ $errors->has(['gs_wrt', 'gs_mcq']) ? 'has-error' : ''}}">
+<div class="form-group {{ $errors->has(['gs_wrt', 'gs_mcq']) ? 'has-error' : ''}}" id="gs_div">
     {!! Form::label('general_science', 'General Science', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
     	<div class="col-sm-6">
@@ -243,7 +249,7 @@
     </div>
 </div>
 
-<div class="thumbnail">
+<div class="thumbnail" id="humanities_div">
 	<div class="text-center bg-info"><b><i>For Humanities Students</i></b></div>
 	<div class="form-group {{ $errors->has(['his_wrt', 'his_mcq']) ? 'has-error' : ''}}">
 	    {!! Form::label('history', 'History', ['class' => 'col-sm-3 control-label']) !!}
@@ -298,7 +304,7 @@
 	</div>
 </div>
 
-<div class="thumbnail">
+<div class="thumbnail" id="business_div">
 	<div class="text-center bg-danger"><b><i>For Business Studies Students</i></b></div>
 	<div class="form-group {{ $errors->has(['acc_wrt', 'acc_mcq']) ? 'has-error' : ''}}">
 	    {!! Form::label('accounting', 'Accounting', ['class' => 'col-sm-3 control-label']) !!}

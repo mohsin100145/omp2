@@ -17,10 +17,34 @@
 	<script src="{{ asset('js/text-only-number.js') }}"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$("#student_id_search").click(function() {
+			$("#student_id").blur(function() {
 				var studentId = $("#student_id").val();
-				console.log(studentId);
+				var url = '{{ url("/result/student-info-show")}}';
+				console.log(url);
+				$.get(url+'?student_id='+studentId, function (data) {
+		            $('#student_info_show').html(data);
+		        });
 			});
+		});
+	</script>
+
+	<script>
+		$(document).ready(function(){
+		    $("#science_btn").click(function(){
+		        //$("#science_div").fadeToggle();
+		        //$("#science_div").fadeToggle("slow");
+		        $("#humanities_div").fadeOut(2000);
+		        $("#business_div").fadeOut(2000);
+		        $("#gs_div").fadeOut(2000);
+		    });
+		    $("#humanities_btn").click(function(){
+		        $("#science_div").fadeOut(2000);
+		        $("#business_div").fadeOut(2000);
+		    });
+		    $("#business_btn").click(function(){
+		        $("#science_div").fadeOut(2000);
+		        $("#humanities_div").fadeOut(2000);
+		    });
 		});
 	</script>
 @endsection

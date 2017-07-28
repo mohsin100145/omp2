@@ -668,8 +668,26 @@ class ResultController extends Controller
     	}
 
 //-------------------Optional Grade Count------------------//
+    	$result->optional_note = $request->optional_note;
     	$result->optional_gp = $request->optional_gp;
     	$optionalGP = $request->optional_gp;
+
+    	if ($optionalGP == 5) {
+    		$result->optional_grade = 'A+';
+    	} else if (($optionalGP < 5) && ($optionalGP >= 4)) {
+    		$result->optional_grade = 'A';
+    	} else if (($optionalGP < 4) && ($optionalGP >= 3.50)) {
+    		$result->optional_grade = 'A-';
+    	} else if (($optionalGP < 3.50) && ($optionalGP >= 3)) {
+    		$result->optional_grade = 'B';
+    	} else if (($optionalGP < 3) && ($optionalGP >= 2)) {
+    		$result->optional_grade = 'C';
+    	} else if (($optionalGP < 2) && ($optionalGP >= 1)) {
+    		$result->optional_grade = 'D';
+    	} else {
+    		$result->optional_grade = 'F';
+    	}
+
     	$optGPremain = $optionalGP - 2;
     	if ($optGPremain > 0) {
     		$addableGP = $optGPremain;
@@ -696,6 +714,30 @@ class ResultController extends Controller
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
     		$result->gp_total_except_optional = $gpTotalExOpt; 
     		$result->gp_total_with_optional = $gpTotalWiOpt; 
+    	}
+
+//---------------------GPA & Grade------------------//
+    	$gpa = $gpTotalWiOpt / 8;
+
+    	$result->gpa = $gpa;
+
+    	if ($gpa >= 5) {
+    		$result->grade = 'A+';
+    		if ($gpTotalExOpt == 40) {
+				$result->status = 'Golden A+';
+    		}
+    	} else if (($gpa < 5) && ($gpa >= 4)) {
+    		$result->grade = 'A';
+    	} else if (($gpa < 4) && ($gpa >= 3.50)) {
+    		$result->grade = 'A-';
+    	} else if (($gpa < 3.50) && ($gpa >= 3)) {
+    		$result->grade = 'B';
+    	} else if (($gpa < 3) && ($gpa >= 2)) {
+    		$result->grade = 'C';
+    	} else if (($gpa < 2) && ($gpa >= 1)) {
+    		$result->grade = 'D';
+    	} else {
+    		$result->grade = 'F';
     	}
 
 //-----------------Count Fail Subjects---------------//
@@ -821,4 +863,13 @@ class ResultController extends Controller
     	return redirect('brand');
     }
 
+    public function studentInfoShow(Request $request)
+    {
+    	//return $request->student_id;
+    	$student = Student::with(['level', 'section'])->find($request->student_id);
+    	if(!$student) {
+            return '<strong style="color: red; margin-left: 15px;">Entered Wrong ID of Student.</strong>';
+        }
+        return view('result.student_info_show', compact('student'));
+    }
 }

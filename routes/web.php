@@ -22,3 +22,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/result', 'ResultController@index');
 Route::get('/result/create', 'ResultController@create');
 Route::post('/result', 'ResultController@store');
+Route::get('/result/student-info-show', 'ResultController@studentInfoShow');
