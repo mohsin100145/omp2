@@ -73,8 +73,27 @@
                 </div>
             </div>
         </nav>
-        @include('flash::message')
-        @yield('content')
+        {{-- @include('flash::message')
+        @yield('content') --}}
+        <div class="container">
+            <div class="row">
+                @include('flash::message')
+
+                <div class="col-md-12">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden-print">
+            <hr/>
+        </div>
+        <div class="footer hidden-print">
+            <div class="container">
+                @include('layouts.partial.footer')
+
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->

@@ -668,6 +668,7 @@ class ResultController extends Controller
     	}
 
 //-------------------Optional Grade Count------------------//
+    	$result->optional_total = $request->optional_total;
     	$result->optional_note = $request->optional_note;
     	$result->optional_gp = $request->optional_gp;
     	$optionalGP = $request->optional_gp;
@@ -698,22 +699,40 @@ class ResultController extends Controller
     	if ($student->section_id == 1) {
     		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $bwiGP + $phyGP + $cheGP + $bioGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
+    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $bwiTotal + $phyTotal + $cheTotal + $bioTotal;
+    		$marksTotalWiOpt = $marksTotalExOpt + $request->optional_total;
     		$result->gp_total_except_optional = $gpTotalExOpt; 
     		$result->gp_total_with_optional = $gpTotalWiOpt; 
+    		$result->marks_total_except_optional = $marksTotalExOpt; 
+    		$result->marks_total_with_optional = $marksTotalWiOpt; 
+    		$result->gpa_except_optional = $gpTotalExOpt / 8;   //may be no need
+    		$result->gpa_with_optional = $gpTotalWiOpt / 8; 
     	}
 
     	if ($student->section_id == 2) {
     		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $gsGP + $hisGP + $civGP + $geoGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
+    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $gsTotal + $hisTotal + $civTotal + $geoTotal;
+    		$marksTotalWiOpt = $marksTotalExOpt + $request->optional_total;
     		$result->gp_total_except_optional = $gpTotalExOpt; 
-    		$result->gp_total_with_optional = $gpTotalWiOpt; 
+    		$result->gp_total_with_optional = $gpTotalWiOpt;
+    		$result->marks_total_except_optional = $marksTotalExOpt; 
+    		$result->marks_total_with_optional = $marksTotalWiOpt;
+    		$result->gpa_except_optional = $gpTotalExOpt / 8; 
+    		$result->gpa_with_optional = $gpTotalWiOpt / 8;  //may be no need
     	}
 
     	if ($student->section_id == 3) {
     		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $gsGP + $accGP + $finGP + $busGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
+    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $gsTotal + $accTotal + $finTotal + $busTotal;
+    		$marksTotalWiOpt = $marksTotalExOpt + $request->optional_total;
     		$result->gp_total_except_optional = $gpTotalExOpt; 
     		$result->gp_total_with_optional = $gpTotalWiOpt; 
+    		$result->marks_total_except_optional = $marksTotalExOpt; 
+    		$result->marks_total_with_optional = $marksTotalWiOpt;
+    		$result->gpa_except_optional = $gpTotalExOpt / 8; 
+    		$result->gpa_with_optional = $gpTotalWiOpt / 8;
     	}
 
 //---------------------GPA & Grade------------------//
@@ -739,6 +758,11 @@ class ResultController extends Controller
     	} else {
     		$result->grade = 'F';
     	}
+
+//----------------
+
+
+
 
 //-----------------Count Fail Subjects---------------//
     	if ($student->section_id == 1) {
@@ -871,5 +895,17 @@ class ResultController extends Controller
             return '<strong style="color: red; margin-left: 15px;">Entered Wrong ID of Student.</strong>';
         }
         return view('result.student_info_show', compact('student'));
+    }
+
+    public function show($id)
+    {
+    	$result = Result::with([
+                                   'term',
+                                   'student.level',
+                                   'student.section',
+                                   'student.year'
+                               ])
+                            ->find($id);
+        return view('result.show', compact('result'));
     }
 }

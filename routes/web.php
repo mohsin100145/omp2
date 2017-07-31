@@ -23,3 +23,5 @@ Route::get('/result', 'ResultController@index');
 Route::get('/result/create', 'ResultController@create');
 Route::post('/result', 'ResultController@store');
 Route::get('/result/student-info-show', 'ResultController@studentInfoShow');
+Route::get('/result/{id}', 'ResultController@show');
+Route::get('/result/{id}/edit', 'ResultController@edit');
