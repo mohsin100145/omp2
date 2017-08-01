@@ -16,8 +16,8 @@
                 /*background-color: #ffff80 !important;*/
             /*}*/
             .print-margin{
-                margin-top: 0px;
-                font-size: 15pt;
+                /*margin-top: 0px;
+                font-size: 15pt;*/
             }
             #pager,
             form,
@@ -34,7 +34,7 @@
             }
         }
     </style>
-    <div class="print-margin">
+    <div class="print-margin" style=" border: 1px solid black;">
         <div class="row">
             <div class="col-xs-2">
                 <div class="pull-left">
@@ -109,7 +109,7 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <table class="table table-bordered table-striped table-hover table-condensed">
+                <table class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
                             <th>SL</th>
@@ -159,8 +159,8 @@
                             <td>English First Peper</td>
                             <td>100</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">66</td>
-                            <td>{{ $result->eng_1st_wrt }}</td>
-                            <td>{{ $result->eng_1st_mcq }}</td>
+                            <td>{{ $result->eng_1st }}</td>
+                            <td></td>
                             <td></td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->eng_total }}</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->eng_gp }}</td>
@@ -169,11 +169,61 @@
                         <tr>
                             <td>4</td>
                             <td>English Second Peper</td>
-                            <td>100</td>
-                            <td>{{ $result->eng_2nd_wrt }}</td>
-                            <td>{{ $result->eng_2nd_mcq }}</td>
+                            <td style="vertical-align: middle; text-align: center;">100</td>
+                            <td>{{ $result->eng_2nd }}</td>
+                            <td></td>
                             <td></td>
                         </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Mathematics</td>
+                            <td>100</td>
+                            <td style="vertical-align: middle; text-align: center;">33 (23+10)</td>
+                            <td>{{ $result->math_wrt }}</td>
+                            <td>{{ $result->math_mcq }}</td>
+                            <td></td>
+                            <td>{{ $result->math_total }}</td>
+                            <td>{{ $result->math_gp }}</td>
+                            <td>{{ $result->math_grade }}</td> 
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Religion Studies</td>
+                            <td>100</td>
+                            <td>33</td>
+                            <td>{{ $result->rel_wrt }}</td>
+                            <td>{{ $result->rel_mcq }}</td>
+                            <td></td>
+                            <td>{{ $result->rel_total }}</td>
+                            <td>{{ $result->rel_gp }}</td>
+                            <td>{{ $result->rel_grade }}</td>   
+                        </tr>
+                        @if($result->section_id == 1)
+                        <tr>
+                            <td>6</td>
+                            <td>Introduction of Bangladesh & World</td>
+                            <td>100</td>
+                            <td>33</td>
+                            <td>{{ $result->bwi_wrt }}</td>
+                            <td>{{ $result->bwi_mcq }}</td>
+                            <td></td>
+                            <td>{{ $result->bwi_total }}</td>
+                            <td>{{ $result->bwi_gp }}</td>
+                            <td>{{ $result->bwi_grade }}</td>   
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Physics</td>
+                            <td>100</td>
+                            <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
+                            <td>{{ $result->phy_wrt }}</td>
+                            <td>{{ $result->phy_mcq }}</td>
+                            <td>{{ $result->phy_prac }}</td>
+                            <td>{{ $result->phy_total }}</td>
+                            <td>{{ $result->phy_gp }}</td>
+                            <td>{{ $result->phy_grade }}</td>   
+                        </tr>
+                        @endif
                                 {{-- <tr>
                                     <td>{{ ++$i }}</td>
                                     <td>{{ $details->name }}</td>
