@@ -16,8 +16,8 @@
                 /*background-color: #ffff80 !important;*/
             /*}*/
             .print-margin{
-                /*margin-top: 0px;
-                font-size: 15pt;*/
+                margin-top: 0px;
+                font-size: 14pt;
             }
             #pager,
             form,
@@ -34,7 +34,7 @@
             }
         }
     </style>
-    <div class="print-margin" style=" border: 1px solid black;">
+    <div class="print-margin" style=" border: 0px solid black;">
         <div class="row">
             <div class="col-xs-2">
                 <div class="pull-left">
@@ -49,7 +49,7 @@
             </h4></center>
             </div>
         </div>
-    <hr>
+    <hr style="margin-top: 10px; margin-bottom: 10px;">
         <div class="row">
             <div class="col-xs-4">
                 <table class="table table-condensed">
@@ -118,18 +118,28 @@
                             <th>Pass Mark</th>
                             <th>Written</th>
                             <th>MCQ</th>
-                            <th>Practical</th>
+                            <th>Prac- tical</th>
                             <th>Get Mark</th>
                             <th>GP</th>
                             <th>Grade</th>
-                            <th>GPA</th>
+                            <th>GPA <strike>(Opt)</strike></th>
+                            <th>GPA (Opt)</th>
                             <th>Total Marks</th>
-                            <th>Fail Subject(s)</th>
+                            @if($result->fail_subjects > 0)
+                                <th>Fail Subject(s)</th>
+                            @endif
                         </tr>
                     </thead>
                     <tbody>
                     <?php
-                        $i = 0;
+                        $grandGPA = $result->gpa;
+                        if ($grandGPA > 5) {
+                            $GPA = number_format(5.00, 2);
+                        } else {
+                           $GPA = $result->gpa; 
+                        }
+
+
                     ?>
                         <tr>
                             <td>1</td>
@@ -142,9 +152,12 @@
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->ban_total }}</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->ban_gp }}</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->ban_grade }}</td>
-                            <td>{{ $result->gpa }}</td>
-                            <td>{{ $result->marks_total_with_optional }}</td>
-                            <td>{{ $result->fail_subjects }}</td>
+                            <td rowspan="10" style="vertical-align: middle; text-align: center;">{{ $result->gpa_except_optional }}</td>
+                            <td rowspan="11" style="vertical-align: middle; text-align: center;">{{  $GPA }} <br> ({{ $result->grade }} grade)<br> {{ $result->status }}</td>
+                            <td rowspan="11" style="vertical-align: middle; text-align: center;">{{ $result->marks_total_with_optional }}</td>
+                            @if($result->fail_subjects > 0)
+                                <td rowspan="11" style="vertical-align: middle; text-align: center;">{{ $result->fail_subjects }}</td>
+                            @endif
                         </tr>
                         <tr>
                             <td>2</td>
@@ -223,7 +236,52 @@
                             <td>{{ $result->phy_gp }}</td>
                             <td>{{ $result->phy_grade }}</td>   
                         </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Chemistry</td>
+                            <td>100</td>
+                            <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
+                            <td>{{ $result->che_wrt }}</td>
+                            <td>{{ $result->che_mcq }}</td>
+                            <td>{{ $result->che_prac }}</td>
+                            <td>{{ $result->che_total }}</td>
+                            <td>{{ $result->che_gp }}</td>
+                            <td>{{ $result->che_grade }}</td>   
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Biology</td>
+                            <td>100</td>
+                            <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
+                            <td>{{ $result->bio_wrt }}</td>
+                            <td>{{ $result->bio_mcq }}</td>
+                            <td>{{ $result->bio_prac }}</td>
+                            <td>{{ $result->bio_total }}</td>
+                            <td>{{ $result->bio_gp }}</td>
+                            <td>{{ $result->bio_grade }}</td>   
+                        </tr>
                         @endif
+<!--*********** Addablae GP  ***************-->
+                        <?php 
+                            $remainGP = $result->optional_gp - 2;
+                            if ($remainGP > 0) {
+                                $addableGP = $remainGP;
+                            } else {
+                                $addableGP = 0;
+                            }
+                        ?>
+
+                        <tr>
+                            <td>10</td>
+                            <td>Optional Subject</td>
+                            <td>100</td>
+                            <td colspan="4" style="vertical-align: middle; text-align: center;">{{ $result->optional_note }}</td>
+                            
+                            <td>{{ $result->optional_total }}</td>
+                            <td>{{ $result->optional_gp }}</td>
+                            <td>{{ $result->optional_grade }}</td>   
+                            <td><small>Addable GP:</small>{{ number_format($addableGP, 2) }}</td>   
+                        </tr>
                                 {{-- <tr>
                                     <td>{{ ++$i }}</td>
                                     <td>{{ $details->name }}</td>
@@ -248,6 +306,23 @@
             </div>
         </div>
     </div>
-    <p>Software Developed by <strong>Mohsin Iqbal</strong></p>
+    <div class="row">
+        <div class="col-xs-6">
+            <div>
+                {{ Html::image('/images/signature.jpg', 'alt', ['width' => 200, 'height' => 50]) }}
+            </div>
+            <div class="pull-left">
+                <h4 class="">Head Master</h4>
+                <p class="">Bara Moheshkhali Girls' High School</p>
+            </div>
+            
+            <!-- <p>Software Developed by <strong>Mohsin Iqbal</strong></p> -->
+        </div>
+        <div class="col-xs-6">
+            <div style="margin-top: 70px;"></div>
+            <h4 class="pull-right">Signature and date of guardian</h4>
+        </div>
+    </div>
+    <center><p>&copy; 2017, Software Developed by <strong>Mohsin Iqbal</strong></p></center>
     <input type="button" class="no-print btn btn-primary" value="Print this page" onClick="window.print()">
 @endsection
