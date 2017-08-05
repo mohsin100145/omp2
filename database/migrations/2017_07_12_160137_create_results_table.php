@@ -20,6 +20,7 @@ class CreateResultsTable extends Migration
             $table->integer('section_id')->unsigned();
             $table->integer('year_id')->unsigned();
             $table->integer('term_id')->unsigned();
+            $table->integer('group_id')->unsigned()->nullable();
 
             $table->float('ban_1st_wrt')->nullable();
             $table->float('ban_1st_mcq')->nullable();

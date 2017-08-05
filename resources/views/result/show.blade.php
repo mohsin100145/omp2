@@ -98,6 +98,10 @@
                         <td style="border: 0;">Student ID:</td>
                         <td style="border: 0;"><strong>{{ $result->student->id }}</strong></td>
                     </tr>
+                    <tr>
+                        <td style="border: none;">Group:</td>
+                        <td style="border: none;"><strong>{{ $result->student->group->name }}</strong></td>
+                    </tr>
                 </table>
             </div>
             <div class="col-xs-3">
@@ -211,7 +215,7 @@
                             <td>{{ $result->rel_gp }}</td>
                             <td>{{ $result->rel_grade }}</td>   
                         </tr>
-                        @if($result->section_id == 1)
+                        @if($result->group_id == 1)
                         <tr>
                             <td>6</td>
                             <td>Introduction of Bangladesh & World</td>

@@ -35,8 +35,13 @@ class Student extends Model
         return $this->belongsTo(Year::class);
     }
 
-    public function resultDetails()
+    public function group()
     {
-        return $this->hasMany(Result::class);
+        return $this->belongsTo(Group::class);
     }
+
+    // public function resultDetails()
+    // {
+    //     return $this->hasMany(Result::class);
+    // }
 }

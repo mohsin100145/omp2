@@ -91,8 +91,13 @@ class ResultController extends Controller
             return redirect()->back()
             			->withInput();
         }
+        if ($student->group_id == null) {
+        	flash()->error('There is no Group in this Student ID');
+            return redirect()->back()
+            			->withInput();
+        }
 
-        if ($student->section_id == 1) {
+        if ($student->group_id == 1) {
         	if (($request->gs_wrt != null) || ($request->gs_mcq != null) || ($request->his_wrt != null) || ($request->his_mcq != null) || ($request->civ_wrt != null) || ($request->civ_mcq != null) || ($request->geo_wrt != null) || ($request->geo_mcq != null) || ($request->acc_wrt != null) || ($request->acc_mcq != null) || ($request->fin_wrt != null) || ($request->fin_mcq != null) || ($request->bus_wrt != null) || ($request->bus_mcq != null)) {
 				flash()->error('You have entered Humanities or Business Studies Group subject, Please enter correctly');
             	return redirect()->back()
@@ -100,7 +105,7 @@ class ResultController extends Controller
 			}
         }
 
-        if ($student->section_id == 2) {
+        if ($student->group_id == 2) {
         	if (($request->bwi_wrt != null) || ($request->bwi_mcq != null) || ($request->phy_wrt != null) || ($request->phy_mcq != null) || ($request->phy_prac != null) || ($request->che_wrt != null) || ($request->che_mcq != null) || ($request->che_prac != null) || ($request->bio_wrt != null) || ($request->bio_mcq != null) || ($request->bio_prac != null) || ($request->acc_wrt != null) || ($request->acc_mcq != null) || ($request->fin_wrt != null) || ($request->fin_mcq != null) || ($request->bus_wrt != null) || ($request->bus_mcq != null)) {
 				flash()->error('You have entered Science or Business Studies Group subject, Please enter correctly');
             	return redirect()->back()
@@ -108,7 +113,7 @@ class ResultController extends Controller
 			}
         }
 
-        if ($student->section_id == 3) {
+        if ($student->group_id == 3) {
         	if (($request->bwi_wrt != null) || ($request->bwi_mcq != null) || ($request->phy_wrt != null) || ($request->phy_mcq != null) || ($request->phy_prac != null) || ($request->che_wrt != null) || ($request->che_mcq != null) || ($request->che_prac != null) || ($request->bio_wrt != null) || ($request->bio_mcq != null) || ($request->bio_prac != null) || ($request->his_wrt != null) || ($request->his_mcq != null) || ($request->civ_wrt != null) || ($request->civ_mcq != null) || ($request->geo_wrt != null) || ($request->geo_mcq != null)) {
 				flash()->error('You have entered Science or Humanities Group subject, Please enter correctly');
             	return redirect()->back()
@@ -119,8 +124,9 @@ class ResultController extends Controller
         $result = new Result;
     	$result->student_id = $request->student_id;
     	$result->level_id = $student->level_id;
-    	$result->section_id = $student->section_id;
+    	$result->group_id = $student->group_id;
     	$result->year_id = $student->year_id;
+    	$result->group_id = $student->group_id;
     	$result->term_id = $request->term_id;
     	$result->ban_1st_wrt = $request->ban_1st_wrt;
     	$result->ban_1st_mcq = $request->ban_1st_mcq;
@@ -271,7 +277,7 @@ class ResultController extends Controller
     	$result->rel_gp = $relGP;
     	$result->rel_grade = $relGrade;
 
-    	if ($student->section_id == 1) {
+    	if ($student->group_id == 1) {
 	    	$result->bwi_wrt = $request->bwi_wrt;
 	    	$result->bwi_mcq = $request->bwi_mcq;
 	    	$bwiTotal = $request->bwi_wrt + $request->bwi_mcq;
@@ -416,7 +422,7 @@ class ResultController extends Controller
 	    	$result->bio_grade = $bioGrade;
     	}
 
-    	if (($student->section_id == 2) || ($student->section_id == 3)) {
+    	if (($student->group_id == 2) || ($student->group_id == 3)) {
 	    	$result->gs_wrt = $request->gs_wrt;
 	    	$result->gs_mcq = $request->gs_mcq;
 	    	$gsTotal = $request->gs_wrt + $request->gs_mcq;
@@ -453,7 +459,7 @@ class ResultController extends Controller
 	    	$result->gs_grade = $gsGrade;
     	}
 
-    	if ($student->section_id == 2) {
+    	if ($student->group_id == 2) {
 	    	$result->his_wrt = $request->his_wrt;
 	    	$result->his_mcq = $request->his_mcq;
 	    	$hisTotal = $request->his_wrt + $request->his_mcq;
@@ -560,7 +566,7 @@ class ResultController extends Controller
 	    	$result->geo_grade = $geoGrade;
 		}
 
-		if ($student->section_id == 3) {
+		if ($student->group_id == 3) {
 	    	$result->acc_wrt = $request->acc_wrt;
 	    	$result->acc_mcq = $request->acc_mcq;
 	    	$accTotal = $request->acc_wrt + $request->acc_mcq;
@@ -696,7 +702,7 @@ class ResultController extends Controller
     		$addableGP = 0;
     	}
 
-    	if ($student->section_id == 1) {
+    	if ($student->group_id == 1) {
     		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $bwiGP + $phyGP + $cheGP + $bioGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
     		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $bwiTotal + $phyTotal + $cheTotal + $bioTotal;
@@ -709,7 +715,7 @@ class ResultController extends Controller
     		$result->gpa_with_optional = $gpTotalWiOpt / 8; 
     	}
 
-    	if ($student->section_id == 2) {
+    	if ($student->group_id == 2) {
     		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $gsGP + $hisGP + $civGP + $geoGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
     		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $gsTotal + $hisTotal + $civTotal + $geoTotal;
@@ -722,7 +728,7 @@ class ResultController extends Controller
     		$result->gpa_with_optional = $gpTotalWiOpt / 8;  //may be no need
     	}
 
-    	if ($student->section_id == 3) {
+    	if ($student->group_id == 3) {
     		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $gsGP + $accGP + $finGP + $busGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
     		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $gsTotal + $accTotal + $finTotal + $busTotal;
@@ -765,7 +771,7 @@ class ResultController extends Controller
 
 
 //-----------------Count Fail Subjects---------------//
-    	if ($student->section_id == 1) {
+    	if ($student->group_id == 1) {
     		$failSubjects = 0;
     		if ($banGP == 0) {
     			$failSubjects++;
@@ -794,7 +800,7 @@ class ResultController extends Controller
     		$result->fail_subjects = $failSubjects;
     	}
 
-    	if ($student->section_id == 2) {
+    	if ($student->group_id == 2) {
     		$failSubjects = 0;
     		if ($banGP == 0) {
     			$failSubjects++;
@@ -822,7 +828,7 @@ class ResultController extends Controller
     		}
     		$result->fail_subjects = $failSubjects;
     	}
-    	if ($student->section_id == 3) {
+    	if ($student->group_id == 3) {
     		$failSubjects = 0;
     		if ($banGP == 0) {
     			$failSubjects++;
@@ -890,9 +896,12 @@ class ResultController extends Controller
     public function studentInfoShow(Request $request)
     {
     	//return $request->student_id;
-    	$student = Student::with(['level', 'section'])->find($request->student_id);
+    	$student = Student::with(['level', 'group'])->find($request->student_id);
     	if(!$student) {
             return '<strong style="color: red; margin-left: 15px;">Entered Wrong ID of Student.</strong>';
+        }
+        if ($student->group_id == null) {
+        	return '<strong style="color: red; margin-left: 15px;">There is no group in this Student Id.</strong>';
         }
         return view('result.student_info_show', compact('student'));
     }

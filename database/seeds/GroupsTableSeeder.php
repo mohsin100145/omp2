@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class SectionsTableSeeder extends Seeder
+class GroupsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,16 +11,20 @@ class SectionsTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('sections')->truncate();
+        \DB::table('groups')->truncate();
 
-        \DB::table('sections')->insert([
+        \DB::table('groups')->insert([
                                          [
                                              'id'    =>  '1',
-                                             'name'  =>  'A',
+                                             'name'  =>  'Science',
                                          ],
                                          [
                                              'id'    =>  '2',
-                                             'name'  =>  'B',
+                                             'name'  =>  'Humanities',
+                                         ],
+                                         [
+                                             'id'    =>  '3',
+                                             'name'  =>  'Business Studies',
                                          ],
                                      ]);
     }
