@@ -122,7 +122,9 @@
                             <th>Pass Mark</th>
                             <th>Written</th>
                             <th>MCQ</th>
-                            <th>Prac- tical</th>
+                            @if ($result->group_id == 1)
+                                <th>Prac- tical</th>
+                            @endif
                             <th>Get Mark</th>
                             <th>GP</th>
                             <th>Grade</th>
@@ -152,7 +154,9 @@
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">66</td>
                             <td>{{ $result->ban_1st_wrt }}</td>
                             <td>{{ $result->ban_1st_mcq }}</td>
-                            <td></td>
+                            @if ($result->group_id == 1)
+                                <td></td>
+                            @endif
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->ban_total }}</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->ban_gp }}</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->ban_grade }}</td>
@@ -169,7 +173,9 @@
                             <td>100</td>
                             <td>{{ $result->ban_2nd_wrt }}</td>
                             <td>{{ $result->ban_2nd_mcq }}</td>
-                            <td></td>
+                            @if ($result->group_id == 1)
+                                <td></td>
+                            @endif
                         </tr>
                         <tr>
                             <td>3</td>
@@ -178,7 +184,9 @@
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">66</td>
                             <td>{{ $result->eng_1st }}</td>
                             <td></td>
-                            <td></td>
+                            @if ($result->group_id == 1)
+                                <td></td>
+                            @endif
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->eng_total }}</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->eng_gp }}</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->eng_grade }}</td>
@@ -189,7 +197,9 @@
                             <td style="vertical-align: middle; text-align: center;">100</td>
                             <td>{{ $result->eng_2nd }}</td>
                             <td></td>
-                            <td></td>
+                            @if ($result->group_id == 1)
+                                <td></td>
+                            @endif
                         </tr>
                         <tr>
                             <td>5</td>
@@ -198,7 +208,9 @@
                             <td style="vertical-align: middle; text-align: center;">33 (23+10)</td>
                             <td>{{ $result->math_wrt }}</td>
                             <td>{{ $result->math_mcq }}</td>
-                            <td></td>
+                            @if ($result->group_id == 1)
+                                <td></td>
+                            @endif
                             <td>{{ $result->math_total }}</td>
                             <td>{{ $result->math_gp }}</td>
                             <td>{{ $result->math_grade }}</td> 
@@ -210,62 +222,182 @@
                             <td>33</td>
                             <td>{{ $result->rel_wrt }}</td>
                             <td>{{ $result->rel_mcq }}</td>
-                            <td></td>
+                            @if ($result->group_id == 1)
+                                <td></td>
+                            @endif
                             <td>{{ $result->rel_total }}</td>
                             <td>{{ $result->rel_gp }}</td>
                             <td>{{ $result->rel_grade }}</td>   
                         </tr>
                         @if($result->group_id == 1)
-                        <tr>
-                            <td>6</td>
-                            <td>Introduction of Bangladesh & World</td>
-                            <td>100</td>
-                            <td>33</td>
-                            <td>{{ $result->bwi_wrt }}</td>
-                            <td>{{ $result->bwi_mcq }}</td>
-                            <td></td>
-                            <td>{{ $result->bwi_total }}</td>
-                            <td>{{ $result->bwi_gp }}</td>
-                            <td>{{ $result->bwi_grade }}</td>   
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Physics</td>
-                            <td>100</td>
-                            <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
-                            <td>{{ $result->phy_wrt }}</td>
-                            <td>{{ $result->phy_mcq }}</td>
-                            <td>{{ $result->phy_prac }}</td>
-                            <td>{{ $result->phy_total }}</td>
-                            <td>{{ $result->phy_gp }}</td>
-                            <td>{{ $result->phy_grade }}</td>   
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Chemistry</td>
-                            <td>100</td>
-                            <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
-                            <td>{{ $result->che_wrt }}</td>
-                            <td>{{ $result->che_mcq }}</td>
-                            <td>{{ $result->che_prac }}</td>
-                            <td>{{ $result->che_total }}</td>
-                            <td>{{ $result->che_gp }}</td>
-                            <td>{{ $result->che_grade }}</td>   
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>Biology</td>
-                            <td>100</td>
-                            <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
-                            <td>{{ $result->bio_wrt }}</td>
-                            <td>{{ $result->bio_mcq }}</td>
-                            <td>{{ $result->bio_prac }}</td>
-                            <td>{{ $result->bio_total }}</td>
-                            <td>{{ $result->bio_gp }}</td>
-                            <td>{{ $result->bio_grade }}</td>   
-                        </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Introduction of Bangladesh & World</td>
+                                <td>100</td>
+                                <td>33</td>
+                                <td>{{ $result->bwi_wrt }}</td>
+                                <td>{{ $result->bwi_mcq }}</td>
+                                <td></td>
+                                <td>{{ $result->bwi_total }}</td>
+                                <td>{{ $result->bwi_gp }}</td>
+                                <td>{{ $result->bwi_grade }}</td>   
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Physics</td>
+                                <td>100</td>
+                                <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
+                                <td>{{ $result->phy_wrt }}</td>
+                                <td>{{ $result->phy_mcq }}</td>
+                                <td>{{ $result->phy_prac }}</td>
+                                <td>{{ $result->phy_total }}</td>
+                                <td>{{ $result->phy_gp }}</td>
+                                <td>{{ $result->phy_grade }}</td>   
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Chemistry</td>
+                                <td>100</td>
+                                <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
+                                <td>{{ $result->che_wrt }}</td>
+                                <td>{{ $result->che_mcq }}</td>
+                                <td>{{ $result->che_prac }}</td>
+                                <td>{{ $result->che_total }}</td>
+                                <td>{{ $result->che_gp }}</td>
+                                <td>{{ $result->che_grade }}</td>   
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Biology</td>
+                                <td>100</td>
+                                <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
+                                <td>{{ $result->bio_wrt }}</td>
+                                <td>{{ $result->bio_mcq }}</td>
+                                <td>{{ $result->bio_prac }}</td>
+                                <td>{{ $result->bio_total }}</td>
+                                <td>{{ $result->bio_gp }}</td>
+                                <td>{{ $result->bio_grade }}</td>   
+                            </tr>
                         @endif
-<!--*********** Addablae GP  ***************-->
+
+                        @if ($result->group_id == 2)
+                            <tr>
+                                <td>6</td>
+                                <td>General Science</td>
+                                <td>100</td>
+                                <td>33</td>
+                                <td>{{ $result->gs_wrt }}</td>
+                                <td>{{ $result->gs_mcq }}</td>
+                                @if ($result->group_id == 1)
+                                    <td></td>
+                                @endif
+                                <td>{{ $result->gs_total }}</td>
+                                <td>{{ $result->gs_gp }}</td>
+                                <td>{{ $result->gs_grade }}</td>   
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>History</td>
+                                <td>100</td>
+                                <td>33</td>
+                                <td>{{ $result->his_wrt }}</td>
+                                <td>{{ $result->his_mcq }}</td>
+                                @if ($result->group_id == 1)
+                                    <td></td>
+                                @endif
+                                <td>{{ $result->his_total }}</td>
+                                <td>{{ $result->his_gp }}</td>
+                                <td>{{ $result->his_grade }}</td>   
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Civics</td>
+                                <td>100</td>
+                                <td>33</td>
+                                <td>{{ $result->civ_wrt }}</td>
+                                <td>{{ $result->civ_mcq }}</td>
+                                @if ($result->group_id == 1)
+                                    <td></td>
+                                @endif
+                                <td>{{ $result->civ_total }}</td>
+                                <td>{{ $result->civ_gp }}</td>
+                                <td>{{ $result->civ_grade }}</td>   
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Geography</td>
+                                <td>100</td>
+                                <td>33</td>
+                                <td>{{ $result->geo_wrt }}</td>
+                                <td>{{ $result->geo_mcq }}</td>
+                                @if ($result->group_id == 1)
+                                    <td></td>
+                                @endif
+                                <td>{{ $result->geo_total }}</td>
+                                <td>{{ $result->geo_gp }}</td>
+                                <td>{{ $result->geo_grade }}</td>   
+                            </tr>
+                        @endif
+
+                        @if ($result->group_id == 3)
+                            <tr>
+                                <td>6</td>
+                                <td>General Science</td>
+                                <td>100</td>
+                                <td>33</td>
+                                <td>{{ $result->gs_wrt }}</td>
+                                <td>{{ $result->gs_mcq }}</td>
+                                @if ($result->group_id == 1)
+                                    <td></td>
+                                @endif
+                                <td>{{ $result->gs_total }}</td>
+                                <td>{{ $result->gs_gp }}</td>
+                                <td>{{ $result->gs_grade }}</td>   
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Accounting</td>
+                                <td>100</td>
+                                <td>33</td>
+                                <td>{{ $result->acc_wrt }}</td>
+                                <td>{{ $result->acc_mcq }}</td>
+                                @if ($result->group_id == 1)
+                                    <td></td>
+                                @endif
+                                <td>{{ $result->acc_total }}</td>
+                                <td>{{ $result->acc_gp }}</td>
+                                <td>{{ $result->acc_grade }}</td>   
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Finance and Banking</td>
+                                <td>100</td>
+                                <td>33</td>
+                                <td>{{ $result->fin_wrt }}</td>
+                                <td>{{ $result->fin_mcq }}</td>
+                                @if ($result->group_id == 1)
+                                    <td></td>
+                                @endif
+                                <td>{{ $result->fin_total }}</td>
+                                <td>{{ $result->fin_gp }}</td>
+                                <td>{{ $result->fin_grade }}</td>   
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Business</td>
+                                <td>100</td>
+                                <td>33</td>
+                                <td>{{ $result->bus_wrt }}</td>
+                                <td>{{ $result->bus_mcq }}</td>
+                                @if ($result->group_id == 1)
+                                    <td></td>
+                                @endif
+                                <td>{{ $result->bus_total }}</td>
+                                <td>{{ $result->bus_gp }}</td>
+                                <td>{{ $result->bus_grade }}</td>   
+                            </tr>
+                        @endif
+<!--*********** Addable GP  ***************-->
                         <?php 
                             $remainGP = $result->optional_gp - 2;
                             if ($remainGP > 0) {
@@ -279,31 +411,15 @@
                             <td>10</td>
                             <td>Optional Subject</td>
                             <td>100</td>
-                            <td colspan="4" style="vertical-align: middle; text-align: center;">{{ $result->optional_note }}</td>
-                            
+                            <td colspan="3" style="vertical-align: middle; text-align: center;">{{ $result->optional_note }}</td>
+                            @if ($result->group_id == 1)
+                                <td></td>
+                            @endif
                             <td>{{ $result->optional_total }}</td>
                             <td>{{ $result->optional_gp }}</td>
                             <td>{{ $result->optional_grade }}</td>   
                             <td><small>Addable GP:</small>{{ number_format($addableGP, 2) }}</td>   
                         </tr>
-                                {{-- <tr>
-                                    <td>{{ ++$i }}</td>
-                                    <td>{{ $details->name }}</td>
-                                    <td>{{ $details->total_mark }}</td>
-                                    <td>{{ $details->pass_mark }}</td>
-                                    <td><strong>{{ $details->resultDetails->first()->get_mark or 'Absent' }}</strong></td>
-                                    <td>{{ $details->resultDetails->first()->get_mark_percentage or ' ' }}</td>
-                                    <td>{{ $details->resultDetails->first()->grade_point or ' ' }}</td>
-                                    <td>{{ $details->resultDetails->first()->grade or ' ' }}</td>
-                                    @if($i==1)
-                                        <td style="vertical-align: middle; text-align: center; background-color: white;" rowspan={{ $resultDetailsBySubject->count() }}><strong>{{ $totalResult }}</strong></td>
-                                        <td style="vertical-align: middle; text-align: center; background-color: white;" rowspan={{ $resultDetailsBySubject->count() }}><strong>{{ $totalMarks }}</strong></td>
-                                        @if($totalFail > 0)
-                                            <td style="vertical-align: middle; text-align: center; background-color: white;" rowspan={{ $resultDetailsBySubject->count() }}><strong>{{ $totalFail }}</strong></td>
-                                        @endif
-                                    @endif
-                                </tr> --}}
-                           
 
                     </tbody>
                 </table>
