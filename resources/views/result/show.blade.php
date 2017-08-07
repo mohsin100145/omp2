@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-xs-2">
                 <div class="pull-left">
-                    {{ Html::image('/images/logo.jpg', 'alt', ['width' => 100, 'height' => 100]) }}
+                    {{ Html::image('/images/logo.jpg', 'No Logo', ['width' => 100, 'height' => 100]) }}
                 </div>
             </div>
             <div class="col-xs-9">
@@ -106,7 +106,7 @@
             </div>
             <div class="col-xs-3">
                 <div class="pull-right">
-                    {{ Html::image('/uploads/' . $result->student->image, 'alt', ['width' => 150, 'height' => 150]) }}
+                    {{ Html::image('/uploads/' . $result->student->image, 'No Picture', ['width' => 150, 'height' => 150]) }}
                 </div>
             </div>
         </div>
@@ -129,7 +129,7 @@
                             <th>GP</th>
                             <th>Grade</th>
                             <th>GPA <strike>(Opt)</strike></th>
-                            <th>GPA (Opt)</th>
+                            <th style="width: 125px;">GPA (Opt)</th>
                             <th>Total Marks</th>
                             @if($result->fail_subjects > 0)
                                 <th>Fail Subject(s)</th>
@@ -148,7 +148,7 @@
 
                     ?>
                         <tr>
-                            <td>1</td>
+                            <td rowspan="2" style="vertical-align: middle; text-align: center;">1</td>
                             <td>Bangla First Peper</td>
                             <td>100</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">66</td>
@@ -160,15 +160,15 @@
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->ban_total }}</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->ban_gp }}</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->ban_grade }}</td>
-                            <td rowspan="10" style="vertical-align: middle; text-align: center;">{{ $result->gpa_except_optional }}</td>
-                            <td rowspan="11" style="vertical-align: middle; text-align: center;">{{  $GPA }} <br> ({{ $result->grade }} grade)<br> {{ $result->status }}</td>
+                            <td rowspan="10" style="vertical-align: middle; text-align: center;">{{ number_format($result->gpa_except_optional, 2) }}</td>
+                            <td rowspan="11" style="vertical-align: middle; text-align: center;"><b>{{  number_format($GPA, 2) }} <br> ({{ $result->grade }} grade)<br> {{ $result->status }}</b></td>
                             <td rowspan="11" style="vertical-align: middle; text-align: center;">{{ $result->marks_total_with_optional }}</td>
                             @if($result->fail_subjects > 0)
                                 <td rowspan="11" style="vertical-align: middle; text-align: center;">{{ $result->fail_subjects }}</td>
                             @endif
                         </tr>
                         <tr>
-                            <td>2</td>
+                            
                             <td>Bangla Second Peper</td>
                             <td>100</td>
                             <td>{{ $result->ban_2nd_wrt }}</td>
@@ -178,7 +178,7 @@
                             @endif
                         </tr>
                         <tr>
-                            <td>3</td>
+                            <td rowspan="2" style="vertical-align: middle; text-align: center;">2</td>
                             <td>English First Peper</td>
                             <td>100</td>
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">66</td>
@@ -192,7 +192,7 @@
                             <td style="vertical-align: middle; text-align: center;" rowspan="2">{{ $result->eng_grade }}</td>
                         </tr>
                         <tr>
-                            <td>4</td>
+                            
                             <td>English Second Peper</td>
                             <td style="vertical-align: middle; text-align: center;">100</td>
                             <td>{{ $result->eng_2nd }}</td>
@@ -202,7 +202,7 @@
                             @endif
                         </tr>
                         <tr>
-                            <td>5</td>
+                            <td>3</td>
                             <td>Mathematics</td>
                             <td>100</td>
                             <td style="vertical-align: middle; text-align: center;">33 (23+10)</td>
@@ -216,7 +216,7 @@
                             <td>{{ $result->math_grade }}</td> 
                         </tr>
                         <tr>
-                            <td>5</td>
+                            <td>4</td>
                             <td>Religion Studies</td>
                             <td>100</td>
                             <td>33</td>
@@ -231,7 +231,7 @@
                         </tr>
                         @if($result->group_id == 1)
                             <tr>
-                                <td>6</td>
+                                <td>5</td>
                                 <td>Introduction of Bangladesh & World</td>
                                 <td>100</td>
                                 <td>33</td>
@@ -243,7 +243,7 @@
                                 <td>{{ $result->bwi_grade }}</td>   
                             </tr>
                             <tr>
-                                <td>7</td>
+                                <td>6</td>
                                 <td>Physics</td>
                                 <td>100</td>
                                 <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
@@ -255,7 +255,7 @@
                                 <td>{{ $result->phy_grade }}</td>   
                             </tr>
                             <tr>
-                                <td>8</td>
+                                <td>7</td>
                                 <td>Chemistry</td>
                                 <td>100</td>
                                 <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
@@ -267,7 +267,7 @@
                                 <td>{{ $result->che_grade }}</td>   
                             </tr>
                             <tr>
-                                <td>9</td>
+                                <td>8</td>
                                 <td>Biology</td>
                                 <td>100</td>
                                 <td style="vertical-align: middle; text-align: center;">33(17+8+8)</td>
@@ -282,7 +282,7 @@
 
                         @if ($result->group_id == 2)
                             <tr>
-                                <td>6</td>
+                                <td>5</td>
                                 <td>General Science</td>
                                 <td>100</td>
                                 <td>33</td>
@@ -296,7 +296,7 @@
                                 <td>{{ $result->gs_grade }}</td>   
                             </tr>
                             <tr>
-                                <td>7</td>
+                                <td>6</td>
                                 <td>History</td>
                                 <td>100</td>
                                 <td>33</td>
@@ -310,7 +310,7 @@
                                 <td>{{ $result->his_grade }}</td>   
                             </tr>
                             <tr>
-                                <td>8</td>
+                                <td>7</td>
                                 <td>Civics</td>
                                 <td>100</td>
                                 <td>33</td>
@@ -324,7 +324,7 @@
                                 <td>{{ $result->civ_grade }}</td>   
                             </tr>
                             <tr>
-                                <td>9</td>
+                                <td>8</td>
                                 <td>Geography</td>
                                 <td>100</td>
                                 <td>33</td>
@@ -341,7 +341,7 @@
 
                         @if ($result->group_id == 3)
                             <tr>
-                                <td>6</td>
+                                <td>5</td>
                                 <td>General Science</td>
                                 <td>100</td>
                                 <td>33</td>
@@ -355,7 +355,7 @@
                                 <td>{{ $result->gs_grade }}</td>   
                             </tr>
                             <tr>
-                                <td>7</td>
+                                <td>6</td>
                                 <td>Accounting</td>
                                 <td>100</td>
                                 <td>33</td>
@@ -369,7 +369,7 @@
                                 <td>{{ $result->acc_grade }}</td>   
                             </tr>
                             <tr>
-                                <td>8</td>
+                                <td>7</td>
                                 <td>Finance and Banking</td>
                                 <td>100</td>
                                 <td>33</td>
@@ -383,7 +383,7 @@
                                 <td>{{ $result->fin_grade }}</td>   
                             </tr>
                             <tr>
-                                <td>9</td>
+                                <td>8</td>
                                 <td>Business</td>
                                 <td>100</td>
                                 <td>33</td>
@@ -408,7 +408,7 @@
                         ?>
 
                         <tr>
-                            <td>10</td>
+                            <td></td>
                             <td>Optional Subject</td>
                             <td>100</td>
                             <td colspan="3" style="vertical-align: middle; text-align: center;">{{ $result->optional_note }}</td>
