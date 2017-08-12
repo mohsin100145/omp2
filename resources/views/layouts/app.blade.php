@@ -12,7 +12,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/bootstrap-3.3.7.min.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dataTables-1.10.15.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -98,6 +100,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-3.3.7.min.js') }}"></script>
+    <script src="{{ asset('js/dataTables-1.10.15.min.js') }}"></script>
     <!-- <script src="{{ asset('js/app.js') }}"></script> -->
     @yield('script')
 </body>

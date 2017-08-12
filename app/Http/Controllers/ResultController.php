@@ -18,7 +18,17 @@ class ResultController extends Controller
 
     public function index()
     {
-    	return view('result.index');
+    	$results = Result::with([
+                                    'term',
+                                    'student.level',
+                                    'student.section',
+                                    'student.year',
+                                    'student.group'
+                                ])
+                                ->get();
+
+        return view('result.index', compact('results'));
+    	//return view('result.index');
     }
 
     public function create()
@@ -97,6 +107,18 @@ class ResultController extends Controller
             			->withInput();
         }
 
+        $existResult = Result::where('student_id', $request->student_id)
+                                    ->where('level_id', $student->level_id)
+                                    ->where('section_id', $student->section_id)
+                                    ->where('year_id', $student->year_id)
+                                    ->where('term_id', $request->term_id)
+                                    ->get();
+            if( count($existResult) ) {
+                flash()->error("This Student's Result already created in this Term.");
+                return redirect()->back()
+                			->withInput();
+            }
+
         if ($student->group_id == 1) {
         	if (($request->gs_wrt != null) || ($request->gs_mcq != null) || ($request->his_wrt != null) || ($request->his_mcq != null) || ($request->civ_wrt != null) || ($request->civ_mcq != null) || ($request->geo_wrt != null) || ($request->geo_mcq != null) || ($request->acc_wrt != null) || ($request->acc_mcq != null) || ($request->fin_wrt != null) || ($request->fin_mcq != null) || ($request->bus_wrt != null) || ($request->bus_mcq != null)) {
 				flash()->error('You have entered Humanities or Business Studies Group subject, Please enter correctly');
@@ -124,7 +146,7 @@ class ResultController extends Controller
         $result = new Result;
     	$result->student_id = $request->student_id;
     	$result->level_id = $student->level_id;
-    	$result->group_id = $student->group_id;
+    	$result->section_id = $student->section_id;
     	$result->year_id = $student->year_id;
     	$result->group_id = $student->group_id;
     	$result->term_id = $request->term_id;
@@ -1023,7 +1045,7 @@ class ResultController extends Controller
         $result = Result::find($id);
     	$result->student_id = $request->student_id;
     	$result->level_id = $student->level_id;
-    	$result->group_id = $student->group_id;
+    	$result->section_id = $student->section_id;
     	$result->year_id = $student->year_id;
     	$result->group_id = $student->group_id;
     	$result->term_id = $request->term_id;
