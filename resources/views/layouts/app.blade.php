@@ -49,8 +49,17 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
-                            <li><a href="#">Menu1</a></li>
-                            <li><a href="#">Menu2</a></li>
+                            <li {{ (Request::is('result') ? 'class=active' : '') }}><a href="{{ url('/result') }}">Result For IX-X</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu<span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Aogin VIII</a></li>
+                                    <li {{ (Request::is('result') ? 'class=active' : '') }}><a href="#">Aegister</a></li>
+                                </ul>
+                            </li>
+                            <li {{ (Request::is('result/create') ? 'class=active' : '') }}><a href="{{ url('/result/create') }}">Result Create</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>

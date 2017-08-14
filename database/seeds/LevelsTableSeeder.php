@@ -16,10 +16,22 @@ class LevelsTableSeeder extends Seeder
         \DB::table('levels')->insert([
                                          [
                                              'id'    =>  '1',
-                                             'name'  =>  'Nine',
+                                             'name'  =>  'Six',
                                          ],
                                          [
                                              'id'    =>  '2',
+                                             'name'  =>  'Seven',
+                                         ],
+                                         [
+                                             'id'    =>  '3',
+                                             'name'  =>  'Eight',
+                                         ],
+                                         [
+                                             'id'    =>  '4',
+                                             'name'  =>  'Nine',
+                                         ],
+                                         [
+                                             'id'    =>  '5',
                                              'name'  =>  'Ten',
                                          ],
                                      ]);

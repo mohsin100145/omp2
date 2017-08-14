@@ -26,6 +26,9 @@ Route::get('/result/student-info-show', 'ResultController@studentInfoShow');
 Route::get('/result/{id}', 'ResultController@show');
 Route::get('/result/{id}/edit', 'ResultController@edit');
 Route::put('/result/{id}', 'ResultController@update');
+
 Route::get('/import-export', 'ExcelController@importExport');
 Route::get('/download-excel/{type}', 'ExcelController@downloadExcel');
 Route::post('/import-excel', 'ExcelController@importExcel');
+
+Route::get('/six-to-eight-result', 'SixToEightResultController@index');

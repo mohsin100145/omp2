@@ -877,8 +877,8 @@ class ResultController extends Controller
 
     	$result->save();
 
-    	flash()->success('Successfully Inserted');
-    	return redirect('result/create');
+    	flash()->success('Result Successfully Created');
+    	return redirect('result');
     }
 
     
