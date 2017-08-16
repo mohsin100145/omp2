@@ -33,6 +33,7 @@ class CreateResultsTable extends Migration
             
             $table->float('eng_1st')->nullable();
             $table->float('eng_2nd')->nullable();
+            $table->float('eng_total')->nullable();
             $table->float('eng_gp')->nullable();
             $table->string('eng_grade')->nullable();
 
@@ -122,6 +123,8 @@ class CreateResultsTable extends Migration
             $table->string('optional_grade')->nullable();
             $table->string('optional_note')->nullable();
 
+            $table->float('marks_total_except_optional')->nullable();
+            $table->float('marks_total_with_optional')->nullable();
             $table->float('gp_total_except_optional')->nullable();
             $table->float('gp_total_with_optional')->nullable();
             $table->float('gpa_except_optional')->nullable();
@@ -129,7 +132,6 @@ class CreateResultsTable extends Migration
 
             $table->float('gpa')->nullable();
             $table->string('grade')->nullable();
-
             $table->string('status')->nullable();
 
             $table->integer('fail_subjects')->unsigned()->nullable();

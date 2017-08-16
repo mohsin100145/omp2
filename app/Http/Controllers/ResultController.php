@@ -37,6 +37,19 @@ class ResultController extends Controller
     	return view('result.create', compact('termList'));
     }
 
+    public function studentInfoShow(Request $request)
+    {
+    	//return $request->student_id;
+    	$student = Student::with(['level', 'group'])->find($request->student_id);
+    	if(!$student) {
+            return '<strong style="color: red; margin-left: 15px;">Entered Wrong ID of Student.</strong>';
+        }
+        if ($student->group_id == null) {
+        	return '<strong style="color: red; margin-left: 15px;">There is no group in this Student Id.</strong>';
+        }
+        return view('result.student_info_show', compact('student'));
+    }
+
     public function store(Request $request)
     {
     	//return $request->all();
@@ -95,6 +108,7 @@ class ResultController extends Controller
                         ->withErrors($validator)
                         ->withInput();
         }
+        
         $student = Student::find($request->student_id);
         if(!count($student)){
             flash()->error('There is no Student in this ID');
@@ -113,11 +127,11 @@ class ResultController extends Controller
                                     ->where('year_id', $student->year_id)
                                     ->where('term_id', $request->term_id)
                                     ->get();
-            if( count($existResult) ) {
-                flash()->error("This Student's Result already created in this Term.");
-                return redirect()->back()
-                			->withInput();
-            }
+        if( count($existResult) ) {
+            flash()->error("This Student's Result already created in this Term.");
+            return redirect()->back()
+            			->withInput();
+        }
 
         if ($student->group_id == 1) {
         	if (($request->gs_wrt != null) || ($request->gs_mcq != null) || ($request->his_wrt != null) || ($request->his_mcq != null) || ($request->civ_wrt != null) || ($request->civ_mcq != null) || ($request->geo_wrt != null) || ($request->geo_mcq != null) || ($request->acc_wrt != null) || ($request->acc_mcq != null) || ($request->fin_wrt != null) || ($request->fin_mcq != null) || ($request->bus_wrt != null) || ($request->bus_mcq != null)) {
@@ -908,19 +922,6 @@ class ResultController extends Controller
 
     	flash()->success('Successfully updated');
     	return redirect('brand');
-    }
-
-    public function studentInfoShow(Request $request)
-    {
-    	//return $request->student_id;
-    	$student = Student::with(['level', 'group'])->find($request->student_id);
-    	if(!$student) {
-            return '<strong style="color: red; margin-left: 15px;">Entered Wrong ID of Student.</strong>';
-        }
-        if ($student->group_id == null) {
-        	return '<strong style="color: red; margin-left: 15px;">There is no group in this Student Id.</strong>';
-        }
-        return view('result.student_info_show', compact('student'));
     }
 
     public function show($id)
