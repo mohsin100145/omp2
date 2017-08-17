@@ -24,48 +24,59 @@ class CreateSixToEightResultsTable extends Migration
             $table->float('ban_1st')->nullable();
             $table->float('ban_2nd')->nullable();
             $table->float('ban_total')->nullable();
+            $table->float('ban_percentage')->nullable();
             $table->float('ban_gp')->nullable();
             $table->string('ban_grade')->nullable();
 
             $table->float('eng_1st')->nullable();
             $table->float('eng_2nd')->nullable();
             $table->float('eng_total')->nullable();
+            $table->float('eng_percentage')->nullable();
             $table->float('eng_gp')->nullable();
             $table->string('eng_grade')->nullable();
 
             $table->float('math')->nullable();
+            $table->float('math_percentage')->nullable();
             $table->float('math_gp')->nullable();
             $table->string('math_grade')->nullable();
 
             $table->float('science')->nullable();
+            $table->float('science_percentage')->nullable();
             $table->float('science_gp')->nullable();
             $table->string('science_grade')->nullable();
 
             $table->float('bangladesh')->nullable();
+            $table->float('bangladesh_percentage')->nullable();
             $table->float('bangladesh_gp')->nullable();
             $table->string('bangladesh_grade')->nullable();
 
             $table->float('religion')->nullable();
+            $table->float('religion_percentage')->nullable();
             $table->float('religion_gp')->nullable();
             $table->string('religion_grade')->nullable();
 
             $table->float('ict')->nullable();
+            $table->float('ict_percentage')->nullable();
             $table->float('ict_gp')->nullable();
             $table->string('ict_grade')->nullable();
 
             $table->float('work')->nullable();
+            $table->float('work_percentage')->nullable();
             $table->float('work_gp')->nullable();
             $table->string('work_grade')->nullable();
 
             $table->float('physical')->nullable();
+            $table->float('physical_percentage')->nullable();
             $table->float('physical_gp')->nullable();
             $table->string('physical_grade')->nullable();
 
             $table->float('arts')->nullable();
+            $table->float('arts_percentage')->nullable();
             $table->float('arts_gp')->nullable();
             $table->string('arts_grade')->nullable();
 
             $table->float('optional')->nullable();
+            $table->float('optional_percentage')->nullable();
             $table->float('optional_gp')->nullable();
             $table->string('optional_grade')->nullable();
 
