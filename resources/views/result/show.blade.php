@@ -118,7 +118,7 @@
                         <tr>
                             <th>SL</th>
                             <th>Subject Name</th>
-                            <th>Total Mark</th>
+                            <th>Mark</th>
                             <th>Pass Mark</th>
                             <th>Written</th>
                             <th>MCQ</th>
@@ -132,7 +132,7 @@
                             <th style="width: 125px;">GPA (Opt)</th>
                             <th>Total Marks</th>
                             @if($result->fail_subjects > 0)
-                                <th>Fail Subject(s)</th>
+                                <th>Fail Sub.</th>
                             @endif
                         </tr>
                     </thead>
@@ -164,7 +164,7 @@
                             <td rowspan="11" style="vertical-align: middle; text-align: center;"><b>{{  number_format($GPA, 2) }} <br> ({{ $result->grade }} grade)<br> {{ $result->status }}</b></td>
                             <td rowspan="11" style="vertical-align: middle; text-align: center;">{{ $result->marks_total_with_optional }}</td>
                             @if($result->fail_subjects > 0)
-                                <td rowspan="11" style="vertical-align: middle; text-align: center;">{{ $result->fail_subjects }}</td>
+                                <td rowspan="11" style="vertical-align: middle; text-align: center;"><b>{{ $result->fail_subjects }}</b></td>
                             @endif
                         </tr>
                         <tr>

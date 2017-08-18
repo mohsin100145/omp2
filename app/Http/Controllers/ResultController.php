@@ -115,6 +115,11 @@ class ResultController extends Controller
             return redirect()->back()
             			->withInput();
         }
+        if (($student->level_id == 1) || ($student->level_id == 2) || ($student->level_id == 3)) {
+        	flash()->error("This student's class may be Six to Eight.");
+            return redirect()->back()
+            			->withInput();
+        }
         if ($student->group_id == null) {
         	flash()->error('There is no Group in this Student ID');
             return redirect()->back()
@@ -1013,8 +1018,26 @@ class ResultController extends Controller
             return redirect()->back()
             			->withInput();
         }
+        if (($student->level_id == 1) || ($student->level_id == 2) || ($student->level_id == 3)) {
+        	flash()->error("This student's class may be Six to Eight.");
+            return redirect()->back()
+            			->withInput();
+        }
         if ($student->group_id == null) {
         	flash()->error('There is no Group in this Student ID');
+            return redirect()->back()
+            			->withInput();
+        }
+
+        $existResult = Result::where('student_id', $request->student_id)
+                                    ->where('level_id', $student->level_id)
+                                    ->where('section_id', $student->section_id)
+                                    ->where('year_id', $student->year_id)
+                                    ->where('term_id', $request->term_id)
+                                    ->where('id', '<>', $id)
+                                    ->get();
+        if( count($existResult) ) {
+            flash()->error("This Student's Result already created in this Term.");
             return redirect()->back()
             			->withInput();
         }
