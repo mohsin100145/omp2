@@ -596,26 +596,34 @@ class SixToEightResultController extends Controller
 				$result->status = 'Golden A+';
     		}
     	} else if (($gpa < 5) && ($gpa >= 4) && ($failSubjects == 0)) {
-    		$result->grade = 'A';
     		if (($subApluseCount == 9) && ($subAcount == 1)) {
 				$result->status = 'General A+';
-    		}
-    		if (($subApluseCount == 8) && ($subAcount == 2)) {
+				$result->grade = 'A+';
+    		} else if (($subApluseCount == 8) && ($subAcount == 2)) {
 				$result->status = 'General A+';
-    		}
-    		if (($subApluseCount == 7) && ($subAcount == 3)) {
+				$result->grade = 'A+';
+    		} else if (($subApluseCount == 7) && ($subAcount == 3)) {
 				$result->status = 'General A+';
+				$result->grade = 'A+';
+    		} else {
+    			$result->status = null;
+    			$result->grade = 'A';
     		}
     	} else if (($gpa < 4) && ($gpa >= 3.50) && ($failSubjects == 0)) {
     		$result->grade = 'A-';
+    		$result->status = null;
     	} else if (($gpa < 3.50) && ($gpa >= 3) && ($failSubjects == 0)) {
     		$result->grade = 'B';
+    		$result->status = null;
     	} else if (($gpa < 3) && ($gpa >= 2) && ($failSubjects == 0)) {
     		$result->grade = 'C';
+    		$result->status = null;
     	} else if (($gpa < 2) && ($gpa >= 1) && ($failSubjects == 0)) {
     		$result->grade = 'D';
+    		$result->status = null;
     	} else {
     		$result->grade = 'F';
+    		$result->status = null;
     	}
 
     	$result->save();
@@ -630,6 +638,18 @@ class SixToEightResultController extends Controller
     	$termList = Term::pluck('name', 'id');
 
     	return view('six_to_eight_result.edit', compact('result', 'termList'));
+    }
+
+    public function show($id)
+    {
+    	$result = SixToEightResult::with([
+                                   'term',
+                                   'student.level',
+                                   'student.section',
+                                   'student.year'
+                               ])
+                            ->find($id);
+        return view('six_to_eight_result.show', compact('result'));
     }
 
     public function update(Request $request, $id)
@@ -1180,26 +1200,34 @@ class SixToEightResultController extends Controller
 				$result->status = 'Golden A+';
     		}
     	} else if (($gpa < 5) && ($gpa >= 4) && ($failSubjects == 0)) {
-    		$result->grade = 'A';
     		if (($subApluseCount == 9) && ($subAcount == 1)) {
 				$result->status = 'General A+';
-    		}
-    		if (($subApluseCount == 8) && ($subAcount == 2)) {
+				$result->grade = 'A+';
+    		} else if (($subApluseCount == 8) && ($subAcount == 2)) {
 				$result->status = 'General A+';
-    		}
-    		if (($subApluseCount == 7) && ($subAcount == 3)) {
+				$result->grade = 'A+';
+    		} else if (($subApluseCount == 7) && ($subAcount == 3)) {
 				$result->status = 'General A+';
+				$result->grade = 'A+';
+    		} else {
+    			$result->status = null;
+    			$result->grade = 'A';
     		}
     	} else if (($gpa < 4) && ($gpa >= 3.50) && ($failSubjects == 0)) {
     		$result->grade = 'A-';
+    		$result->status = null;
     	} else if (($gpa < 3.50) && ($gpa >= 3) && ($failSubjects == 0)) {
     		$result->grade = 'B';
+    		$result->status = null;
     	} else if (($gpa < 3) && ($gpa >= 2) && ($failSubjects == 0)) {
     		$result->grade = 'C';
+    		$result->status = null;
     	} else if (($gpa < 2) && ($gpa >= 1) && ($failSubjects == 0)) {
     		$result->grade = 'D';
+    		$result->status = null;
     	} else {
     		$result->grade = 'F';
+    		$result->status = null;
     	}
 
     	$result->save();

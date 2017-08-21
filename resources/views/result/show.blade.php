@@ -71,7 +71,6 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-xs-1"></div>
             <div class="col-xs-4">
                 <table class="table table-condensed">
                     <tr>
@@ -96,6 +95,7 @@
                     </tr>
                 </table>
             </div>
+            <div class="col-xs-1"></div>
             <div class="col-xs-3">
                 <div class="pull-right">
                 @if($result->student->image == null)
@@ -437,7 +437,7 @@
         </div>
         <div class="col-xs-6">
             <div style="margin-top: 70px;"></div>
-            <h4 class="pull-right">Signature and date of guardian</h4>
+            <h4 class="pull-right">Signature of guardian (with date)</h4>
         </div>
     </div>
     <center><p>&copy; 2017, Software Developed by <strong>Mohsin Iqbal</strong></p></center>

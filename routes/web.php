@@ -35,6 +35,6 @@ Route::get('/six-to-eight-result', 'SixToEightResultController@index');
 Route::get('/six-to-eight-result/create', 'SixToEightResultController@create');
 Route::get('/six-to-eight-result/student-info-show', 'SixToEightResultController@studentInfoShow');
 Route::post('/six-to-eight-result', 'SixToEightResultController@store');
-
+Route::get('/six-to-eight-result/{id}', 'SixToEightResultController@show');
 Route::get('/six-to-eight-result/{id}/edit', 'SixToEightResultController@edit');
 Route::put('/six-to-eight-result/{id}', 'SixToEightResultController@update');
