@@ -13,7 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- <link href="{{ asset('css/bootstrap-3.3.7.min.css') }}" rel="stylesheet"> -->
-    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome-4.7.0.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dataTables-1.10.15.min.css') }}" rel="stylesheet">
 </head>
 <body>
