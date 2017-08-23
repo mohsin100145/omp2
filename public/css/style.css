@@ -1,0 +1,8 @@
+/*required "*" symbol*/
+.form-group.required .control-label:after {
+    color: #d00;
+    content: "*";
+    position: absolute;
+    margin-left: 2px;
+    font-size: 19px;
+}

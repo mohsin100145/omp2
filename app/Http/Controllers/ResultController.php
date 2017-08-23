@@ -25,6 +25,7 @@ class ResultController extends Controller
                                     'student.year',
                                     'student.group'
                                 ])
+    							->orderBy('id', 'desc')
                                 ->get();
 
         return view('result.index', compact('results'));

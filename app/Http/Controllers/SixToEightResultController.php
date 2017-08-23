@@ -25,6 +25,7 @@ class SixToEightResultController extends Controller
                                     'student.section',
                                     'student.year'
                                 ])
+    							->orderBy('id', 'desc')
                                 ->get();
 
         return view('six_to_eight_result.index', compact('results'));

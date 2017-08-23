@@ -4,7 +4,7 @@
     {!! Form::open(['url' => 'six-to-eight-result', 'method' => 'post', 'class' => 'form-horizontal']) !!}
 @endif
 
-<div class="form-group {{ $errors->has('student_id') ? ' has-error' : '' }}">
+<div class="form-group required {{ $errors->has('student_id') ? ' has-error' : '' }}">
     {!! Form::label('student_id', 'Student ID', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
     	<div class="col-sm-6">
@@ -24,7 +24,7 @@
     </div>
 </div>
 
-<div class="form-group {{ $errors->has('term_id') ? 'has-error' : '' }}">
+<div class="form-group required {{ $errors->has('term_id') ? 'has-error' : '' }}">
     {!! Form::label('term_id', 'Select Term', ['class' => 'control-label col-sm-3']) !!}
     <div class="col-sm-9">
     	<div class="col-sm-12">
@@ -181,7 +181,7 @@
 </div>
 
 <div class="form-group">
-    <div class="col-sm-offset-3 col-sm-9">
+    <div class="col-sm-offset-0 col-sm-12">
         {!! Form::submit('Submit', ['class' => 'btn btn-primary btn-block']) !!}
     </div>
 </div>

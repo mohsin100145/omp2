@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="col-sm-12">
-        <h3>
+        <h3 style="margin-top: 0px;">
             <i class="fa fa-list-ul"></i>
             Results List of <mark>Six</mark> to <mark>Eight</mark>
 

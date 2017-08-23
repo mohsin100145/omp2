@@ -20,6 +20,7 @@ class CreateStudentsTable extends Migration
             $table->integer('level_id')->unsigned();
             $table->integer('section_id')->unsigned();
             $table->integer('year_id')->unsigned();
+            $table->integer('group_id')->unsigned()->nullable();
             $table->string('father_name')->nullable();
             $table->string('mother_name')->nullable();
             $table->string('address')->nullable();
