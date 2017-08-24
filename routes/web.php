@@ -38,3 +38,5 @@ Route::post('/six-to-eight-result', 'SixToEightResultController@store');
 Route::get('/six-to-eight-result/{id}', 'SixToEightResultController@show');
 Route::get('/six-to-eight-result/{id}/edit', 'SixToEightResultController@edit');
 Route::put('/six-to-eight-result/{id}', 'SixToEightResultController@update');
+
+Route::resource('/student', 'StudentController');
