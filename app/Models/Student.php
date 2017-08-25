@@ -14,6 +14,7 @@ class Student extends Model
         'level_id',
         'section_id',
         'year_id',
+        'group_id',
         'father_name',
         'mother_name',
         'address',

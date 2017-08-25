@@ -6,7 +6,7 @@
 <div class="required form-group {{ $errors->has('name') ? 'has-error' : ''}}">
     {!! Form::label('name', 'Name', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
-        {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Enter Student Name', 'autocomplete' => 'off', 'required', 'autofocus']) !!}
+        {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Enter Student Name', 'autocomplete' => 'off', 'autofocus']) !!}
         <span class="help-block text-danger">
 			    {{ $errors->first('name') }}
 		    </span>
@@ -15,7 +15,7 @@
 <div class="required form-group {{ $errors->has('roll_no') ? 'has-error' : ''}}">
     {!! Form::label('roll_no', 'Roll No.', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
-        {!! Form::number('roll_no', null, ['class' => 'form-control', 'placeholder' => 'Enter Roll No.', 'autocomplete' => 'off', 'required']) !!}
+        {!! Form::number('roll_no', null, ['class' => 'form-control', 'placeholder' => 'Enter Roll No.', 'autocomplete' => 'off']) !!}
         <span class=" help-block text-danger">
 			    {{ $errors->first('roll_no') }}
 		    </span>
@@ -24,7 +24,7 @@
 <div class="required form-group {{ $errors->has('level_id') ? 'has-error' : ''}}">
     {!! Form::label('level_id', 'Select Class', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
-        {!! Form::select('level_id', $classList, null, ['class' => 'form-control', 'placeholder' => 'Select Class', 'autocomplete' => 'off', 'required']) !!}
+        {!! Form::select('level_id', $classList, null, ['class' => 'form-control', 'placeholder' => 'Select Class', 'autocomplete' => 'off']) !!}
         <span class="help-block text-danger">
 			    {{ $errors->first('level_id') }}
 		    </span>
@@ -33,19 +33,28 @@
 <div class="required form-group {{ $errors->has('section_id') ? 'has-error' : ''}}">
     {!! Form::label('section_id', 'Select Section', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
-        {!! Form::select('section_id', $sectionList, null, ['class' => 'form-control', 'placeholder' => 'Select Section', 'autocomplete' => 'off', 'required']) !!}
+        {!! Form::select('section_id', $sectionList, null, ['class' => 'form-control', 'placeholder' => 'Select Section', 'autocomplete' => 'off']) !!}
         <span class="help-block text-danger">
 			    {{ $errors->first('section_id') }}
 		    </span>
     </div>
 </div>
 <div class="required form-group {{ $errors->has('year_id') ? 'has-error' : ''}}">
-    {!! Form::label('year_id', 'Select year', ['class' => 'col-sm-3 control-label']) !!}
+    {!! Form::label('year_id', 'Select Year', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
-        {!! Form::select('year_id', $yearList, null, ['class' => 'form-control', 'placeholder' => 'Select Year', 'autocomplete' => 'off', 'required']) !!}
+        {!! Form::select('year_id', $yearList, null, ['class' => 'form-control', 'placeholder' => 'Select Year', 'autocomplete' => 'off']) !!}
         <span class="help-block text-danger">
 			    {{ $errors->first('year_id') }}
 		    </span>
+    </div>
+</div>
+<div class="form-group {{ $errors->has('group_id') ? 'has-error' : ''}}">
+    {!! Form::label('group_id', 'Select Group', ['class' => 'col-sm-3 control-label']) !!}
+    <div class="col-sm-9">
+        {!! Form::select('group_id', $groupList, null, ['class' => 'form-control', 'placeholder' => 'Select Group (only for class IX & X)', 'autocomplete' => 'off']) !!}
+        <span class="help-block text-danger">
+                {{ $errors->first('group_id') }}
+            </span>
     </div>
 </div>
 <div class="form-group {{ $errors->has('father_name') ? 'has-error' : ''}}">

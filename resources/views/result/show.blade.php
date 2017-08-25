@@ -99,10 +99,10 @@
             <div class="col-xs-3">
                 <div class="pull-right">
                 @if($result->student->image == null)
-                    {{ Html::image('/images/student_avatar.jpg', 'No Picture', ['width' => 150, 'height' => 150]) }}
+                    {{ Html::image('/images/student_avatar.jpg', 'No Picture', ['width' => 130, 'height' => 150]) }}
                     <div>(Picture not uploaded)</div>
                 @else
-                    {{ Html::image('/uploads/' . $result->student->image, 'No Picture', ['width' => 150, 'height' => 150]) }}
+                    {{ Html::image('/uploads/' . $result->student->image, 'No Picture', ['width' => 130, 'height' => 150]) }}
                 @endif
                 </div>
             </div>
