@@ -44,15 +44,15 @@
                 <div class="item active">
 
                     <!-- Slide Background -->
-                    <img src="{{ asset('images/slide1.jpeg') }}" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <img src="{{ asset('images/slide1.jpg') }}" alt="Bootstrap Touch Slider"  class="slide-image"/>
                     <div class="bs-slider-overlay"></div>
 
                     <div class="container">
                         <div class="row">
                             <!-- Slide Text Layer -->
                             <div class="slide-text slide_style_left">
-                                <h1 data-animation="animated zoomInRight">Bootstrap Carousel</h1>
-                                <p data-animation="animated fadeInLeft">Bootstrap carousel now touch enable slide.</p>
+                                <h1 data-animation="animated zoomInRight">Bara Moheshkhali Girls' High School</h1>
+                                <p data-animation="animated fadeInLeft">Bara Moheshkhali, Moheshkhali, Cox's Bazar.</p>
                                 @if (Route::has('login'))
 				                    @if (Auth::check())
 				                        <a href="{!! url('/home') !!}" class="btn btn-default" data-animation="animated fadeInLeft">Home</a>
@@ -72,12 +72,12 @@
                 <div class="item">
 
                     <!-- Slide Background -->
-                    <img src="{{ asset('images/slide2.jpeg') }}" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <img src="{{ asset('images/slide2.jpg') }}" alt="Bootstrap Touch Slider"  class="slide-image"/>
                     <div class="bs-slider-overlay"></div>
                     <!-- Slide Text Layer -->
                     <div class="slide-text slide_style_center">
-                        <h1 data-animation="animated flipInX">Bootstrap touch slider</h1>
-                        <p data-animation="animated lightSpeedIn">Make Bootstrap Better together.</p>
+                        <h1 data-animation="animated flipInX">Students of BMGHS</h1>
+                        <p data-animation="animated lightSpeedIn">Students of BMGHS.</p>
                         @if (Route::has('login'))
 		                    @if (Auth::check())
 		                        <a href="{!! url('/home') !!}" class="btn btn-default" data-animation="animated fadeInUp">home</a>
@@ -95,12 +95,12 @@
                 <div class="item">
 
                     <!-- Slide Background -->
-                    <img src="{{ asset('images/slide3.jpeg') }}" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <img src="{{ asset('images/slide3.jpg') }}" alt="Bootstrap Touch Slider"  class="slide-image"/>
                     <div class="bs-slider-overlay"></div>
                     <!-- Slide Text Layer -->
                     <div class="slide-text slide_style_right">
-                        <h1 data-animation="animated zoomInLeft">Beautiful Animations</h1>
-                        <p data-animation="animated fadeInRight">Lots of css3 Animations to make slide beautiful .</p>
+                        <h1 data-animation="animated zoomInLeft">BMGHS observing National Mourning Day</h1>
+                        <p data-animation="animated fadeInRight">BMGHS observing National Mourning Day .</p>
                         @if (Route::has('login'))
 		                    @if (Auth::check())
 		                        <a href="{!! url('/home') !!}" class="btn btn-default" data-animation="animated fadeInLeft">home</a>

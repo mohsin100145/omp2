@@ -17,6 +17,12 @@
     <link href="{{ asset('css/dataTables-1.10.15.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     @yield('style')
+    <style type="text/css">
+       
+        /*ul li:hover ul {
+    display: block;
+}*/
+    </style>
 </head>
 <body>
     <div id="app">
@@ -34,8 +40,10 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        RPS
                     </a>
+                        <!-- {{ config('app.name', 'Result') }} -->
+                    <!-- </a> -->
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -49,19 +57,31 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <!-- <li><a href="{{ route('register') }}">Register</a></li> -->
                         @else
-                            <li {{ (Request::is('result') ? 'class=active' : '') }}><a href="{{ url('/result') }}">Result For IX-X</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu<span class="caret"></span>
+                            <li {{ (Request::is('six-to-eight-result/create') ? 'class=active' : '') }}><a href="{{ url('/six-to-eight-result/create') }}">VI-VIII Result Create</a></li>
+                            <li {{ (Request::is('six-to-eight-result') ? 'class=active' : '') }}><a href="{{ url('/six-to-eight-result') }}">VI-VIII Result</a></li>
+                            <li {{ (Request::is('result') ? 'class=active' : '') }} {{ (Request::is('six-to-eight-result/create') ? 'class=active' : '') }} class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">VI-VIII Result Print <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Aogin VIII</a></li>
-                                    <li {{ (Request::is('result') ? 'class=active' : '') }}><a href="#">Aegister</a></li>
+                                    <li><a href="#">VI-VIII Class Wise Result</a></li>
+                                    <li {{ (Request::is('result') ? 'class=active' : '') }}><a href="#">VI-VIII Class Wise Result with Fail</a></li>
                                 </ul>
                             </li>
-                            <li {{ (Request::is('result/create') ? 'class=active' : '') }}><a href="{{ url('/result/create') }}">Result Create</a></li>
+                            <li {{ (Request::is('result/create') ? 'class=active' : '') }}><a href="{{ url('/result/create') }}">IX-X Result Create</a></li>
+                            <li {{ (Request::is('result') ? 'class=active' : '') }}><a href="{{ url('/result') }}">IX-X Result</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">IX-X Result Print <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">IX-X Class Wise Result</a></li>
+                                    <li {{ (Request::is('result') ? 'class=active' : '') }}><a href="#">IX-X Class Wise Result with Fail</a></li>
+                                </ul>
+                            </li>
+                            <li {{ (Request::is('import-export') ? 'class=active' : '') }}><a href="{{ url('/import-export') }}">Excel</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>

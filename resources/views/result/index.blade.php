@@ -60,7 +60,7 @@
                             {{--<td><strong>{{ $result->result }}</strong></td>--}}
                             <td><strong>{{ $result->marks_total_with_optional }}</strong></td>
                             <td>{!! Html::link("result/$result->id",' View', ['class' => 'fa fa-eye btn btn-success btn-xs']) !!}</td>
-                            <td>{!! Html::link("result/$result->id/edit",' Edit', ['class' => 'fa fa-eye btn btn-primary btn-xs']) !!}</td>
+                            <td>{!! Html::link("result/$result->id/edit",' Edit', ['class' => 'fa fa-edit btn btn-primary btn-xs']) !!}</td>
                             <td><a class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal-{{ $result->id }}">
                                     <i class="fa fa-trash"></i> Delete
                                 </a>
