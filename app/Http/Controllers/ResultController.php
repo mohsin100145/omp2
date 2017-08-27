@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Term;
 use App\Models\Result;
 use App\Models\Student;
+use App\Models\Level;
+use App\Models\Section;
+use App\Models\Year;
 use Validator;
 use Illuminate\Support\Facades\Input;
 
@@ -1801,6 +1804,36 @@ class ResultController extends Controller
     	$result->save();
 
     	flash()->success('Successfully Updated');
-    	return redirect('result/create');
+    	return redirect('result');
+    }
+
+    public function classWiseResultForm()
+    {
+        $classList = Level::whereIn('id', [4, 5])->pluck('name', 'id');
+        $yearList = Year::pluck('year', 'id');
+        $termList = Term::pluck('name', 'id');
+
+        return view('result.report.form', compact('classList', 'termList', 'yearList'));
+    }
+
+    public function classWiseResultShow(Request $request)
+    {
+        $results = Result::with(['student.section', 'term'])
+            ->where('level_id', $request->level_id)
+            ->where('year_id', $request->year_id)
+            ->where('term_id', $request->term_id)
+            ->orderBy('gpa', 'desc')
+            ->orderBy('fail_subjects', 'asc')
+            ->get();
+        
+        if(!count($results)) {
+            flash()->error('There is no result');
+
+            return redirect()->back();
+        }
+        $level = Level::find($request->level_id);
+        $year = Year::find($request->year_id);
+
+        return view('result.report.show', compact('results', 'level', 'year'));
     }
 }

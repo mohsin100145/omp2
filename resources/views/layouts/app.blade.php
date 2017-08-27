@@ -8,7 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- <title>{{ config('app.name', 'Laravel') }}</title> -->
+    <title>Result Processing System</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -17,12 +18,6 @@
     <link href="{{ asset('css/dataTables-1.10.15.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     @yield('style')
-    <style type="text/css">
-       
-        /*ul li:hover ul {
-    display: block;
-}*/
-    </style>
 </head>
 <body>
     <div id="app">

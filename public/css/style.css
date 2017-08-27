@@ -11,3 +11,10 @@
 ul li:hover ul {
     display: block;
 }
+
+/*Need to remove href values when printing in Chrome*/
+@media print {
+    a[href]:after {
+        content: none !important;
+    }
+}
