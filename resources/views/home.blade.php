@@ -3,98 +3,16 @@
 @section('content')
 <div class="container">
 <style type="text/css">
-    /*@import url(http://fonts.googleapis.com/css?family=Anaheim);*/
-
-    *{
-      margin: 0;
-      padding: 0;
-      outline: none;
-      border: none;
-        box-sizing: border-box;
-    }
-    *:before,
-    *:after{
-        box-sizing: border-box;
-    }
-    html,
-    body{
-      min-height: 100%;
-    }
-    body{
-      background-image: radial-gradient(mintcream 0%, lightgray 100%);
-    }
-    h1{
-      display: table;
-      margin: 5% auto 0;
-      text-transform: uppercase;
-      font-family: 'Anaheim', sans-serif;
-      font-size: 4em;
-      font-weight: 400;
-      text-shadow: 0 1px white, 0 2px black;
-    }
-    .container1{
-      margin: 4% auto;
-      width: 210px;
-      height: 140px;
-      position: relative;
-      perspective: 1000px;
-    }
-    #carousel{
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      transform-style: preserve-3d;
-      animation: rotation 20s infinite linear;
-    }
-    #carousel:hover{
-      animation-play-state: paused;
-    }
-    #carousel figure{
-      display: block;
-      position: absolute;
-      width: 90%;
-      height: 50%px;
-      left: 10px;
-      top: 10px;
-      background: black;
-      overflow: hidden;
-      border: solid 5px black;
-    }
-    #carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
-    #carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
-    #carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
-    #carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
-    #carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
-    #carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
-    #carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
-    #carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
-    #carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
-
-    img{
-      -webkit-filter: grayscale(0);
-      cursor: pointer;
-      transition: all .5s ease;
-    }
-    img:hover{
-      -webkit-filter: grayscale(0);
-      transform: scale(1.2,1.2);
-    }
-
-    @keyframes rotation{
-      from{
-        transform: rotateY(0deg);
-      }
-      to{
-        transform: rotateY(360deg);
-      }
-    }
+    
   </style>
     <div class="row">
         <div class="col-md-12 col-md-offset-0">
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
                 <div class="panel-heading">Dashboard</div>
 
-                <div class="panel-body">
+                <!-- <div class="panel-body" style="background-color: #ecf0f5"> -->
+                <!-- <div class="panel-body" style="background-color: rebeccapurple"> -->
+                <div class="panel-body" style="background-color: #c3bdca">
                     <div class="container1">
                         <div id="carousel">
                             <figure><img src="{{ asset('images/rotate_img1.jpg') }}" alt=""></figure>
@@ -110,63 +28,354 @@
                     </div>
 
                     <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="fa fa-phone"></i></span>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-phone"></i></span>
 
-            <div class="info-box-content">
-              <span class="info-box-text">Messages</span>
-              <span class="info-box-number">1,410</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="fa fa-phone-square"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Messages</span>
+                                    <span class="info-box-number">1,410</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-phone-square"></i></span>
 
-            <div class="info-box-content">
-              <span class="info-box-text">Bookmarks</span>
-              <span class="info-box-number">410</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="fa fa-user-o"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Bookmarks</span>
+                                    <span class="info-box-number">410</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-user-o"></i></span>
 
-            <div class="info-box-content">
-              <span class="info-box-text">Uploads</span>
-              <span class="info-box-number">13,648</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="fa fa-volume-control-phone"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Uploads</span>
+                                    <span class="info-box-number">13,648</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-volume-control-phone"></i></span>
 
-            <div class="info-box-content">
-              <span class="info-box-text">Likes</span>
-              <span class="info-box-number">93,139</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Likes</span>
+                                    <span class="info-box-number">93,139</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
 
-      <!-- =========================================================== -->
+                    <!-- =========================================================== -->
+
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-green">
+                            <span class="info-box-icon"><i class="fa fa-heart-o"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Bookmarks</span>
+                              <span class="info-box-number">41,410</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-green">
+                            <span class="info-box-icon"><i class="fa fa-hand-o-right"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Likes</span>
+                              <span class="info-box-number">41,410</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-green">
+                            <span class="info-box-icon"><i class="fa fa-headphones"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Events</span>
+                              <span class="info-box-number">41,410</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-green">
+                            <span class="info-box-icon"><i class="fa fa-tty"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Comments</span>
+                              <span class="info-box-number">41,410</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- =========================================================== -->
+
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box">
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-envelope-o"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Messages</span>
+                              <span class="info-box-number">1,410</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box">
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-flag-o"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Bookmarks</span>
+                              <span class="info-box-number">410</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box">
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Uploads</span>
+                              <span class="info-box-number">13,648</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box">
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-star-o"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Likes</span>
+                              <span class="info-box-number">93,139</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- =========================================================== -->
+
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-red">
+                            <span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Bookmarks</span>
+                              <span class="info-box-number">41,410</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-red">
+                            <span class="info-box-icon"><i class="fa fa-thumbs-o-up"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Likes</span>
+                              <span class="info-box-number">41,410</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-red">
+                            <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Events</span>
+                              <span class="info-box-number">41,410</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-red">
+                            <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text">Comments</span>
+                              <span class="info-box-number">41,410</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- =========================================================== -->
                     
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <div class="col-lg-3 col-xs-6">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua">
+                            <div class="inner">
+                              <h3>150</h3>
+
+                              <p>New Orders</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-shopping-cart"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua">
+                            <div class="inner">
+                              <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                              <p>Bounce Rate</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-bell-o"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua" style="background-color: #008080 !important;">
+                            <div class="inner">
+                              <h3>44</h3>
+
+                              <p>User Registrations</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-times"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua">
+                            <div class="inner">
+                              <h3>65</h3>
+
+                              <p>Unique Visitors</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-users"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- =========================================================== -->
+
+                    <!-- <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="circle-tile ">
+                            <a href="#"><div class="circle-tile-heading green"><i class="fa fa-share fa-fw fa-3x"></i></div></a>
+                            <div class="circle-tile-content green">
+                                <div class="circle-tile-description text-faded"> <h3 style="margin-top: 0; margin-bottom: 0;"> New </h3> </div>
+                                <div class="circle-tile-number text-faded" id="new_total">50</div>
+                                
+                            </div>
+                          </div>
+                        </div>
+                     
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="circle-tile ">
+                            <a href="index.php/ticket_dashboard/show_pending"><div class="circle-tile-heading red"><i class="fa fa-clock-o fa-fw fa-3x"></i></div></a>
+                            <div class="circle-tile-content red">
+                                  <div class="circle-tile-description text-faded"> <h3 style="margin-top: 5px; margin-bottom: 5px;"> Pending </h3> </div>
+                                  <div class="circle-tile-number text-faded" id="pending_total">70</div>
+                                  
+                              </div>
+                            </div>
+                        </div> 
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="circle-tile ">
+                            <a href="index.php/ticket_dashboard/show_answered"><div class="circle-tile-heading dark-blue"><i class="fa fa-reply fa-fw fa-3x"></i></div></a>
+                                <div class="circle-tile-content dark-blue">
+                                  <div class="circle-tile-description text-faded"> <h3 style="margin-top: 0; margin-bottom: 0;"> Answered </h3></div>
+                                  <div class="circle-tile-number text-faded" id="answered_total">100</div>
+                                  
+                              </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="circle-tile ">
+                            <a href="index.php/ticket_dashboard/show_new"><div class="circle-tile-heading green"><i class="fa fa-share fa-fw fa-3x"></i></div></a>
+                            <div class="circle-tile-content green">
+                                <div class="circle-tile-description text-faded"> <h3 style="margin-top: 0; margin-bottom: 0;"> New </h3> </div>
+                                <div class="circle-tile-number text-faded" id="new_total">50</div>
+                                
+                            </div>
+                          </div>
+                        </div> -->
+                                <!-- /.col -->
+                      <!-- </div> -->
+                                 <!-- /.row -->
+
+                      <!-- =========================================================== -->
+
                 </div>
             </div>
         </div>
@@ -175,4 +384,10 @@
 <!-- <div class="">
     <iframe src="{{ asset('/') }}" height="382" width="100%"></iframe>
 </div> -->
+@endsection
+
+@section('style')
+<link href="{{ asset('css/rotate_img.css') }}" rel="stylesheet">
+<link href="{{ asset('css/AdminLTE.min.css') }}" rel="stylesheet">
+<link href="{{ asset('css/style_dash.css') }}" rel="stylesheet">
 @endsection
