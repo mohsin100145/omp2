@@ -58,7 +58,7 @@
 				                        <a href="{!! url('/home') !!}" class="btn btn-default" data-animation="animated fadeInLeft">Home</a>
                                 		<a href="{!! url('/result') !!}" class="btn btn-primary" data-animation="animated fadeInRight">result</a>
 				                    @else
-				                        <a href="{!! url('/login') !!}" class="btn btn-default" data-animation="animated fadeInLeft">Click Me To Log In</a>
+				                        <a href="{!! url('/login') !!}" class="btn btn-default" data-animation="animated fadeInLeft">Click Here To Log In</a>
                                 		<a href="#" class="btn btn-primary" data-animation="animated fadeInRight">registration</a>
 				                    @endif
 				            	@endif
@@ -83,7 +83,7 @@
 		                        <a href="{!! url('/home') !!}" class="btn btn-default" data-animation="animated fadeInUp">home</a>
                         		<a href="{!! url('/result') !!}" class="btn btn-primary" data-animation="animated fadeInDown">result</a>
 		                    @else
-		                        <a href="{!! url('/login') !!}" class="btn btn-default" data-animation="animated fadeInUp">click me to log in</a>
+		                        <a href="{!! url('/login') !!}" class="btn btn-default" data-animation="animated fadeInUp">click here to log in</a>
                         		<a href="#" class="btn btn-primary" data-animation="animated fadeInDown">registration</a>
 		                    @endif
 		            	@endif                      
@@ -106,7 +106,7 @@
 		                        <a href="{!! url('/home') !!}" class="btn btn-default" data-animation="animated fadeInLeft">home</a>
                         		<a href="{!! url('/result') !!}" class="btn btn-primary" data-animation="animated fadeInRight">result</a>
 		                    @else
-		                        <a href="{!! url('/login') !!}" class="btn btn-default" data-animation="animated fadeInLeft">click me to log in</a>
+		                        <a href="{!! url('/login') !!}" class="btn btn-default" data-animation="animated fadeInLeft">click here to log in</a>
                         		<a href="#" class="btn btn-primary" data-animation="animated fadeInRight">registration</a>
 		                    @endif
 		            	@endif
