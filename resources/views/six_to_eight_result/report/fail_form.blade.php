@@ -5,11 +5,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-primary">
-                <div class="panel-heading"><center>Class <code>IX-X</code> Result Print Form With Fail Subjects</center></div>
+                <div class="panel-heading"><center>Class <code>VI-VIII</code> Result Print Form With Fail Subjects</center></div>
 
                 <div class="panel-body">
                     <div class="col-md-12">
-                    {!! Form::open(['url' => 'result/class-wise-fail-result-show', 'method' => 'post', 'class' => 'form-horizontal', 'role' => 'form' ]) !!}
+                    {!! Form::open(['url' => 'six-to-eight-result/class-wise-fail-result-show', 'method' => 'post', 'class' => 'form-horizontal', 'role' => 'form' ]) !!}
                     <div class="required form-group" {{ $errors->has('level_id') ? 'has-error' : '' }}>
                         {!! Form::label('level_id', 'Select Class', ['class' => 'control-label col-sm-3']) !!}
                         <div class="col-sm-9">

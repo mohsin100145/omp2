@@ -20,7 +20,7 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <table class="table table-bordered table-striped table-hover">
+        <table id="myTable" class="table table-bordered table-striped table-hover">
             <thead>
             <tr>
                 <th style="vertical-align: middle; text-align: center;">Present Roll</th>
@@ -55,5 +55,9 @@
 @endsection
 
 @section('script')
-    {!! Html::script('js/data_table_search.js') !!}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#myTable').DataTable();
+    });
+</script>
 @endsection

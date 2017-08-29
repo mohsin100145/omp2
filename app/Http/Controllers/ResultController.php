@@ -1829,11 +1829,42 @@ class ResultController extends Controller
         if(!count($results)) {
             flash()->error('There is no result');
 
-            return redirect()->back();
+            return redirect()->back()->withInput();
         }
         $level = Level::find($request->level_id);
         $year = Year::find($request->year_id);
 
         return view('result.report.show', compact('results', 'level', 'year'));
+    }
+
+    public function classWiseFailResultForm()
+    {
+        $classList = Level::whereIn('id', [4, 5])->pluck('name', 'id');
+        $yearList = Year::pluck('year', 'id');
+        $termList = Term::pluck('name', 'id');
+        $failSubjects = ['0' => '0. Zero Subject', '1' => '1. One Subject', '2' => '2. Two Subjects', '3' => '3. Three Subjects', '4' => '4. Four Subjects', '5' => '5. Five Subjects', '6' => '6. Six Subjects', '7' => '7. Seven Subjects', '8' => '8. Eight Subjects'];
+
+        return view('result.report.fail_form', compact('classList', 'termList', 'yearList', 'failSubjects'));
+    }
+
+    public function classWiseFailResultShow(Request $request)
+    {
+        $results = Result::with(['student.section', 'term'])
+            ->where('level_id', $request->level_id)
+            ->where('year_id', $request->year_id)
+            ->where('term_id', $request->term_id)
+            ->where('fail_subjects', $request->fail_subjects)
+            ->orderBy('gpa', 'desc')
+            ->get();
+        
+        if(!count($results)) {
+            flash()->error('There is no result');
+
+            return redirect()->back()->withInput();
+        }
+        $level = Level::find($request->level_id);
+        $year = Year::find($request->year_id);
+
+        return view('result.report.fail_show', compact('results', 'level', 'year'));
     }
 }

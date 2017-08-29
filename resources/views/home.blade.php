@@ -30,11 +30,11 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="info-box">
-                                <span class="info-box-icon bg-aqua"><i class="fa fa-phone"></i></span>
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-user"></i></span>
 
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Messages</span>
-                                    <span class="info-box-number">1,410</span>
+                                    <span class="info-box-text" style="font-size: 18px;">VI Students</span>
+                                    <span class="info-box-number" style="font-size: 33px;">{{ $sixStudents }}</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -43,11 +43,11 @@
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="info-box">
-                                <span class="info-box-icon bg-aqua"><i class="fa fa-phone-square"></i></span>
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-user-circle"></i></span>
 
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Bookmarks</span>
-                                    <span class="info-box-number">410</span>
+                                    <span class="info-box-text" style="font-size: 18px;">VII Students</span>
+                                    <span class="info-box-number" style="font-size: 33px;">{{ $sevenStudents }}</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -59,8 +59,8 @@
                                 <span class="info-box-icon bg-aqua"><i class="fa fa-user-o"></i></span>
 
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Uploads</span>
-                                    <span class="info-box-number">13,648</span>
+                                    <span class="info-box-text" style="font-size: 18px;">VIII Students</span>
+                                    <span class="info-box-number" style="font-size: 33px;">{{ $eightStudents }}</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -69,11 +69,11 @@
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="info-box">
-                                <span class="info-box-icon bg-aqua"><i class="fa fa-volume-control-phone"></i></span>
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-user-circle-o"></i></span>
 
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Likes</span>
-                                    <span class="info-box-number">93,139</span>
+                                    <span class="info-box-text" style="font-size: 18px;">IX Students</span>
+                                    <span class="info-box-number" style="font-size: 33px;">{{ $nineStudents }}</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -88,11 +88,11 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <div class="info-box bg-green">
-                            <span class="info-box-icon"><i class="fa fa-heart-o"></i></span>
+                            <span class="info-box-icon"><i class="fa fa-user-plus"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Bookmarks</span>
-                              <span class="info-box-number">41,410</span>
+                              <span class="info-box-text" style="font-size: 18px;">X Students</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $tenStudents }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -101,11 +101,11 @@
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <div class="info-box bg-green">
-                            <span class="info-box-icon"><i class="fa fa-hand-o-right"></i></span>
+                            <span class="info-box-icon"><i class="fa fa-user-secret"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Likes</span>
-                              <span class="info-box-number">41,410</span>
+                              <span class="info-box-text" style="font-size: 16px;">Total Students</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $totalStudents }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -114,11 +114,11 @@
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <div class="info-box bg-green">
-                            <span class="info-box-icon"><i class="fa fa-headphones"></i></span>
+                            <span class="info-box-icon"><i class="fa fa-area-chart"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Events</span>
-                              <span class="info-box-number">41,410</span>
+                              <span class="info-box-text" style="font-size: 18px;">VI Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $sixResults }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -127,11 +127,11 @@
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <div class="info-box bg-green">
-                            <span class="info-box-icon"><i class="fa fa-tty"></i></span>
+                            <span class="info-box-icon"><i class="fa fa-bar-chart"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Comments</span>
-                              <span class="info-box-number">41,410</span>
+                              <span class="info-box-text" style="font-size: 18px;">VII Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $sevenResults }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -146,11 +146,11 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <div class="info-box">
-                            <span class="info-box-icon bg-yellow"><i class="fa fa-envelope-o"></i></span>
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-bar-chart"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Messages</span>
-                              <span class="info-box-number">1,410</span>
+                              <span class="info-box-text" style="font-size: 18px;">VIII Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $eightResults }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -159,11 +159,11 @@
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <div class="info-box">
-                            <span class="info-box-icon bg-yellow"><i class="fa fa-flag-o"></i></span>
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-file-text"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Bookmarks</span>
-                              <span class="info-box-number">410</span>
+                              <span class="info-box-text" style="font-size: 18px;">IX Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $nineResults }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -175,8 +175,8 @@
                             <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Uploads</span>
-                              <span class="info-box-number">13,648</span>
+                              <span class="info-box-text" style="font-size: 18px;">X Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $tenResults }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -185,11 +185,11 @@
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <div class="info-box">
-                            <span class="info-box-icon bg-yellow"><i class="fa fa-star-o"></i></span>
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-clipboard"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Likes</span>
-                              <span class="info-box-number">93,139</span>
+                              <span class="info-box-text" style="font-size: 18px;">Total Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $totalResults }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -204,11 +204,11 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <div class="info-box bg-red">
-                            <span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
+                            <span class="info-box-icon"><i class="fa fa-file-o"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Bookmarks</span>
-                              <span class="info-box-number">41,410</span>
+                              <span class="info-box-text" style="font-size: 18px;">Classes</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $levels }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -217,11 +217,11 @@
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <div class="info-box bg-red">
-                            <span class="info-box-icon"><i class="fa fa-thumbs-o-up"></i></span>
+                            <span class="info-box-icon"><i class="fa fa-outdent"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Likes</span>
-                              <span class="info-box-number">41,410</span>
+                              <span class="info-box-text" style="font-size: 18px;">Sections</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $sections }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -233,8 +233,8 @@
                             <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Events</span>
-                              <span class="info-box-number">41,410</span>
+                              <span class="info-box-text" style="font-size: 18px;">Groups</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $groups }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -243,11 +243,11 @@
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <div class="info-box bg-red">
-                            <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+                            <span class="info-box-icon"><i class="fa fa-file"></i></span>
 
                             <div class="info-box-content">
-                              <span class="info-box-text">Comments</span>
-                              <span class="info-box-number">41,410</span>
+                              <span class="info-box-text" style="font-size: 18px;">Terms</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $terms }}</span>
                             </div>
                             <!-- /.info-box-content -->
                           </div>
@@ -261,58 +261,59 @@
                     
                     <!-- Small boxes (Stat box) -->
                     <div class="row">
-                        <div class="col-lg-3 col-xs-6">
-                          <!-- small box -->
-                          <div class="small-box bg-aqua">
-                            <div class="inner">
-                              <h3>150</h3>
-
-                              <p>New Orders</p>
-                            </div>
-                            <div class="icon">
-                              <i class="fa fa-shopping-cart"></i>
-                            </div>
-                            
-                          </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-3 col-xs-6">
-                          <!-- small box -->
-                          <div class="small-box bg-aqua">
-                            <div class="inner">
-                              <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                              <p>Bounce Rate</p>
-                            </div>
-                            <div class="icon">
-                              <i class="fa fa-bell-o"></i>
-                            </div>
-                            
-                          </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-3 col-xs-6">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
                           <!-- small box -->
                           <div class="small-box bg-aqua" style="background-color: #008080 !important;">
                             <div class="inner">
-                              <h3>44</h3>
+                              <h3>{{ date('d/m/Y') }}</h3>
 
-                              <p>User Registrations</p>
+                              <p>Something something</p>
                             </div>
                             <div class="icon">
-                              <i class="fa fa-times"></i>
+                              <i class="fa fa-hand-o-right"></i>
                             </div>
                             
                           </div>
                         </div>
                         <!-- ./col -->
-                        <div class="col-lg-3 col-xs-6">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
                           <!-- small box -->
-                          <div class="small-box bg-aqua">
+                          <div class="small-box bg-aqua" style="background-color: #008080 !important;">
                             <div class="inner">
-                              <h3>65</h3>
+                              <!-- <h3>00<sup style="font-size: 20px">%</sup></h3> -->
+                              <h3>{{ date('Y') }}</h3>
 
-                              <p>Unique Visitors</p>
+                              <p>Nothing nothing</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-address-card"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua" style="background-color: #008080 !important;">
+                            <div class="inner">
+                              <h3>{{ date('Y') }}</h3>
+
+                              <p>Something something</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-address-card-o"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua" style="background-color: #008080 !important;">
+                            <div class="inner">
+                              <h3>{{ date('Y') }}</h3>
+
+                              <p>Nothing nothing</p>
                             </div>
                             <div class="icon">
                               <i class="fa fa-users"></i>

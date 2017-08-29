@@ -56,24 +56,24 @@
                         @else
                             <li {{ (Request::is('six-to-eight-result/create') ? 'class=active' : '') }}><a href="{{ url('/six-to-eight-result/create') }}">VI-VIII Result Create</a></li>
                             <li {{ (Request::is('six-to-eight-result') ? 'class=active' : '') }}><a href="{{ url('/six-to-eight-result') }}">VI-VIII Result</a></li>
-                            <li {{ (Request::is('result') ? 'class=active' : '') }} {{ (Request::is('six-to-eight-result/create') ? 'class=active' : '') }} class="dropdown">
+                            <li {{ (Request::is('six-to-eight-result/class-wise-result-form') ? 'class=active' : '') }} {{ (Request::is('six-to-eight-result/class-wise-fail-result-form') ? 'class=active' : '') }} {{ (Request::is('six-to-eight-result/class-wise-result-show') ? 'class=active' : '') }} {{ (Request::is('six-to-eight-result/class-wise-fail-result-show') ? 'class=active' : '') }} class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">VI-VIII Result Print <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">VI-VIII Class Wise Result</a></li>
-                                    <li {{ (Request::is('result') ? 'class=active' : '') }}><a href="#">VI-VIII Class Wise Result with Fail</a></li>
+                                    <li {{ (Request::is('six-to-eight-result/class-wise-result-form') ? 'class=active' : '') }}><a href="{{ url('/six-to-eight-result/class-wise-result-form') }}">VI-VIII Class Wise Result</a></li>
+                                    <li {{ (Request::is('six-to-eight-result/class-wise-fail-result-form') ? 'class=active' : '') }}><a href="{{ url('/six-to-eight-result/class-wise-fail-result-form') }}">VI-VIII Class Wise Result with Fail</a></li>
                                 </ul>
                             </li>
                             <li {{ (Request::is('result/create') ? 'class=active' : '') }}><a href="{{ url('/result/create') }}">IX-X Result Create</a></li>
                             <li {{ (Request::is('result') ? 'class=active' : '') }}><a href="{{ url('/result') }}">IX-X Result</a></li>
-                            <li class="dropdown">
+                            <li {{ (Request::is('result/class-wise-result-form') ? 'class=active' : '') }} {{ (Request::is('result/class-wise-fail-result-form') ? 'class=active' : '') }} {{ (Request::is('result/class-wise-result-show') ? 'class=active' : '') }} {{ (Request::is('result/class-wise-fail-result-show') ? 'class=active' : '') }} class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">IX-X Result Print <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">IX-X Class Wise Result</a></li>
-                                    <li {{ (Request::is('result') ? 'class=active' : '') }}><a href="#">IX-X Class Wise Result with Fail</a></li>
+                                    <li {{ (Request::is('result/class-wise-result-form') ? 'class=active' : '') }}><a href="{{ url('/result/class-wise-result-form') }}">IX-X Class Wise Result</a></li>
+                                    <li {{ (Request::is('result/class-wise-fail-result-form') ? 'class=active' : '') }}><a href="{{ url('/result/class-wise-fail-result-form') }}">IX-X Class Wise Result with Fail</a></li>
                                 </ul>
                             </li>
                             <li {{ (Request::is('import-export') ? 'class=active' : '') }}><a href="{{ url('/import-export') }}">Excel</a></li>

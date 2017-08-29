@@ -5,11 +5,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-primary">
-                <div class="panel-heading"><center>Class <code>IX-X</code> Result Print Form With Fail Subjects</center></div>
+                <div class="panel-heading"><center>Class <code>VI-VIII</code> Result Print Form</center></div>
 
                 <div class="panel-body">
                     <div class="col-md-12">
-                    {!! Form::open(['url' => 'result/class-wise-fail-result-show', 'method' => 'post', 'class' => 'form-horizontal', 'role' => 'form' ]) !!}
+                    {!! Form::open(['url' => 'six-to-eight-result/class-wise-result-show', 'method' => 'post', 'class' => 'form-horizontal', 'role' => 'form' ]) !!}
                     <div class="required form-group" {{ $errors->has('level_id') ? 'has-error' : '' }}>
                         {!! Form::label('level_id', 'Select Class', ['class' => 'control-label col-sm-3']) !!}
                         <div class="col-sm-9">
@@ -34,15 +34,6 @@
                             {!! Form::select('term_id', $termList, null, ['class' => 'form-control', 'placeholder' => 'Select Term', 'required']) !!}
                             <span class="help-block text-danger">
                                 {{ $errors->first('term_id') }}
-                            </span>
-                        </div>
-                    </div>
-                    <div class="required form-group" {{ $errors->has('fail_subjects') ? 'has-error' : '' }}>
-                        {!! Form::label('fail_subjects', 'Select Term', ['class' => 'control-label col-sm-3']) !!}
-                        <div class="col-sm-9">
-                            {!! Form::select('fail_subjects', $failSubjects, null, ['class' => 'form-control', 'placeholder' => 'Select How Many Fail in Subjects', 'required']) !!}
-                            <span class="help-block text-danger">
-                                {{ $errors->first('fail_subjects') }}
                             </span>
                         </div>
                     </div>
