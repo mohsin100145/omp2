@@ -52,6 +52,8 @@
         </table>
     </div>
 </div>
+<center><p>&copy; 2017, Software Developed by <strong>Mohsin Iqbal</strong></p></center>
+<input type="button" class="hidden-print btn btn-primary" value="Print this page" onClick="window.print()">
 @endsection
 
 @section('script')

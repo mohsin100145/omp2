@@ -75,7 +75,7 @@ class StudentController extends Controller
                 } else {
                     flash()->error('uploaded file is not valid');
 
-                    return redirect()->back();
+                    return redirect()->back()->withInput();
                 }
                 $student = Student::create(
                     [
@@ -150,7 +150,7 @@ class StudentController extends Controller
                 } else {
                     flash()->error('uploaded file is not valid');
 
-                    return redirect()->back();
+                    return redirect()->back()->withInput();
                 }
                 File::delete('uploads/' . $student->image);
                 $student->update(

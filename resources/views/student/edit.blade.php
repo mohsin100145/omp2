@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>
-        <i class="fa fa-edit"></i>
-        Edit Student
-    </h1>
-    @include('student._form')
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h3 class="panel-title"><i class="fa fa-edit"></i> Student Update</h3>
+	</div>
+	<div class="panel-body">
+  		@include('student._form')
+	</div>
+</div>
 @endsection

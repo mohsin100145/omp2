@@ -97,8 +97,8 @@
 </div>
 
 <div class="form-group">
-    <div class="col-sm-offset-3 col-sm-9">
-        {!! Form::submit('Submit', ['class' => 'btn btn-primary']) !!}
+    <div class="col-sm-offset-0 col-sm-12">
+        {!! Form::submit('Submit', ['class' => 'btn btn-primary btn-block']) !!}
     </div>
 </div>
 {!! Form::close() !!}

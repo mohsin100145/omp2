@@ -54,6 +54,7 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <!-- <li><a href="{{ route('register') }}">Register</a></li> -->
                         @else
+                            <li {{ (Request::is('student') ? 'class=active' : '') }} {{ (Request::is('student/create') ? 'class=active' : '') }}><a href="{{ url('/student') }}">Student</a></li>
                             <li {{ (Request::is('six-to-eight-result/create') ? 'class=active' : '') }}><a href="{{ url('/six-to-eight-result/create') }}">VI-VIII Result Create</a></li>
                             <li {{ (Request::is('six-to-eight-result') ? 'class=active' : '') }}><a href="{{ url('/six-to-eight-result') }}">VI-VIII Result</a></li>
                             <li {{ (Request::is('six-to-eight-result/class-wise-result-form') ? 'class=active' : '') }} {{ (Request::is('six-to-eight-result/class-wise-fail-result-form') ? 'class=active' : '') }} {{ (Request::is('six-to-eight-result/class-wise-result-show') ? 'class=active' : '') }} {{ (Request::is('six-to-eight-result/class-wise-fail-result-show') ? 'class=active' : '') }} class="dropdown">
