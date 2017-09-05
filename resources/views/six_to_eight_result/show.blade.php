@@ -288,7 +288,7 @@
                 {{ Html::image('/images/signature.jpg', 'alt', ['width' => 200, 'height' => 50]) }}
             </div>
             <div class="pull-left">
-                <h4 class="">Head Master</h4>
+                <h4 class="">Headmaster</h4>
                 <p class="">Bara Moheshkhali Girls' High School</p>
             </div>
             

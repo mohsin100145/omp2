@@ -96,6 +96,13 @@ class ResultController extends Controller
 	    	'fin_mcq' =>  'numeric|min:0|max:30|nullable',
 	    	'bus_wrt' =>  'numeric|min:0|max:70|nullable',
 	    	'bus_mcq' =>  'numeric|min:0|max:30|nullable',
+            'ps_wrt' =>  'numeric|min:0|max:40|nullable',
+            'ps_mcq' =>  'numeric|min:0|max:35|nullable',
+            'ps_prac' =>  'numeric|min:0|max:25|nullable',
+            'ict_mcq' =>  'numeric|min:0|max:25|nullable',
+            'ict_prac' =>  'numeric|min:0|max:25|nullable',
+            'cs_mcq' =>  'numeric|min:0|max:25|nullable',
+            'cs_prac' =>  'numeric|min:0|max:25|nullable',
 	    	'optional_total' =>  'numeric|min:0|max:100|nullable',
 	    	'optional_gp' =>  'numeric|min:0|max:5|nullable',
 	    ];
@@ -322,6 +329,114 @@ class ResultController extends Controller
     	$result->rel_gp = $relGP;
     	$result->rel_grade = $relGrade;
 
+        $result->ps_wrt = $request->ps_wrt;
+        $result->ps_mcq = $request->ps_mcq;
+        $result->ps_prac = $request->ps_prac;
+        $psTotal = $request->ps_wrt + $request->ps_mcq + $request->ps_prac;
+        $result->ps_total = $psTotal;
+        if ($psTotal < 33) {
+            $psGP = 0;
+            $psGrade = 'F';
+        } else if ( ($request->ps_wrt == null) || ($request->ps_mcq == null) || ($request->ps_prac == null) || ($request->ps_wrt < 13) || ($request->ps_mcq < 12) || ($request->ps_prac < 8) ) {
+            $psGP = 0;
+            $psGrade = 'F';
+        } else if (($psTotal >= 80) && ($psTotal <= 100)) {
+            $psGP = 5;
+            $psGrade = 'A+';
+        } else if (($psTotal >= 70) && ($psTotal <= 79)) {
+            $psGP = 4;
+            $psGrade = 'A';
+        } else if (($psTotal >= 60) && ($psTotal <= 69)) {
+            $psGP = 3.5;
+            $psGrade = 'A-';
+        } else if (($psTotal >= 50) && ($psTotal <= 59)) {
+            $psGP = 3;
+            $psGrade = 'B';
+        } else if (($psTotal >= 40) && ($psTotal <= 49)) {
+            $psGP = 2;
+            $psGrade = 'C';
+        } else if (($psTotal >= 33) && ($psTotal <= 39)) {
+            $psGP = 1;
+            $psGrade = 'D';
+        } else {
+            $psGP = 0;
+            $psGrade = 'F';
+        }
+        $result->ps_gp = $psGP;
+        $result->ps_grade = $psGrade;
+
+        $result->ict_mcq = $request->ict_mcq;
+        $result->ict_prac = $request->ict_prac;
+        $ictTotal = $request->ict_mcq + $request->ict_prac;
+        $result->ict_total = $ictTotal;
+        $ictPercentage = $ictTotal * 2;
+        if ($ictPercentage < 32) {
+            $ictGP = 0;
+            $ictGrade = 'F';
+        } else if ( ($request->ict_mcq == null) || ($request->ict_prac == null) || ($request->ict_mcq < 8) || ($request->ict_prac < 8) ) {
+            $ictGP = 0;
+            $ictGrade = 'F';
+        } else if (($ictPercentage >= 80) && ($ictPercentage <= 100)) {
+            $ictGP = 5;
+            $ictGrade = 'A+';
+        } else if (($ictPercentage >= 70) && ($ictPercentage <= 79)) {
+            $ictGP = 4;
+            $ictGrade = 'A';
+        } else if (($ictPercentage >= 60) && ($ictPercentage <= 69)) {
+            $ictGP = 3.5;
+            $ictGrade = 'A-';
+        } else if (($ictPercentage >= 50) && ($ictPercentage <= 59)) {
+            $ictGP = 3;
+            $ictGrade = 'B';
+        } else if (($ictPercentage >= 40) && ($ictPercentage <= 49)) {
+            $ictGP = 2;
+            $ictGrade = 'C';
+        } else if (($ictPercentage >= 33) && ($ictPercentage <= 39)) {
+            $ictGP = 1;
+            $ictGrade = 'D';
+        } else {
+            $ictGP = 0;
+            $ictGrade = 'F';
+        }
+        $result->ict_gp = $ictGP;
+        $result->ict_grade = $ictGrade;
+
+        $result->cs_mcq = $request->cs_mcq;
+        $result->cs_prac = $request->cs_prac;
+        $csTotal = $request->cs_mcq + $request->cs_prac;
+        $result->cs_total = $csTotal;
+        $csPercentage = $csTotal * 2;
+        if ($csPercentage < 32) {
+            $csGP = 0;
+            $csGrade = 'F';
+        } else if ( ($request->cs_mcq == null) || ($request->cs_prac == null) || ($request->cs_mcq < 8) || ($request->cs_prac < 8) ) {
+            $csGP = 0;
+            $csGrade = 'F';
+        } else if (($csPercentage >= 80) && ($csPercentage <= 100)) {
+            $csGP = 5;
+            $csGrade = 'A+';
+        } else if (($csPercentage >= 70) && ($csPercentage <= 79)) {
+            $csGP = 4;
+            $csGrade = 'A';
+        } else if (($csPercentage >= 60) && ($csPercentage <= 69)) {
+            $csGP = 3.5;
+            $csGrade = 'A-';
+        } else if (($csPercentage >= 50) && ($csPercentage <= 59)) {
+            $csGP = 3;
+            $csGrade = 'B';
+        } else if (($csPercentage >= 40) && ($csPercentage <= 49)) {
+            $csGP = 2;
+            $csGrade = 'C';
+        } else if (($csPercentage >= 33) && ($csPercentage <= 39)) {
+            $csGP = 1;
+            $csGrade = 'D';
+        } else {
+            $csGP = 0;
+            $csGrade = 'F';
+        }
+        $result->cs_gp = $csGP;
+        $result->cs_grade = $csGrade;
+
     	if ($student->group_id == 1) {
 	    	$result->bwi_wrt = $request->bwi_wrt;
 	    	$result->bwi_mcq = $request->bwi_mcq;
@@ -748,42 +863,42 @@ class ResultController extends Controller
     	}
 
     	if ($student->group_id == 1) {
-    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $bwiGP + $phyGP + $cheGP + $bioGP;
+    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $psGP + $ictGP + $csGP + $bwiGP + $phyGP + $cheGP + $bioGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
-    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $bwiTotal + $phyTotal + $cheTotal + $bioTotal;
+    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $psTotal + $ictTotal + $csTotal + $bwiTotal + $phyTotal + $cheTotal + $bioTotal;
     		$marksTotalWiOpt = $marksTotalExOpt + $request->optional_total;
     		$result->gp_total_except_optional = $gpTotalExOpt; 
     		$result->gp_total_with_optional = $gpTotalWiOpt; 
     		$result->marks_total_except_optional = $marksTotalExOpt; 
     		$result->marks_total_with_optional = $marksTotalWiOpt; 
-    		$result->gpa_except_optional = $gpTotalExOpt / 8;   //may be no need
-    		$result->gpa_with_optional = $gpTotalWiOpt / 8; 
+    		$result->gpa_except_optional = $gpTotalExOpt / 11;   //may be no need
+    		$result->gpa_with_optional = $gpTotalWiOpt / 11; 
     	}
 
     	if ($student->group_id == 2) {
-    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $gsGP + $hisGP + $civGP + $geoGP;
+    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $psGP + $ictGP + $csGP + $gsGP + $hisGP + $civGP + $geoGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
-    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $gsTotal + $hisTotal + $civTotal + $geoTotal;
+    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $psTotal + $ictTotal + $csTotal + $gsTotal + $hisTotal + $civTotal + $geoTotal;
     		$marksTotalWiOpt = $marksTotalExOpt + $request->optional_total;
     		$result->gp_total_except_optional = $gpTotalExOpt; 
     		$result->gp_total_with_optional = $gpTotalWiOpt;
     		$result->marks_total_except_optional = $marksTotalExOpt; 
     		$result->marks_total_with_optional = $marksTotalWiOpt;
-    		$result->gpa_except_optional = $gpTotalExOpt / 8; 
-    		$result->gpa_with_optional = $gpTotalWiOpt / 8;  //may be no need
+    		$result->gpa_except_optional = $gpTotalExOpt / 11; 
+    		$result->gpa_with_optional = $gpTotalWiOpt / 11;  //may be no need
     	}
 
     	if ($student->group_id == 3) {
-    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $gsGP + $accGP + $finGP + $busGP;
+    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $psGP + $ictGP + $csGP + $gsGP + $accGP + $finGP + $busGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
-    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $gsTotal + $accTotal + $finTotal + $busTotal;
+    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $psTotal + $ictTotal + $csTotal + $gsTotal + $accTotal + $finTotal + $busTotal;
     		$marksTotalWiOpt = $marksTotalExOpt + $request->optional_total;
     		$result->gp_total_except_optional = $gpTotalExOpt; 
     		$result->gp_total_with_optional = $gpTotalWiOpt; 
     		$result->marks_total_except_optional = $marksTotalExOpt; 
     		$result->marks_total_with_optional = $marksTotalWiOpt;
-    		$result->gpa_except_optional = $gpTotalExOpt / 8; 
-    		$result->gpa_with_optional = $gpTotalWiOpt / 8;
+    		$result->gpa_except_optional = $gpTotalExOpt / 11; 
+    		$result->gpa_with_optional = $gpTotalWiOpt / 11;
     	}
 
 //-----------------Count Fail Subjects---------------//
@@ -801,6 +916,15 @@ class ResultController extends Controller
     		if ($relGP == 0) {
     			$failSubjects++;
     		}
+            if ($psGP == 0) {
+                $failSubjects++;
+            }
+            if ($ictGP == 0) {
+                $failSubjects++;
+            }
+            if ($csGP == 0) {
+                $failSubjects++;
+            }
     		if ($bwiGP == 0) {
     			$failSubjects++;
     		}
@@ -830,6 +954,15 @@ class ResultController extends Controller
     		if ($relGP == 0) {
     			$failSubjects++;
     		}
+            if ($psGP == 0) {
+                $failSubjects++;
+            }
+            if ($ictGP == 0) {
+                $failSubjects++;
+            }
+            if ($csGP == 0) {
+                $failSubjects++;
+            }
     		if ($gsGP == 0) {
     			$failSubjects++;
     		}
@@ -858,6 +991,15 @@ class ResultController extends Controller
     		if ($relGP == 0) {
     			$failSubjects++;
     		}
+            if ($psGP == 0) {
+                $failSubjects++;
+            }
+            if ($ictGP == 0) {
+                $failSubjects++;
+            }
+            if ($csGP == 0) {
+                $failSubjects++;
+            }
     		if ($gsGP == 0) {
     			$failSubjects++;
     		}
@@ -875,27 +1017,34 @@ class ResultController extends Controller
 
 
 //---------------------GPA & Grade------------------//
-    	$gpa = $gpTotalWiOpt / 8;
+    	$gpa = $gpTotalWiOpt / 11;
 
     	$result->gpa = $gpa;
 
     	if ($gpa >= 5) {
     		$result->grade = 'A+';
-    		if ($gpTotalExOpt == 40) {
+            $result->status = null;
+    		if ($gpTotalExOpt == 55) {
 				$result->status = 'Golden A+';
     		}
     	} else if (($gpa < 5) && ($gpa >= 4) && ($failSubjects == 0)) {
     		$result->grade = 'A';
+            $result->status = null;
     	} else if (($gpa < 4) && ($gpa >= 3.50) && ($failSubjects == 0)) {
     		$result->grade = 'A-';
+            $result->status = null;
     	} else if (($gpa < 3.50) && ($gpa >= 3) && ($failSubjects == 0)) {
     		$result->grade = 'B';
+            $result->status = null;
     	} else if (($gpa < 3) && ($gpa >= 2) && ($failSubjects == 0)) {
     		$result->grade = 'C';
+            $result->status = null;
     	} else if (($gpa < 2) && ($gpa >= 1) && ($failSubjects == 0)) {
     		$result->grade = 'D';
+            $result->status = null;
     	} else {
     		$result->grade = 'F';
+            $result->status = null;
     	}
 
     	$result->save();
@@ -1000,6 +1149,13 @@ class ResultController extends Controller
 	    	'fin_mcq' =>  'numeric|min:0|max:30|nullable',
 	    	'bus_wrt' =>  'numeric|min:0|max:70|nullable',
 	    	'bus_mcq' =>  'numeric|min:0|max:30|nullable',
+            'ps_wrt' =>  'numeric|min:0|max:40|nullable',
+            'ps_mcq' =>  'numeric|min:0|max:35|nullable',
+            'ps_prac' =>  'numeric|min:0|max:25|nullable',
+            'ict_mcq' =>  'numeric|min:0|max:25|nullable',
+            'ict_prac' =>  'numeric|min:0|max:25|nullable',
+            'cs_mcq' =>  'numeric|min:0|max:25|nullable',
+            'cs_prac' =>  'numeric|min:0|max:25|nullable',
 	    	'optional_total' =>  'numeric|min:0|max:100|nullable',
 	    	'optional_gp' =>  'numeric|min:0|max:5|nullable',
 	    ];
@@ -1226,6 +1382,114 @@ class ResultController extends Controller
     	$result->rel_gp = $relGP;
     	$result->rel_grade = $relGrade;
 
+        $result->ps_wrt = $request->ps_wrt;
+        $result->ps_mcq = $request->ps_mcq;
+        $result->ps_prac = $request->ps_prac;
+        $psTotal = $request->ps_wrt + $request->ps_mcq + $request->ps_prac;
+        $result->ps_total = $psTotal;
+        if ($psTotal < 33) {
+            $psGP = 0;
+            $psGrade = 'F';
+        } else if ( ($request->ps_wrt == null) || ($request->ps_mcq == null) || ($request->ps_prac == null) || ($request->ps_wrt < 13) || ($request->ps_mcq < 12) || ($request->ps_prac < 8) ) {
+            $psGP = 0;
+            $psGrade = 'F';
+        } else if (($psTotal >= 80) && ($psTotal <= 100)) {
+            $psGP = 5;
+            $psGrade = 'A+';
+        } else if (($psTotal >= 70) && ($psTotal <= 79)) {
+            $psGP = 4;
+            $psGrade = 'A';
+        } else if (($psTotal >= 60) && ($psTotal <= 69)) {
+            $psGP = 3.5;
+            $psGrade = 'A-';
+        } else if (($psTotal >= 50) && ($psTotal <= 59)) {
+            $psGP = 3;
+            $psGrade = 'B';
+        } else if (($psTotal >= 40) && ($psTotal <= 49)) {
+            $psGP = 2;
+            $psGrade = 'C';
+        } else if (($psTotal >= 33) && ($psTotal <= 39)) {
+            $psGP = 1;
+            $psGrade = 'D';
+        } else {
+            $psGP = 0;
+            $psGrade = 'F';
+        }
+        $result->ps_gp = $psGP;
+        $result->ps_grade = $psGrade;
+
+        $result->ict_mcq = $request->ict_mcq;
+        $result->ict_prac = $request->ict_prac;
+        $ictTotal = $request->ict_mcq + $request->ict_prac;
+        $result->ict_total = $ictTotal;
+        $ictPercentage = $ictTotal * 2;
+        if ($ictPercentage < 32) {
+            $ictGP = 0;
+            $ictGrade = 'F';
+        } else if ( ($request->ict_mcq == null) || ($request->ict_prac == null) || ($request->ict_mcq < 8) || ($request->ict_prac < 8) ) {
+            $ictGP = 0;
+            $ictGrade = 'F';
+        } else if (($ictPercentage >= 80) && ($ictPercentage <= 100)) {
+            $ictGP = 5;
+            $ictGrade = 'A+';
+        } else if (($ictPercentage >= 70) && ($ictPercentage <= 79)) {
+            $ictGP = 4;
+            $ictGrade = 'A';
+        } else if (($ictPercentage >= 60) && ($ictPercentage <= 69)) {
+            $ictGP = 3.5;
+            $ictGrade = 'A-';
+        } else if (($ictPercentage >= 50) && ($ictPercentage <= 59)) {
+            $ictGP = 3;
+            $ictGrade = 'B';
+        } else if (($ictPercentage >= 40) && ($ictPercentage <= 49)) {
+            $ictGP = 2;
+            $ictGrade = 'C';
+        } else if (($ictPercentage >= 33) && ($ictPercentage <= 39)) {
+            $ictGP = 1;
+            $ictGrade = 'D';
+        } else {
+            $ictGP = 0;
+            $ictGrade = 'F';
+        }
+        $result->ict_gp = $ictGP;
+        $result->ict_grade = $ictGrade;
+
+        $result->cs_mcq = $request->cs_mcq;
+        $result->cs_prac = $request->cs_prac;
+        $csTotal = $request->cs_mcq + $request->cs_prac;
+        $result->cs_total = $csTotal;
+        $csPercentage = $csTotal * 2;
+        if ($csPercentage < 32) {
+            $csGP = 0;
+            $csGrade = 'F';
+        } else if ( ($request->cs_mcq == null) || ($request->cs_prac == null) || ($request->cs_mcq < 8) || ($request->cs_prac < 8) ) {
+            $csGP = 0;
+            $csGrade = 'F';
+        } else if (($csPercentage >= 80) && ($csPercentage <= 100)) {
+            $csGP = 5;
+            $csGrade = 'A+';
+        } else if (($csPercentage >= 70) && ($csPercentage <= 79)) {
+            $csGP = 4;
+            $csGrade = 'A';
+        } else if (($csPercentage >= 60) && ($csPercentage <= 69)) {
+            $csGP = 3.5;
+            $csGrade = 'A-';
+        } else if (($csPercentage >= 50) && ($csPercentage <= 59)) {
+            $csGP = 3;
+            $csGrade = 'B';
+        } else if (($csPercentage >= 40) && ($csPercentage <= 49)) {
+            $csGP = 2;
+            $csGrade = 'C';
+        } else if (($csPercentage >= 33) && ($csPercentage <= 39)) {
+            $csGP = 1;
+            $csGrade = 'D';
+        } else {
+            $csGP = 0;
+            $csGrade = 'F';
+        }
+        $result->cs_gp = $csGP;
+        $result->cs_grade = $csGrade;
+
     	if ($student->group_id == 1) {
 	    	$result->bwi_wrt = $request->bwi_wrt;
 	    	$result->bwi_mcq = $request->bwi_mcq;
@@ -1652,42 +1916,42 @@ class ResultController extends Controller
     	}
 
     	if ($student->group_id == 1) {
-    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $bwiGP + $phyGP + $cheGP + $bioGP;
+    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $psGP + $ictGP + $csGP + $bwiGP + $phyGP + $cheGP + $bioGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
-    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $bwiTotal + $phyTotal + $cheTotal + $bioTotal;
+    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $psTotal + $ictTotal + $csTotal + $bwiTotal + $phyTotal + $cheTotal + $bioTotal;
     		$marksTotalWiOpt = $marksTotalExOpt + $request->optional_total;
     		$result->gp_total_except_optional = $gpTotalExOpt; 
     		$result->gp_total_with_optional = $gpTotalWiOpt; 
     		$result->marks_total_except_optional = $marksTotalExOpt; 
     		$result->marks_total_with_optional = $marksTotalWiOpt; 
-    		$result->gpa_except_optional = $gpTotalExOpt / 8;   //may be no need
-    		$result->gpa_with_optional = $gpTotalWiOpt / 8; 
+    		$result->gpa_except_optional = $gpTotalExOpt / 11;   //may be no need
+    		$result->gpa_with_optional = $gpTotalWiOpt / 11; 
     	}
 
     	if ($student->group_id == 2) {
-    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $gsGP + $hisGP + $civGP + $geoGP;
+    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $psGP + $ictGP + $csGP + $gsGP + $hisGP + $civGP + $geoGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
-    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $gsTotal + $hisTotal + $civTotal + $geoTotal;
+    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $psTotal + $ictTotal + $csTotal + $gsTotal + $hisTotal + $civTotal + $geoTotal;
     		$marksTotalWiOpt = $marksTotalExOpt + $request->optional_total;
     		$result->gp_total_except_optional = $gpTotalExOpt; 
     		$result->gp_total_with_optional = $gpTotalWiOpt;
     		$result->marks_total_except_optional = $marksTotalExOpt; 
     		$result->marks_total_with_optional = $marksTotalWiOpt;
-    		$result->gpa_except_optional = $gpTotalExOpt / 8; 
-    		$result->gpa_with_optional = $gpTotalWiOpt / 8;  //may be no need
+    		$result->gpa_except_optional = $gpTotalExOpt / 11; 
+    		$result->gpa_with_optional = $gpTotalWiOpt / 11;  //may be no need
     	}
 
     	if ($student->group_id == 3) {
-    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $gsGP + $accGP + $finGP + $busGP;
+    		$gpTotalExOpt = $banGP + $engGP + $mathGP + $relGP + $psGP + $ictGP + $csGP + $gsGP + $accGP + $finGP + $busGP;
     		$gpTotalWiOpt = $gpTotalExOpt + $addableGP;
-    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $gsTotal + $accTotal + $finTotal + $busTotal;
+    		$marksTotalExOpt = $banTotal + $engTotal + $mathTotal + $relTotal + $psTotal + $ictTotal + $csTotal + $gsTotal + $accTotal + $finTotal + $busTotal;
     		$marksTotalWiOpt = $marksTotalExOpt + $request->optional_total;
     		$result->gp_total_except_optional = $gpTotalExOpt; 
     		$result->gp_total_with_optional = $gpTotalWiOpt; 
     		$result->marks_total_except_optional = $marksTotalExOpt; 
     		$result->marks_total_with_optional = $marksTotalWiOpt;
-    		$result->gpa_except_optional = $gpTotalExOpt / 8; 
-    		$result->gpa_with_optional = $gpTotalWiOpt / 8;
+    		$result->gpa_except_optional = $gpTotalExOpt / 11; 
+    		$result->gpa_with_optional = $gpTotalWiOpt / 11;
     	}
 
 //-----------------Count Fail Subjects---------------//
@@ -1705,6 +1969,15 @@ class ResultController extends Controller
     		if ($relGP == 0) {
     			$failSubjects++;
     		}
+            if ($psGP == 0) {
+                $failSubjects++;
+            }
+            if ($ictGP == 0) {
+                $failSubjects++;
+            }
+            if ($csGP == 0) {
+                $failSubjects++;
+            }
     		if ($bwiGP == 0) {
     			$failSubjects++;
     		}
@@ -1734,6 +2007,15 @@ class ResultController extends Controller
     		if ($relGP == 0) {
     			$failSubjects++;
     		}
+            if ($psGP == 0) {
+                $failSubjects++;
+            }
+            if ($ictGP == 0) {
+                $failSubjects++;
+            }
+            if ($csGP == 0) {
+                $failSubjects++;
+            }
     		if ($gsGP == 0) {
     			$failSubjects++;
     		}
@@ -1762,6 +2044,15 @@ class ResultController extends Controller
     		if ($relGP == 0) {
     			$failSubjects++;
     		}
+            if ($psGP == 0) {
+                $failSubjects++;
+            }
+            if ($ictGP == 0) {
+                $failSubjects++;
+            }
+            if ($csGP == 0) {
+                $failSubjects++;
+            }
     		if ($gsGP == 0) {
     			$failSubjects++;
     		}
@@ -1778,27 +2069,34 @@ class ResultController extends Controller
     	}
 
 //---------------------GPA & Grade------------------//
-    	$gpa = $gpTotalWiOpt / 8;
+    	$gpa = $gpTotalWiOpt / 11;
 
     	$result->gpa = $gpa;
 
     	if ($gpa >= 5) {
     		$result->grade = 'A+';
-    		if ($gpTotalExOpt == 40) {
+            $result->status = null;
+    		if ($gpTotalExOpt == 55) {
 				$result->status = 'Golden A+';
     		}
     	} else if (($gpa < 5) && ($gpa >= 4) && ($failSubjects == 0)) {
     		$result->grade = 'A';
+            $result->status = null;
     	} else if (($gpa < 4) && ($gpa >= 3.50) && ($failSubjects == 0)) {
     		$result->grade = 'A-';
+            $result->status = null;
     	} else if (($gpa < 3.50) && ($gpa >= 3) && ($failSubjects == 0)) {
     		$result->grade = 'B';
+            $result->status = null;
     	} else if (($gpa < 3) && ($gpa >= 2) && ($failSubjects == 0)) {
     		$result->grade = 'C';
+            $result->status = null;
     	} else if (($gpa < 2) && ($gpa >= 1) && ($failSubjects == 0)) {
     		$result->grade = 'D';
+            $result->status = null;
     	} else {
     		$result->grade = 'F';
+            $result->status = null;
     	}
 
     	$result->save();
@@ -1842,7 +2140,7 @@ class ResultController extends Controller
         $classList = Level::whereIn('id', [4, 5])->pluck('name', 'id');
         $yearList = Year::pluck('year', 'id');
         $termList = Term::pluck('name', 'id');
-        $failSubjects = ['0' => '0. Zero Subject', '1' => '1. One Subject', '2' => '2. Two Subjects', '3' => '3. Three Subjects', '4' => '4. Four Subjects', '5' => '5. Five Subjects', '6' => '6. Six Subjects', '7' => '7. Seven Subjects', '8' => '8. Eight Subjects'];
+        $failSubjects = ['0' => '0. Zero Subject', '1' => '1. One Subject', '2' => '2. Two Subjects', '3' => '3. Three Subjects', '4' => '4. Four Subjects', '5' => '5. Five Subjects', '6' => '6. Six Subjects', '7' => '7. Seven Subjects', '8' => '8. Eight Subjects', '9' => '9. Nine Subjects', '10' => '10. Ten Subjects', '11' => '11. Eleven Subjects'];
 
         return view('result.report.fail_form', compact('classList', 'termList', 'yearList', 'failSubjects'));
     }

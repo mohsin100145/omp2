@@ -118,6 +118,25 @@ class CreateResultsTable extends Migration
             $table->float('bus_gp')->nullable();
             $table->string('bus_grade')->nullable();
 
+            $table->float('ps_wrt')->nullable();
+            $table->float('ps_mcq')->nullable();
+            $table->float('ps_prac')->nullable();
+            $table->float('ps_total')->nullable();
+            $table->float('ps_gp')->nullable();
+            $table->string('ps_grade')->nullable();
+
+            $table->float('ict_mcq')->nullable();
+            $table->float('ict_prac')->nullable();
+            $table->float('ict_total')->nullable();
+            $table->float('ict_gp')->nullable();
+            $table->string('ict_grade')->nullable();
+
+            $table->float('cs_mcq')->nullable();
+            $table->float('cs_prac')->nullable();
+            $table->float('cs_total')->nullable();
+            $table->float('cs_gp')->nullable();
+            $table->string('cs_grade')->nullable();
+
             $table->float('optional_total')->nullable();
             $table->float('optional_gp')->nullable();
             $table->string('optional_grade')->nullable();

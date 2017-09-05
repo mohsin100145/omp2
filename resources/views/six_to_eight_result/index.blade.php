@@ -34,7 +34,7 @@
                             <th>Total Marks</th>
                             <th>View</th>
                             <th>Edit</th>
-                            <th>Delete</th>
+                            <!-- <th>Delete</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -58,10 +58,10 @@
                             <td><strong>{{ $result->marks_total }}</strong></td>
                             <td>{!! Html::link("six-to-eight-result/$result->id",' View', ['class' => 'fa fa-eye btn btn-success btn-xs']) !!}</td>
                             <td>{!! Html::link("six-to-eight-result/$result->id/edit",' Edit', ['class' => 'fa fa-edit btn btn-primary btn-xs']) !!}</td>
-                            <td><a class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal-{{ $result->id }}">
+                            <!-- <td><a class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal-{{ $result->id }}">
                                     <i class="fa fa-trash"></i> Delete
                                 </a>
-                            </td>
+                            </td> -->
 
                             <!-- Modal -->
                             <div class="modal fade" id="myModal-{{ $result->id }}" role="dialog">

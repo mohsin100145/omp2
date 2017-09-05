@@ -1275,7 +1275,7 @@ class SixToEightResultController extends Controller
         $classList = Level::whereIn('id', [1, 2, 3])->pluck('name', 'id');
         $yearList = Year::pluck('year', 'id');
         $termList = Term::pluck('name', 'id');
-        $failSubjects = ['0' => '0. Zero Subject', '1' => '1. One Subject', '2' => '2. Two Subjects', '3' => '3. Three Subjects', '4' => '4. Four Subjects', '5' => '5. Five Subjects', '6' => '6. Six Subjects', '7' => '7. Seven Subjects', '8' => '8. Eight Subjects'];
+        $failSubjects = ['0' => '0. Zero Subject', '1' => '1. One Subject', '2' => '2. Two Subjects', '3' => '3. Three Subjects', '4' => '4. Four Subjects', '5' => '5. Five Subjects', '6' => '6. Six Subjects', '7' => '7. Seven Subjects', '8' => '8. Eight Subjects', '9' => '9. Nine Subjects', '10' => '10. Ten Subjects', '11' => '11. Eleven Subjects'];
 
         return view('six_to_eight_result.report.fail_form', compact('classList', 'termList', 'yearList', 'failSubjects'));
     }

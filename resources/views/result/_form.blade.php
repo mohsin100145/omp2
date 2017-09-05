@@ -136,6 +136,66 @@
     </div>
 </div>
 
+<div class="form-group {{ $errors->has(['ps_wrt', 'ps_mcq', 'ps_prac']) ? 'has-error' : ''}}">
+    {!! Form::label('physical_studies', 'Physical Studies', ['class' => 'col-sm-3 control-label']) !!}
+    <div class="col-sm-9">
+    	<div class="col-sm-4">
+	        {!! Form::text('ps_wrt', null, ['class' => 'form-control numeric-field', 'placeholder' => 'Physical Studies Written', 'autocomplete' => 'off']) !!}
+	        <span class="text-danger">
+			    {{ $errors->first('ps_wrt') }}
+		    </span>
+		</div>
+		<div class="col-sm-4">
+	        {!! Form::text('ps_mcq', null, ['class' => 'form-control numeric-field', 'placeholder' => 'Physical Studies MCQ', 'autocomplete' => 'off']) !!}
+	        <span class="text-danger">
+			    {{ $errors->first('ps_mcq') }}
+		    </span>
+		</div>
+		<div class="col-sm-4">
+	        {!! Form::text('ps_prac', null, ['class' => 'form-control numeric-field', 'placeholder' => 'Physical Studies Practical', 'autocomplete' => 'off']) !!}
+	        <span class="text-danger">
+			    {{ $errors->first('ps_prac') }}
+		    </span>
+		</div>
+    </div>
+</div>
+
+<div class="form-group {{ $errors->has(['ict_mcq', 'ict_prac']) ? 'has-error' : ''}}">
+    {!! Form::label('ict', 'ICT', ['class' => 'col-sm-3 control-label']) !!}
+    <div class="col-sm-9">
+    	<div class="col-sm-6">
+	        {!! Form::text('ict_mcq', null, ['class' => 'form-control numeric-field', 'placeholder' => 'ICT MCQ', 'autocomplete' => 'off']) !!}
+	        <span class="text-danger">
+			    {{ $errors->first('ict_mcq') }}
+		    </span>
+		</div>
+		<div class="col-sm-6">
+	        {!! Form::text('ict_prac', null, ['class' => 'form-control numeric-field', 'placeholder' => 'ICT Practical', 'autocomplete' => 'off']) !!}
+	        <span class="text-danger">
+			    {{ $errors->first('ict_prac') }}
+		    </span>
+		</div>
+    </div>
+</div>
+
+<div class="form-group {{ $errors->has(['cs_mcq', 'cs_prac']) ? 'has-error' : ''}}">
+    {!! Form::label('carrier_studies', 'Carrier Studies', ['class' => 'col-sm-3 control-label']) !!}
+    <div class="col-sm-9">
+    	<div class="col-sm-6">
+	        {!! Form::text('cs_mcq', null, ['class' => 'form-control numeric-field', 'placeholder' => 'Carrier Studies MCQ', 'autocomplete' => 'off']) !!}
+	        <span class="text-danger">
+			    {{ $errors->first('cs_mcq') }}
+		    </span>
+		</div>
+		<div class="col-sm-6">
+	        {!! Form::text('cs_prac', null, ['class' => 'form-control numeric-field', 'placeholder' => 'Carrier Studies Practical', 'autocomplete' => 'off']) !!}
+	        <span class="text-danger">
+			    {{ $errors->first('cs_prac') }}
+		    </span>
+		</div>
+    </div>
+</div>
+
 <div class="thumbnail" id="science_div">
 	<div class="text-center bg-success"><b><i>For Science Students</i></b></div>
 	<!-- <div class="center-block" style="background-color:yellow; width: 200px;">This div will be centered.</div> -->

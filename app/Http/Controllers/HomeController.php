@@ -44,11 +44,21 @@ class HomeController extends Controller
         $nineResults = Result::where('level_id', 4)->where('year_id', $currentYear->id)->count();
         $tenResults = Result::where('level_id', 5)->where('year_id', $currentYear->id)->count();
         $totalResults = $sixResults + $sevenResults + $eightResults + $nineResults + $tenResults;
+        $sixResultsFirst = SixToEightResult::where('level_id', 1)->where('term_id', 1)->where('year_id', $currentYear->id)->count();
+        $sevenResultsFirst = SixToEightResult::where('level_id', 2)->where('term_id', 1)->where('year_id', $currentYear->id)->count();
+        $eightResultsFirst = SixToEightResult::where('level_id', 3)->where('term_id', 1)->where('year_id', $currentYear->id)->count();
+        $nineResultsFirst = Result::where('level_id', 4)->where('term_id', 1)->where('year_id', $currentYear->id)->count();
+        $tenResultsFirst = Result::where('level_id', 5)->where('term_id', 1)->where('year_id', $currentYear->id)->count();
+        $sixResultsAnnual = SixToEightResult::where('level_id', 1)->where('term_id', 2)->where('year_id', $currentYear->id)->count();
+        $sevenResultsAnnual = SixToEightResult::where('level_id', 2)->where('term_id', 2)->where('year_id', $currentYear->id)->count();
+        $eightResultsAnnual = SixToEightResult::where('level_id', 3)->where('term_id', 2)->where('year_id', $currentYear->id)->count();
+        $nineResultsAnnual = Result::where('level_id', 4)->where('term_id', 2)->where('year_id', $currentYear->id)->count();
+        $tenResultsAnnual = Result::where('level_id', 5)->where('term_id', 2)->where('year_id', $currentYear->id)->count();
         $levels = Level::count();
         $sections = Section::count();
         $groups = Group::count();
         $terms = Term::count();
 
-        return view('home', compact('sixStudents', 'sevenStudents', 'eightStudents', 'nineStudents', 'tenStudents', 'totalStudents', 'sixResults', 'sevenResults', 'eightResults', 'nineResults', 'tenResults', 'totalResults', 'levels', 'sections', 'groups', 'terms'));
+        return view('home', compact('sixStudents', 'sevenStudents', 'eightStudents', 'nineStudents', 'tenStudents', 'totalStudents', 'sixResults', 'sevenResults', 'eightResults', 'nineResults', 'tenResults', 'totalResults', 'levels', 'sections', 'groups', 'terms', 'sixResultsFirst', 'sevenResultsFirst', 'eightResultsFirst', 'nineResultsFirst', 'tenResultsFirst', 'sixResultsAnnual', 'sevenResultsAnnual', 'eightResultsAnnual', 'nineResultsAnnual', 'tenResultsAnnual'));
     }
 }
