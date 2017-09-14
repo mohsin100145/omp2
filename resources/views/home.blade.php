@@ -12,7 +12,12 @@
 
                 <!-- <div class="panel-body" style="background-color: #ecf0f5"> -->
                 <!-- <div class="panel-body" style="background-color: rebeccapurple"> -->
-                <div class="panel-body" style="background-color: #c3bdca">
+                <!-- <div class="panel-body" style="background-color: #c3bdca"> -->
+                <div class="panel-body" style="background: url(images/bg_image.jpg) no-repeat center center fixed; 
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;">
                     <div class="container1">
                         <div id="carousel">
                             <figure><img src="{{ asset('images/rotate_img1.jpg') }}" alt=""></figure>
