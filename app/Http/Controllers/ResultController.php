@@ -203,19 +203,19 @@ class ResultController extends Controller
     	} else if (($banAvg >= 80) && ($banAvg <= 100)) {
     		$banGP = 5;
     		$banGrade = 'A+';
-    	} else if (($banAvg >= 70) && ($banAvg <= 79)) {
+    	} else if (($banAvg >= 70) && ($banAvg <= 79.99)) {
     		$banGP = 4;
     		$banGrade = 'A';
-    	} else if (($banAvg >= 60) && ($banAvg <= 69)) {
+    	} else if (($banAvg >= 60) && ($banAvg <= 69.99)) {
     		$banGP = 3.5;
     		$banGrade = 'A-';
-    	} else if (($banAvg >= 50) && ($banAvg <= 59)) {
+    	} else if (($banAvg >= 50) && ($banAvg <= 59.99)) {
     		$banGP = 3;
     		$banGrade = 'B';
-    	} else if (($banAvg >= 40) && ($banAvg <= 49)) {
+    	} else if (($banAvg >= 40) && ($banAvg <= 49.99)) {
     		$banGP = 2;
     		$banGrade = 'C';
-    	} else if (($banAvg >= 33) && ($banAvg <= 39)) {
+    	} else if (($banAvg >= 33) && ($banAvg <= 39.99)) {
     		$banGP = 1;
     		$banGrade = 'D';
     	} else {
@@ -237,19 +237,19 @@ class ResultController extends Controller
     	} else if (($engAvg >= 80) && ($engAvg <= 100)) {
     		$engGP = 5;
     		$engGrade = 'A+';
-    	} else if (($engAvg >= 70) && ($engAvg <= 79)) {
+    	} else if (($engAvg >= 70) && ($engAvg <= 79.99)) {
     		$engGP = 4;
     		$engGrade = 'A';
-    	} else if (($engAvg >= 60) && ($engAvg <= 69)) {
+    	} else if (($engAvg >= 60) && ($engAvg <= 69.99)) {
     		$engGP = 3.5;
     		$engGrade = 'A-';
-    	} else if (($engAvg >= 50) && ($engAvg <= 59)) {
+    	} else if (($engAvg >= 50) && ($engAvg <= 59.99)) {
     		$engGP = 3;
     		$engGrade = 'B';
-    	} else if (($engAvg >= 40) && ($engAvg <= 49)) {
+    	} else if (($engAvg >= 40) && ($engAvg <= 49.99)) {
     		$engGP = 2;
     		$engGrade = 'C';
-    	} else if (($engAvg >= 33) && ($engAvg <= 39)) {
+    	} else if (($engAvg >= 33) && ($engAvg <= 39.99)) {
     		$engGP = 1;
     		$engGrade = 'D';
     	} else {
@@ -272,19 +272,19 @@ class ResultController extends Controller
     	} else if (($mathTotal >= 80) && ($mathTotal <= 100)) {
     		$mathGP = 5;
     		$mathGrade = 'A+';
-    	} else if (($mathTotal >= 70) && ($mathTotal <= 79)) {
+    	} else if (($mathTotal >= 70) && ($mathTotal <= 79.99)) {
     		$mathGP = 4;
     		$mathGrade = 'A';
-    	} else if (($mathTotal >= 60) && ($mathTotal <= 69)) {
+    	} else if (($mathTotal >= 60) && ($mathTotal <= 69.99)) {
     		$mathGP = 3.5;
     		$mathGrade = 'A-';
-    	} else if (($mathTotal >= 50) && ($mathTotal <= 59)) {
+    	} else if (($mathTotal >= 50) && ($mathTotal <= 59.99)) {
     		$mathGP = 3;
     		$mathGrade = 'B';
-    	} else if (($mathTotal >= 40) && ($mathTotal <= 49)) {
+    	} else if (($mathTotal >= 40) && ($mathTotal <= 49.99)) {
     		$mathGP = 2;
     		$mathGrade = 'C';
-    	} else if (($mathTotal >= 33) && ($mathTotal <= 39)) {
+    	} else if (($mathTotal >= 33) && ($mathTotal <= 39.99)) {
     		$mathGP = 1;
     		$mathGrade = 'D';
     	} else {
@@ -307,19 +307,19 @@ class ResultController extends Controller
     	} else if (($relTotal >= 80) && ($relTotal <= 100)) {
     		$relGP = 5;
     		$relGrade = 'A+';
-    	} else if (($relTotal >= 70) && ($relTotal <= 79)) {
+    	} else if (($relTotal >= 70) && ($relTotal <= 79.99)) {
     		$relGP = 4;
     		$relGrade = 'A';
-    	} else if (($relTotal >= 60) && ($relTotal <= 69)) {
+    	} else if (($relTotal >= 60) && ($relTotal <= 69.99)) {
     		$relGP = 3.5;
     		$relGrade = 'A-';
-    	} else if (($relTotal >= 50) && ($relTotal <= 59)) {
+    	} else if (($relTotal >= 50) && ($relTotal <= 59.99)) {
     		$relGP = 3;
     		$relGrade = 'B';
-    	} else if (($relTotal >= 40) && ($relTotal <= 49)) {
+    	} else if (($relTotal >= 40) && ($relTotal <= 49.99)) {
     		$relGP = 2;
     		$relGrade = 'C';
-    	} else if (($relTotal >= 33) && ($relTotal <= 39)) {
+    	} else if (($relTotal >= 33) && ($relTotal <= 39.99)) {
     		$relGP = 1;
     		$relGrade = 'D';
     	} else {
@@ -343,19 +343,19 @@ class ResultController extends Controller
         } else if (($psTotal >= 80) && ($psTotal <= 100)) {
             $psGP = 5;
             $psGrade = 'A+';
-        } else if (($psTotal >= 70) && ($psTotal <= 79)) {
+        } else if (($psTotal >= 70) && ($psTotal <= 79.99)) {
             $psGP = 4;
             $psGrade = 'A';
-        } else if (($psTotal >= 60) && ($psTotal <= 69)) {
+        } else if (($psTotal >= 60) && ($psTotal <= 69.99)) {
             $psGP = 3.5;
             $psGrade = 'A-';
-        } else if (($psTotal >= 50) && ($psTotal <= 59)) {
+        } else if (($psTotal >= 50) && ($psTotal <= 59.99)) {
             $psGP = 3;
             $psGrade = 'B';
-        } else if (($psTotal >= 40) && ($psTotal <= 49)) {
+        } else if (($psTotal >= 40) && ($psTotal <= 49.99)) {
             $psGP = 2;
             $psGrade = 'C';
-        } else if (($psTotal >= 33) && ($psTotal <= 39)) {
+        } else if (($psTotal >= 33) && ($psTotal <= 39.99)) {
             $psGP = 1;
             $psGrade = 'D';
         } else {
@@ -379,19 +379,19 @@ class ResultController extends Controller
         } else if (($ictPercentage >= 80) && ($ictPercentage <= 100)) {
             $ictGP = 5;
             $ictGrade = 'A+';
-        } else if (($ictPercentage >= 70) && ($ictPercentage <= 79)) {
+        } else if (($ictPercentage >= 70) && ($ictPercentage <= 79.99)) {
             $ictGP = 4;
             $ictGrade = 'A';
-        } else if (($ictPercentage >= 60) && ($ictPercentage <= 69)) {
+        } else if (($ictPercentage >= 60) && ($ictPercentage <= 69.99)) {
             $ictGP = 3.5;
             $ictGrade = 'A-';
-        } else if (($ictPercentage >= 50) && ($ictPercentage <= 59)) {
+        } else if (($ictPercentage >= 50) && ($ictPercentage <= 59.99)) {
             $ictGP = 3;
             $ictGrade = 'B';
-        } else if (($ictPercentage >= 40) && ($ictPercentage <= 49)) {
+        } else if (($ictPercentage >= 40) && ($ictPercentage <= 49.99)) {
             $ictGP = 2;
             $ictGrade = 'C';
-        } else if (($ictPercentage >= 33) && ($ictPercentage <= 39)) {
+        } else if (($ictPercentage >= 33) && ($ictPercentage <= 39.99)) {
             $ictGP = 1;
             $ictGrade = 'D';
         } else {
@@ -415,19 +415,19 @@ class ResultController extends Controller
         } else if (($csPercentage >= 80) && ($csPercentage <= 100)) {
             $csGP = 5;
             $csGrade = 'A+';
-        } else if (($csPercentage >= 70) && ($csPercentage <= 79)) {
+        } else if (($csPercentage >= 70) && ($csPercentage <= 79.99)) {
             $csGP = 4;
             $csGrade = 'A';
-        } else if (($csPercentage >= 60) && ($csPercentage <= 69)) {
+        } else if (($csPercentage >= 60) && ($csPercentage <= 69.99)) {
             $csGP = 3.5;
             $csGrade = 'A-';
-        } else if (($csPercentage >= 50) && ($csPercentage <= 59)) {
+        } else if (($csPercentage >= 50) && ($csPercentage <= 59.99)) {
             $csGP = 3;
             $csGrade = 'B';
-        } else if (($csPercentage >= 40) && ($csPercentage <= 49)) {
+        } else if (($csPercentage >= 40) && ($csPercentage <= 49.99)) {
             $csGP = 2;
             $csGrade = 'C';
-        } else if (($csPercentage >= 33) && ($csPercentage <= 39)) {
+        } else if (($csPercentage >= 33) && ($csPercentage <= 39.99)) {
             $csGP = 1;
             $csGrade = 'D';
         } else {
@@ -451,19 +451,19 @@ class ResultController extends Controller
 	    	} else if (($bwiTotal >= 80) && ($bwiTotal <= 100)) {
 	    		$bwiGP = 5;
 	    		$bwiGrade = 'A+';
-	    	} else if (($bwiTotal >= 70) && ($bwiTotal <= 79)) {
+	    	} else if (($bwiTotal >= 70) && ($bwiTotal <= 79.99)) {
 	    		$bwiGP = 4;
 	    		$bwiGrade = 'A';
-	    	} else if (($bwiTotal >= 60) && ($bwiTotal <= 69)) {
+	    	} else if (($bwiTotal >= 60) && ($bwiTotal <= 69.99)) {
 	    		$bwiGP = 3.5;
 	    		$bwiGrade = 'A-';
-	    	} else if (($bwiTotal >= 50) && ($bwiTotal <= 59)) {
+	    	} else if (($bwiTotal >= 50) && ($bwiTotal <= 59.99)) {
 	    		$bwiGP = 3;
 	    		$bwiGrade = 'B';
-	    	} else if (($bwiTotal >= 40) && ($bwiTotal <= 49)) {
+	    	} else if (($bwiTotal >= 40) && ($bwiTotal <= 49.99)) {
 	    		$bwiGP = 2;
 	    		$bwiGrade = 'C';
-	    	} else if (($bwiTotal >= 33) && ($bwiTotal <= 39)) {
+	    	} else if (($bwiTotal >= 33) && ($bwiTotal <= 39.99)) {
 	    		$bwiGP = 1;
 	    		$bwiGrade = 'D';
 	    	} else {
@@ -487,19 +487,19 @@ class ResultController extends Controller
 	    	} else if (($phyTotal >= 80) && ($phyTotal <= 100)) {
 	    		$phyGP = 5;
 	    		$phyGrade = 'A+';
-	    	} else if (($phyTotal >= 70) && ($phyTotal <= 79)) {
+	    	} else if (($phyTotal >= 70) && ($phyTotal <= 79.99)) {
 	    		$phyGP = 4;
 	    		$phyGrade = 'A';
-	    	} else if (($phyTotal >= 60) && ($phyTotal <= 69)) {
+	    	} else if (($phyTotal >= 60) && ($phyTotal <= 69.99)) {
 	    		$phyGP = 3.5;
 	    		$phyGrade = 'A-';
-	    	} else if (($phyTotal >= 50) && ($phyTotal <= 59)) {
+	    	} else if (($phyTotal >= 50) && ($phyTotal <= 59.99)) {
 	    		$phyGP = 3;
 	    		$phyGrade = 'B';
-	    	} else if (($phyTotal >= 40) && ($phyTotal <= 49)) {
+	    	} else if (($phyTotal >= 40) && ($phyTotal <= 49.99)) {
 	    		$phyGP = 2;
 	    		$phyGrade = 'C';
-	    	} else if (($phyTotal >= 33) && ($phyTotal <= 39)) {
+	    	} else if (($phyTotal >= 33) && ($phyTotal <= 39.99)) {
 	    		$phyGP = 1;
 	    		$phyGrade = 'D';
 	    	} else {
@@ -523,19 +523,19 @@ class ResultController extends Controller
 	    	} else if (($cheTotal >= 80) && ($cheTotal <= 100)) {
 	    		$cheGP = 5;
 	    		$cheGrade = 'A+';
-	    	} else if (($cheTotal >= 70) && ($cheTotal <= 79)) {
+	    	} else if (($cheTotal >= 70) && ($cheTotal <= 79.99)) {
 	    		$cheGP = 4;
 	    		$cheGrade = 'A';
-	    	} else if (($cheTotal >= 60) && ($cheTotal <= 69)) {
+	    	} else if (($cheTotal >= 60) && ($cheTotal <= 69.99)) {
 	    		$cheGP = 3.5;
 	    		$cheGrade = 'A-';
-	    	} else if (($cheTotal >= 50) && ($cheTotal <= 59)) {
+	    	} else if (($cheTotal >= 50) && ($cheTotal <= 59.99)) {
 	    		$cheGP = 3;
 	    		$cheGrade = 'B';
-	    	} else if (($cheTotal >= 40) && ($cheTotal <= 49)) {
+	    	} else if (($cheTotal >= 40) && ($cheTotal <= 49.99)) {
 	    		$cheGP = 2;
 	    		$cheGrade = 'C';
-	    	} else if (($cheTotal >= 33) && ($cheTotal <= 39)) {
+	    	} else if (($cheTotal >= 33) && ($cheTotal <= 39.99)) {
 	    		$cheGP = 1;
 	    		$cheGrade = 'D';
 	    	} else {
@@ -559,19 +559,19 @@ class ResultController extends Controller
 	    	} else if (($bioTotal >= 80) && ($bioTotal <= 100)) {
 	    		$bioGP = 5;
 	    		$bioGrade = 'A+';
-	    	} else if (($bioTotal >= 70) && ($bioTotal <= 79)) {
+	    	} else if (($bioTotal >= 70) && ($bioTotal <= 79.99)) {
 	    		$bioGP = 4;
 	    		$bioGrade = 'A';
-	    	} else if (($bioTotal >= 60) && ($bioTotal <= 69)) {
+	    	} else if (($bioTotal >= 60) && ($bioTotal <= 69.99)) {
 	    		$bioGP = 3.5;
 	    		$bioGrade = 'A-';
-	    	} else if (($bioTotal >= 50) && ($bioTotal <= 59)) {
+	    	} else if (($bioTotal >= 50) && ($bioTotal <= 59.99)) {
 	    		$bioGP = 3;
 	    		$bioGrade = 'B';
-	    	} else if (($bioTotal >= 40) && ($bioTotal <= 49)) {
+	    	} else if (($bioTotal >= 40) && ($bioTotal <= 49.99)) {
 	    		$bioGP = 2;
 	    		$bioGrade = 'C';
-	    	} else if (($bioTotal >= 33) && ($bioTotal <= 39)) {
+	    	} else if (($bioTotal >= 33) && ($bioTotal <= 39.99)) {
 	    		$bioGP = 1;
 	    		$bioGrade = 'D';
 	    	} else {
@@ -596,19 +596,19 @@ class ResultController extends Controller
 	    	} else if (($gsTotal >= 80) && ($gsTotal <= 100)) {
 	    		$gsGP = 5;
 	    		$gsGrade = 'A+';
-	    	} else if (($gsTotal >= 70) && ($gsTotal <= 79)) {
+	    	} else if (($gsTotal >= 70) && ($gsTotal <= 79.99)) {
 	    		$gsGP = 4;
 	    		$gsGrade = 'A';
-	    	} else if (($gsTotal >= 60) && ($gsTotal <= 69)) {
+	    	} else if (($gsTotal >= 60) && ($gsTotal <= 69.99)) {
 	    		$gsGP = 3.5;
 	    		$gsGrade = 'A-';
-	    	} else if (($gsTotal >= 50) && ($gsTotal <= 59)) {
+	    	} else if (($gsTotal >= 50) && ($gsTotal <= 59.99)) {
 	    		$gsGP = 3;
 	    		$gsGrade = 'B';
-	    	} else if (($gsTotal >= 40) && ($gsTotal <= 49)) {
+	    	} else if (($gsTotal >= 40) && ($gsTotal <= 49.99)) {
 	    		$gsGP = 2;
 	    		$gsGrade = 'C';
-	    	} else if (($gsTotal >= 33) && ($gsTotal <= 39)) {
+	    	} else if (($gsTotal >= 33) && ($gsTotal <= 39.99)) {
 	    		$gsGP = 1;
 	    		$gsGrade = 'D';
 	    	} else {
@@ -633,19 +633,19 @@ class ResultController extends Controller
 	    	} else if (($hisTotal >= 80) && ($hisTotal <= 100)) {
 	    		$hisGP = 5;
 	    		$hisGrade = 'A+';
-	    	} else if (($hisTotal >= 70) && ($hisTotal <= 79)) {
+	    	} else if (($hisTotal >= 70) && ($hisTotal <= 79.99)) {
 	    		$hisGP = 4;
 	    		$hisGrade = 'A';
-	    	} else if (($hisTotal >= 60) && ($hisTotal <= 69)) {
+	    	} else if (($hisTotal >= 60) && ($hisTotal <= 69.99)) {
 	    		$hisGP = 3.5;
 	    		$hisGrade = 'A-';
-	    	} else if (($hisTotal >= 50) && ($hisTotal <= 59)) {
+	    	} else if (($hisTotal >= 50) && ($hisTotal <= 59.99)) {
 	    		$hisGP = 3;
 	    		$hisGrade = 'B';
-	    	} else if (($hisTotal >= 40) && ($hisTotal <= 49)) {
+	    	} else if (($hisTotal >= 40) && ($hisTotal <= 49.99)) {
 	    		$hisGP = 2;
 	    		$hisGrade = 'C';
-	    	} else if (($hisTotal >= 33) && ($hisTotal <= 39)) {
+	    	} else if (($hisTotal >= 33) && ($hisTotal <= 39.99)) {
 	    		$hisGP = 1;
 	    		$hisGrade = 'D';
 	    	} else {
@@ -668,19 +668,19 @@ class ResultController extends Controller
 	    	} else if (($civTotal >= 80) && ($civTotal <= 100)) {
 	    		$civGP = 5;
 	    		$civGrade = 'A+';
-	    	} else if (($civTotal >= 70) && ($civTotal <= 79)) {
+	    	} else if (($civTotal >= 70) && ($civTotal <= 79.99)) {
 	    		$civGP = 4;
 	    		$civGrade = 'A';
-	    	} else if (($civTotal >= 60) && ($civTotal <= 69)) {
+	    	} else if (($civTotal >= 60) && ($civTotal <= 69.99)) {
 	    		$civGP = 3.5;
 	    		$civGrade = 'A-';
-	    	} else if (($civTotal >= 50) && ($civTotal <= 59)) {
+	    	} else if (($civTotal >= 50) && ($civTotal <= 59.99)) {
 	    		$civGP = 3;
 	    		$civGrade = 'B';
-	    	} else if (($civTotal >= 40) && ($civTotal <= 49)) {
+	    	} else if (($civTotal >= 40) && ($civTotal <= 49.99)) {
 	    		$civGP = 2;
 	    		$civGrade = 'C';
-	    	} else if (($civTotal >= 33) && ($civTotal <= 39)) {
+	    	} else if (($civTotal >= 33) && ($civTotal <= 39.99)) {
 	    		$civGP = 1;
 	    		$civGrade = 'D';
 	    	} else {
@@ -703,19 +703,19 @@ class ResultController extends Controller
 	    	} else if (($geoTotal >= 80) && ($geoTotal <= 100)) {
 	    		$geoGP = 5;
 	    		$geoGrade = 'A+';
-	    	} else if (($geoTotal >= 70) && ($geoTotal <= 79)) {
+	    	} else if (($geoTotal >= 70) && ($geoTotal <= 79.99)) {
 	    		$geoGP = 4;
 	    		$geoGrade = 'A';
-	    	} else if (($geoTotal >= 60) && ($geoTotal <= 69)) {
+	    	} else if (($geoTotal >= 60) && ($geoTotal <= 69.99)) {
 	    		$geoGP = 3.5;
 	    		$geoGrade = 'A-';
-	    	} else if (($geoTotal >= 50) && ($geoTotal <= 59)) {
+	    	} else if (($geoTotal >= 50) && ($geoTotal <= 59.99)) {
 	    		$geoGP = 3;
 	    		$geoGrade = 'B';
-	    	} else if (($geoTotal >= 40) && ($geoTotal <= 49)) {
+	    	} else if (($geoTotal >= 40) && ($geoTotal <= 49.99)) {
 	    		$geoGP = 2;
 	    		$geoGrade = 'C';
-	    	} else if (($geoTotal >= 33) && ($geoTotal <= 39)) {
+	    	} else if (($geoTotal >= 33) && ($geoTotal <= 39.99)) {
 	    		$geoGP = 1;
 	    		$geoGrade = 'D';
 	    	} else {
@@ -740,19 +740,19 @@ class ResultController extends Controller
 	    	} else if (($accTotal >= 80) && ($accTotal <= 100)) {
 	    		$accGP = 5;
 	    		$accGrade = 'A+';
-	    	} else if (($accTotal >= 70) && ($accTotal <= 79)) {
+	    	} else if (($accTotal >= 70) && ($accTotal <= 79.99)) {
 	    		$accGP = 4;
 	    		$accGrade = 'A';
-	    	} else if (($accTotal >= 60) && ($accTotal <= 69)) {
+	    	} else if (($accTotal >= 60) && ($accTotal <= 69.99)) {
 	    		$accGP = 3.5;
 	    		$accGrade = 'A-';
-	    	} else if (($accTotal >= 50) && ($accTotal <= 59)) {
+	    	} else if (($accTotal >= 50) && ($accTotal <= 59.99)) {
 	    		$accGP = 3;
 	    		$accGrade = 'B';
-	    	} else if (($accTotal >= 40) && ($accTotal <= 49)) {
+	    	} else if (($accTotal >= 40) && ($accTotal <= 49.99)) {
 	    		$accGP = 2;
 	    		$accGrade = 'C';
-	    	} else if (($accTotal >= 33) && ($accTotal <= 39)) {
+	    	} else if (($accTotal >= 33) && ($accTotal <= 39.99)) {
 	    		$accGP = 1;
 	    		$accGrade = 'D';
 	    	} else {
@@ -775,19 +775,19 @@ class ResultController extends Controller
 	    	} else if (($finTotal >= 80) && ($finTotal <= 100)) {
 	    		$finGP = 5;
 	    		$finGrade = 'A+';
-	    	} else if (($finTotal >= 70) && ($finTotal <= 79)) {
+	    	} else if (($finTotal >= 70) && ($finTotal <= 79.99)) {
 	    		$finGP = 4;
 	    		$finGrade = 'A';
-	    	} else if (($finTotal >= 60) && ($finTotal <= 69)) {
+	    	} else if (($finTotal >= 60) && ($finTotal <= 69.99)) {
 	    		$finGP = 3.5;
 	    		$finGrade = 'A-';
-	    	} else if (($finTotal >= 50) && ($finTotal <= 59)) {
+	    	} else if (($finTotal >= 50) && ($finTotal <= 59.99)) {
 	    		$finGP = 3;
 	    		$finGrade = 'B';
-	    	} else if (($finTotal >= 40) && ($finTotal <= 49)) {
+	    	} else if (($finTotal >= 40) && ($finTotal <= 49.99)) {
 	    		$finGP = 2;
 	    		$finGrade = 'C';
-	    	} else if (($finTotal >= 33) && ($finTotal <= 39)) {
+	    	} else if (($finTotal >= 33) && ($finTotal <= 39.99)) {
 	    		$finGP = 1;
 	    		$finGrade = 'D';
 	    	} else {
@@ -810,19 +810,19 @@ class ResultController extends Controller
 	    	} else if (($busTotal >= 80) && ($busTotal <= 100)) {
 	    		$busGP = 5;
 	    		$busGrade = 'A+';
-	    	} else if (($busTotal >= 70) && ($busTotal <= 79)) {
+	    	} else if (($busTotal >= 70) && ($busTotal <= 79.99)) {
 	    		$busGP = 4;
 	    		$busGrade = 'A';
-	    	} else if (($busTotal >= 60) && ($busTotal <= 69)) {
+	    	} else if (($busTotal >= 60) && ($busTotal <= 69.99)) {
 	    		$busGP = 3.5;
 	    		$busGrade = 'A-';
-	    	} else if (($busTotal >= 50) && ($busTotal <= 59)) {
+	    	} else if (($busTotal >= 50) && ($busTotal <= 59.99)) {
 	    		$busGP = 3;
 	    		$busGrade = 'B';
-	    	} else if (($busTotal >= 40) && ($busTotal <= 49)) {
+	    	} else if (($busTotal >= 40) && ($busTotal <= 49.99)) {
 	    		$busGP = 2;
 	    		$busGrade = 'C';
-	    	} else if (($busTotal >= 33) && ($busTotal <= 39)) {
+	    	} else if (($busTotal >= 33) && ($busTotal <= 39.99)) {
 	    		$busGP = 1;
 	    		$busGrade = 'D';
 	    	} else {
@@ -1256,19 +1256,19 @@ class ResultController extends Controller
     	} else if (($banAvg >= 80) && ($banAvg <= 100)) {
     		$banGP = 5;
     		$banGrade = 'A+';
-    	} else if (($banAvg >= 70) && ($banAvg <= 79)) {
+    	} else if (($banAvg >= 70) && ($banAvg <= 79.99)) {
     		$banGP = 4;
     		$banGrade = 'A';
-    	} else if (($banAvg >= 60) && ($banAvg <= 69)) {
+    	} else if (($banAvg >= 60) && ($banAvg <= 69.99)) {
     		$banGP = 3.5;
     		$banGrade = 'A-';
-    	} else if (($banAvg >= 50) && ($banAvg <= 59)) {
+    	} else if (($banAvg >= 50) && ($banAvg <= 59.99)) {
     		$banGP = 3;
     		$banGrade = 'B';
-    	} else if (($banAvg >= 40) && ($banAvg <= 49)) {
+    	} else if (($banAvg >= 40) && ($banAvg <= 49.99)) {
     		$banGP = 2;
     		$banGrade = 'C';
-    	} else if (($banAvg >= 33) && ($banAvg <= 39)) {
+    	} else if (($banAvg >= 33) && ($banAvg <= 39.99)) {
     		$banGP = 1;
     		$banGrade = 'D';
     	} else {
@@ -1290,19 +1290,19 @@ class ResultController extends Controller
     	} else if (($engAvg >= 80) && ($engAvg <= 100)) {
     		$engGP = 5;
     		$engGrade = 'A+';
-    	} else if (($engAvg >= 70) && ($engAvg <= 79)) {
+    	} else if (($engAvg >= 70) && ($engAvg <= 79.99)) {
     		$engGP = 4;
     		$engGrade = 'A';
-    	} else if (($engAvg >= 60) && ($engAvg <= 69)) {
+    	} else if (($engAvg >= 60) && ($engAvg <= 69.99)) {
     		$engGP = 3.5;
     		$engGrade = 'A-';
-    	} else if (($engAvg >= 50) && ($engAvg <= 59)) {
+    	} else if (($engAvg >= 50) && ($engAvg <= 59.99)) {
     		$engGP = 3;
     		$engGrade = 'B';
-    	} else if (($engAvg >= 40) && ($engAvg <= 49)) {
+    	} else if (($engAvg >= 40) && ($engAvg <= 49.99)) {
     		$engGP = 2;
     		$engGrade = 'C';
-    	} else if (($engAvg >= 33) && ($engAvg <= 39)) {
+    	} else if (($engAvg >= 33) && ($engAvg <= 39.99)) {
     		$engGP = 1;
     		$engGrade = 'D';
     	} else {
@@ -1325,19 +1325,19 @@ class ResultController extends Controller
     	} else if (($mathTotal >= 80) && ($mathTotal <= 100)) {
     		$mathGP = 5;
     		$mathGrade = 'A+';
-    	} else if (($mathTotal >= 70) && ($mathTotal <= 79)) {
+    	} else if (($mathTotal >= 70) && ($mathTotal <= 79.99)) {
     		$mathGP = 4;
     		$mathGrade = 'A';
-    	} else if (($mathTotal >= 60) && ($mathTotal <= 69)) {
+    	} else if (($mathTotal >= 60) && ($mathTotal <= 69.99)) {
     		$mathGP = 3.5;
     		$mathGrade = 'A-';
-    	} else if (($mathTotal >= 50) && ($mathTotal <= 59)) {
+    	} else if (($mathTotal >= 50) && ($mathTotal <= 59.99)) {
     		$mathGP = 3;
     		$mathGrade = 'B';
-    	} else if (($mathTotal >= 40) && ($mathTotal <= 49)) {
+    	} else if (($mathTotal >= 40) && ($mathTotal <= 49.99)) {
     		$mathGP = 2;
     		$mathGrade = 'C';
-    	} else if (($mathTotal >= 33) && ($mathTotal <= 39)) {
+    	} else if (($mathTotal >= 33) && ($mathTotal <= 39.99)) {
     		$mathGP = 1;
     		$mathGrade = 'D';
     	} else {
@@ -1360,19 +1360,19 @@ class ResultController extends Controller
     	} else if (($relTotal >= 80) && ($relTotal <= 100)) {
     		$relGP = 5;
     		$relGrade = 'A+';
-    	} else if (($relTotal >= 70) && ($relTotal <= 79)) {
+    	} else if (($relTotal >= 70) && ($relTotal <= 79.99)) {
     		$relGP = 4;
     		$relGrade = 'A';
-    	} else if (($relTotal >= 60) && ($relTotal <= 69)) {
+    	} else if (($relTotal >= 60) && ($relTotal <= 69.99)) {
     		$relGP = 3.5;
     		$relGrade = 'A-';
-    	} else if (($relTotal >= 50) && ($relTotal <= 59)) {
+    	} else if (($relTotal >= 50) && ($relTotal <= 59.99)) {
     		$relGP = 3;
     		$relGrade = 'B';
-    	} else if (($relTotal >= 40) && ($relTotal <= 49)) {
+    	} else if (($relTotal >= 40) && ($relTotal <= 49.99)) {
     		$relGP = 2;
     		$relGrade = 'C';
-    	} else if (($relTotal >= 33) && ($relTotal <= 39)) {
+    	} else if (($relTotal >= 33) && ($relTotal <= 39.99)) {
     		$relGP = 1;
     		$relGrade = 'D';
     	} else {
@@ -1396,19 +1396,19 @@ class ResultController extends Controller
         } else if (($psTotal >= 80) && ($psTotal <= 100)) {
             $psGP = 5;
             $psGrade = 'A+';
-        } else if (($psTotal >= 70) && ($psTotal <= 79)) {
+        } else if (($psTotal >= 70) && ($psTotal <= 79.99)) {
             $psGP = 4;
             $psGrade = 'A';
-        } else if (($psTotal >= 60) && ($psTotal <= 69)) {
+        } else if (($psTotal >= 60) && ($psTotal <= 69.99)) {
             $psGP = 3.5;
             $psGrade = 'A-';
-        } else if (($psTotal >= 50) && ($psTotal <= 59)) {
+        } else if (($psTotal >= 50) && ($psTotal <= 59.99)) {
             $psGP = 3;
             $psGrade = 'B';
-        } else if (($psTotal >= 40) && ($psTotal <= 49)) {
+        } else if (($psTotal >= 40) && ($psTotal <= 49.99)) {
             $psGP = 2;
             $psGrade = 'C';
-        } else if (($psTotal >= 33) && ($psTotal <= 39)) {
+        } else if (($psTotal >= 33) && ($psTotal <= 39.99)) {
             $psGP = 1;
             $psGrade = 'D';
         } else {
@@ -1432,19 +1432,19 @@ class ResultController extends Controller
         } else if (($ictPercentage >= 80) && ($ictPercentage <= 100)) {
             $ictGP = 5;
             $ictGrade = 'A+';
-        } else if (($ictPercentage >= 70) && ($ictPercentage <= 79)) {
+        } else if (($ictPercentage >= 70) && ($ictPercentage <= 79.99)) {
             $ictGP = 4;
             $ictGrade = 'A';
-        } else if (($ictPercentage >= 60) && ($ictPercentage <= 69)) {
+        } else if (($ictPercentage >= 60) && ($ictPercentage <= 69.99)) {
             $ictGP = 3.5;
             $ictGrade = 'A-';
-        } else if (($ictPercentage >= 50) && ($ictPercentage <= 59)) {
+        } else if (($ictPercentage >= 50) && ($ictPercentage <= 59.99)) {
             $ictGP = 3;
             $ictGrade = 'B';
-        } else if (($ictPercentage >= 40) && ($ictPercentage <= 49)) {
+        } else if (($ictPercentage >= 40) && ($ictPercentage <= 49.99)) {
             $ictGP = 2;
             $ictGrade = 'C';
-        } else if (($ictPercentage >= 33) && ($ictPercentage <= 39)) {
+        } else if (($ictPercentage >= 33) && ($ictPercentage <= 39.99)) {
             $ictGP = 1;
             $ictGrade = 'D';
         } else {
@@ -1468,19 +1468,19 @@ class ResultController extends Controller
         } else if (($csPercentage >= 80) && ($csPercentage <= 100)) {
             $csGP = 5;
             $csGrade = 'A+';
-        } else if (($csPercentage >= 70) && ($csPercentage <= 79)) {
+        } else if (($csPercentage >= 70) && ($csPercentage <= 79.99)) {
             $csGP = 4;
             $csGrade = 'A';
-        } else if (($csPercentage >= 60) && ($csPercentage <= 69)) {
+        } else if (($csPercentage >= 60) && ($csPercentage <= 69.99)) {
             $csGP = 3.5;
             $csGrade = 'A-';
-        } else if (($csPercentage >= 50) && ($csPercentage <= 59)) {
+        } else if (($csPercentage >= 50) && ($csPercentage <= 59.99)) {
             $csGP = 3;
             $csGrade = 'B';
-        } else if (($csPercentage >= 40) && ($csPercentage <= 49)) {
+        } else if (($csPercentage >= 40) && ($csPercentage <= 49.99)) {
             $csGP = 2;
             $csGrade = 'C';
-        } else if (($csPercentage >= 33) && ($csPercentage <= 39)) {
+        } else if (($csPercentage >= 33) && ($csPercentage <= 39.99)) {
             $csGP = 1;
             $csGrade = 'D';
         } else {
@@ -1504,19 +1504,19 @@ class ResultController extends Controller
 	    	} else if (($bwiTotal >= 80) && ($bwiTotal <= 100)) {
 	    		$bwiGP = 5;
 	    		$bwiGrade = 'A+';
-	    	} else if (($bwiTotal >= 70) && ($bwiTotal <= 79)) {
+	    	} else if (($bwiTotal >= 70) && ($bwiTotal <= 79.99)) {
 	    		$bwiGP = 4;
 	    		$bwiGrade = 'A';
-	    	} else if (($bwiTotal >= 60) && ($bwiTotal <= 69)) {
+	    	} else if (($bwiTotal >= 60) && ($bwiTotal <= 69.99)) {
 	    		$bwiGP = 3.5;
 	    		$bwiGrade = 'A-';
-	    	} else if (($bwiTotal >= 50) && ($bwiTotal <= 59)) {
+	    	} else if (($bwiTotal >= 50) && ($bwiTotal <= 59.99)) {
 	    		$bwiGP = 3;
 	    		$bwiGrade = 'B';
-	    	} else if (($bwiTotal >= 40) && ($bwiTotal <= 49)) {
+	    	} else if (($bwiTotal >= 40) && ($bwiTotal <= 49.99)) {
 	    		$bwiGP = 2;
 	    		$bwiGrade = 'C';
-	    	} else if (($bwiTotal >= 33) && ($bwiTotal <= 39)) {
+	    	} else if (($bwiTotal >= 33) && ($bwiTotal <= 39.99)) {
 	    		$bwiGP = 1;
 	    		$bwiGrade = 'D';
 	    	} else {
@@ -1540,19 +1540,19 @@ class ResultController extends Controller
 	    	} else if (($phyTotal >= 80) && ($phyTotal <= 100)) {
 	    		$phyGP = 5;
 	    		$phyGrade = 'A+';
-	    	} else if (($phyTotal >= 70) && ($phyTotal <= 79)) {
+	    	} else if (($phyTotal >= 70) && ($phyTotal <= 79.99)) {
 	    		$phyGP = 4;
 	    		$phyGrade = 'A';
-	    	} else if (($phyTotal >= 60) && ($phyTotal <= 69)) {
+	    	} else if (($phyTotal >= 60) && ($phyTotal <= 69.99)) {
 	    		$phyGP = 3.5;
 	    		$phyGrade = 'A-';
-	    	} else if (($phyTotal >= 50) && ($phyTotal <= 59)) {
+	    	} else if (($phyTotal >= 50) && ($phyTotal <= 59.99)) {
 	    		$phyGP = 3;
 	    		$phyGrade = 'B';
-	    	} else if (($phyTotal >= 40) && ($phyTotal <= 49)) {
+	    	} else if (($phyTotal >= 40) && ($phyTotal <= 49.99)) {
 	    		$phyGP = 2;
 	    		$phyGrade = 'C';
-	    	} else if (($phyTotal >= 33) && ($phyTotal <= 39)) {
+	    	} else if (($phyTotal >= 33) && ($phyTotal <= 39.99)) {
 	    		$phyGP = 1;
 	    		$phyGrade = 'D';
 	    	} else {
@@ -1576,19 +1576,19 @@ class ResultController extends Controller
 	    	} else if (($cheTotal >= 80) && ($cheTotal <= 100)) {
 	    		$cheGP = 5;
 	    		$cheGrade = 'A+';
-	    	} else if (($cheTotal >= 70) && ($cheTotal <= 79)) {
+	    	} else if (($cheTotal >= 70) && ($cheTotal <= 79.99)) {
 	    		$cheGP = 4;
 	    		$cheGrade = 'A';
-	    	} else if (($cheTotal >= 60) && ($cheTotal <= 69)) {
+	    	} else if (($cheTotal >= 60) && ($cheTotal <= 69.99)) {
 	    		$cheGP = 3.5;
 	    		$cheGrade = 'A-';
-	    	} else if (($cheTotal >= 50) && ($cheTotal <= 59)) {
+	    	} else if (($cheTotal >= 50) && ($cheTotal <= 59.99)) {
 	    		$cheGP = 3;
 	    		$cheGrade = 'B';
-	    	} else if (($cheTotal >= 40) && ($cheTotal <= 49)) {
+	    	} else if (($cheTotal >= 40) && ($cheTotal <= 49.99)) {
 	    		$cheGP = 2;
 	    		$cheGrade = 'C';
-	    	} else if (($cheTotal >= 33) && ($cheTotal <= 39)) {
+	    	} else if (($cheTotal >= 33) && ($cheTotal <= 39.99)) {
 	    		$cheGP = 1;
 	    		$cheGrade = 'D';
 	    	} else {
@@ -1612,19 +1612,19 @@ class ResultController extends Controller
 	    	} else if (($bioTotal >= 80) && ($bioTotal <= 100)) {
 	    		$bioGP = 5;
 	    		$bioGrade = 'A+';
-	    	} else if (($bioTotal >= 70) && ($bioTotal <= 79)) {
+	    	} else if (($bioTotal >= 70) && ($bioTotal <= 79.99)) {
 	    		$bioGP = 4;
 	    		$bioGrade = 'A';
-	    	} else if (($bioTotal >= 60) && ($bioTotal <= 69)) {
+	    	} else if (($bioTotal >= 60) && ($bioTotal <= 69.99)) {
 	    		$bioGP = 3.5;
 	    		$bioGrade = 'A-';
-	    	} else if (($bioTotal >= 50) && ($bioTotal <= 59)) {
+	    	} else if (($bioTotal >= 50) && ($bioTotal <= 59.99)) {
 	    		$bioGP = 3;
 	    		$bioGrade = 'B';
-	    	} else if (($bioTotal >= 40) && ($bioTotal <= 49)) {
+	    	} else if (($bioTotal >= 40) && ($bioTotal <= 49.99)) {
 	    		$bioGP = 2;
 	    		$bioGrade = 'C';
-	    	} else if (($bioTotal >= 33) && ($bioTotal <= 39)) {
+	    	} else if (($bioTotal >= 33) && ($bioTotal <= 39.99)) {
 	    		$bioGP = 1;
 	    		$bioGrade = 'D';
 	    	} else {
@@ -1649,19 +1649,19 @@ class ResultController extends Controller
 	    	} else if (($gsTotal >= 80) && ($gsTotal <= 100)) {
 	    		$gsGP = 5;
 	    		$gsGrade = 'A+';
-	    	} else if (($gsTotal >= 70) && ($gsTotal <= 79)) {
+	    	} else if (($gsTotal >= 70) && ($gsTotal <= 79.99)) {
 	    		$gsGP = 4;
 	    		$gsGrade = 'A';
-	    	} else if (($gsTotal >= 60) && ($gsTotal <= 69)) {
+	    	} else if (($gsTotal >= 60) && ($gsTotal <= 69.99)) {
 	    		$gsGP = 3.5;
 	    		$gsGrade = 'A-';
-	    	} else if (($gsTotal >= 50) && ($gsTotal <= 59)) {
+	    	} else if (($gsTotal >= 50) && ($gsTotal <= 59.99)) {
 	    		$gsGP = 3;
 	    		$gsGrade = 'B';
-	    	} else if (($gsTotal >= 40) && ($gsTotal <= 49)) {
+	    	} else if (($gsTotal >= 40) && ($gsTotal <= 49.99)) {
 	    		$gsGP = 2;
 	    		$gsGrade = 'C';
-	    	} else if (($gsTotal >= 33) && ($gsTotal <= 39)) {
+	    	} else if (($gsTotal >= 33) && ($gsTotal <= 39.99)) {
 	    		$gsGP = 1;
 	    		$gsGrade = 'D';
 	    	} else {
@@ -1686,19 +1686,19 @@ class ResultController extends Controller
 	    	} else if (($hisTotal >= 80) && ($hisTotal <= 100)) {
 	    		$hisGP = 5;
 	    		$hisGrade = 'A+';
-	    	} else if (($hisTotal >= 70) && ($hisTotal <= 79)) {
+	    	} else if (($hisTotal >= 70) && ($hisTotal <= 79.99)) {
 	    		$hisGP = 4;
 	    		$hisGrade = 'A';
-	    	} else if (($hisTotal >= 60) && ($hisTotal <= 69)) {
+	    	} else if (($hisTotal >= 60) && ($hisTotal <= 69.99)) {
 	    		$hisGP = 3.5;
 	    		$hisGrade = 'A-';
-	    	} else if (($hisTotal >= 50) && ($hisTotal <= 59)) {
+	    	} else if (($hisTotal >= 50) && ($hisTotal <= 59.99)) {
 	    		$hisGP = 3;
 	    		$hisGrade = 'B';
-	    	} else if (($hisTotal >= 40) && ($hisTotal <= 49)) {
+	    	} else if (($hisTotal >= 40) && ($hisTotal <= 49.99)) {
 	    		$hisGP = 2;
 	    		$hisGrade = 'C';
-	    	} else if (($hisTotal >= 33) && ($hisTotal <= 39)) {
+	    	} else if (($hisTotal >= 33) && ($hisTotal <= 39.99)) {
 	    		$hisGP = 1;
 	    		$hisGrade = 'D';
 	    	} else {
@@ -1721,19 +1721,19 @@ class ResultController extends Controller
 	    	} else if (($civTotal >= 80) && ($civTotal <= 100)) {
 	    		$civGP = 5;
 	    		$civGrade = 'A+';
-	    	} else if (($civTotal >= 70) && ($civTotal <= 79)) {
+	    	} else if (($civTotal >= 70) && ($civTotal <= 79.99)) {
 	    		$civGP = 4;
 	    		$civGrade = 'A';
-	    	} else if (($civTotal >= 60) && ($civTotal <= 69)) {
+	    	} else if (($civTotal >= 60) && ($civTotal <= 69.99)) {
 	    		$civGP = 3.5;
 	    		$civGrade = 'A-';
-	    	} else if (($civTotal >= 50) && ($civTotal <= 59)) {
+	    	} else if (($civTotal >= 50) && ($civTotal <= 59.99)) {
 	    		$civGP = 3;
 	    		$civGrade = 'B';
-	    	} else if (($civTotal >= 40) && ($civTotal <= 49)) {
+	    	} else if (($civTotal >= 40) && ($civTotal <= 49.99)) {
 	    		$civGP = 2;
 	    		$civGrade = 'C';
-	    	} else if (($civTotal >= 33) && ($civTotal <= 39)) {
+	    	} else if (($civTotal >= 33) && ($civTotal <= 39.99)) {
 	    		$civGP = 1;
 	    		$civGrade = 'D';
 	    	} else {
@@ -1756,19 +1756,19 @@ class ResultController extends Controller
 	    	} else if (($geoTotal >= 80) && ($geoTotal <= 100)) {
 	    		$geoGP = 5;
 	    		$geoGrade = 'A+';
-	    	} else if (($geoTotal >= 70) && ($geoTotal <= 79)) {
+	    	} else if (($geoTotal >= 70) && ($geoTotal <= 79.99)) {
 	    		$geoGP = 4;
 	    		$geoGrade = 'A';
-	    	} else if (($geoTotal >= 60) && ($geoTotal <= 69)) {
+	    	} else if (($geoTotal >= 60) && ($geoTotal <= 69.99)) {
 	    		$geoGP = 3.5;
 	    		$geoGrade = 'A-';
-	    	} else if (($geoTotal >= 50) && ($geoTotal <= 59)) {
+	    	} else if (($geoTotal >= 50) && ($geoTotal <= 59.99)) {
 	    		$geoGP = 3;
 	    		$geoGrade = 'B';
-	    	} else if (($geoTotal >= 40) && ($geoTotal <= 49)) {
+	    	} else if (($geoTotal >= 40) && ($geoTotal <= 49.99)) {
 	    		$geoGP = 2;
 	    		$geoGrade = 'C';
-	    	} else if (($geoTotal >= 33) && ($geoTotal <= 39)) {
+	    	} else if (($geoTotal >= 33) && ($geoTotal <= 39.99)) {
 	    		$geoGP = 1;
 	    		$geoGrade = 'D';
 	    	} else {
@@ -1793,19 +1793,19 @@ class ResultController extends Controller
 	    	} else if (($accTotal >= 80) && ($accTotal <= 100)) {
 	    		$accGP = 5;
 	    		$accGrade = 'A+';
-	    	} else if (($accTotal >= 70) && ($accTotal <= 79)) {
+	    	} else if (($accTotal >= 70) && ($accTotal <= 79.99)) {
 	    		$accGP = 4;
 	    		$accGrade = 'A';
-	    	} else if (($accTotal >= 60) && ($accTotal <= 69)) {
+	    	} else if (($accTotal >= 60) && ($accTotal <= 69.99)) {
 	    		$accGP = 3.5;
 	    		$accGrade = 'A-';
-	    	} else if (($accTotal >= 50) && ($accTotal <= 59)) {
+	    	} else if (($accTotal >= 50) && ($accTotal <= 59.99)) {
 	    		$accGP = 3;
 	    		$accGrade = 'B';
-	    	} else if (($accTotal >= 40) && ($accTotal <= 49)) {
+	    	} else if (($accTotal >= 40) && ($accTotal <= 49.99)) {
 	    		$accGP = 2;
 	    		$accGrade = 'C';
-	    	} else if (($accTotal >= 33) && ($accTotal <= 39)) {
+	    	} else if (($accTotal >= 33) && ($accTotal <= 39.99)) {
 	    		$accGP = 1;
 	    		$accGrade = 'D';
 	    	} else {
@@ -1828,19 +1828,19 @@ class ResultController extends Controller
 	    	} else if (($finTotal >= 80) && ($finTotal <= 100)) {
 	    		$finGP = 5;
 	    		$finGrade = 'A+';
-	    	} else if (($finTotal >= 70) && ($finTotal <= 79)) {
+	    	} else if (($finTotal >= 70) && ($finTotal <= 79.99)) {
 	    		$finGP = 4;
 	    		$finGrade = 'A';
-	    	} else if (($finTotal >= 60) && ($finTotal <= 69)) {
+	    	} else if (($finTotal >= 60) && ($finTotal <= 69.99)) {
 	    		$finGP = 3.5;
 	    		$finGrade = 'A-';
-	    	} else if (($finTotal >= 50) && ($finTotal <= 59)) {
+	    	} else if (($finTotal >= 50) && ($finTotal <= 59.99)) {
 	    		$finGP = 3;
 	    		$finGrade = 'B';
-	    	} else if (($finTotal >= 40) && ($finTotal <= 49)) {
+	    	} else if (($finTotal >= 40) && ($finTotal <= 49.99)) {
 	    		$finGP = 2;
 	    		$finGrade = 'C';
-	    	} else if (($finTotal >= 33) && ($finTotal <= 39)) {
+	    	} else if (($finTotal >= 33) && ($finTotal <= 39.99)) {
 	    		$finGP = 1;
 	    		$finGrade = 'D';
 	    	} else {
@@ -1863,19 +1863,19 @@ class ResultController extends Controller
 	    	} else if (($busTotal >= 80) && ($busTotal <= 100)) {
 	    		$busGP = 5;
 	    		$busGrade = 'A+';
-	    	} else if (($busTotal >= 70) && ($busTotal <= 79)) {
+	    	} else if (($busTotal >= 70) && ($busTotal <= 79.99)) {
 	    		$busGP = 4;
 	    		$busGrade = 'A';
-	    	} else if (($busTotal >= 60) && ($busTotal <= 69)) {
+	    	} else if (($busTotal >= 60) && ($busTotal <= 69.99)) {
 	    		$busGP = 3.5;
 	    		$busGrade = 'A-';
-	    	} else if (($busTotal >= 50) && ($busTotal <= 59)) {
+	    	} else if (($busTotal >= 50) && ($busTotal <= 59.99)) {
 	    		$busGP = 3;
 	    		$busGrade = 'B';
-	    	} else if (($busTotal >= 40) && ($busTotal <= 49)) {
+	    	} else if (($busTotal >= 40) && ($busTotal <= 49.99)) {
 	    		$busGP = 2;
 	    		$busGrade = 'C';
-	    	} else if (($busTotal >= 33) && ($busTotal <= 39)) {
+	    	} else if (($busTotal >= 33) && ($busTotal <= 39.99)) {
 	    		$busGP = 1;
 	    		$busGrade = 'D';
 	    	} else {

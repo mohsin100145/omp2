@@ -136,19 +136,19 @@ class SixToEightResultController extends Controller
     	} else if (($banPercentage >= 80) && ($banPercentage <= 100)) {
     		$banGP = 5;
     		$banGrade = 'A+';
-    	} else if (($banPercentage >= 70) && ($banPercentage <= 79)) {
+    	} else if (($banPercentage >= 70) && ($banPercentage <= 79.99)) {
     		$banGP = 4;
     		$banGrade = 'A';
-    	} else if (($banPercentage >= 60) && ($banPercentage <= 69)) {
+    	} else if (($banPercentage >= 60) && ($banPercentage <= 69.99)) {
     		$banGP = 3.5;
     		$banGrade = 'A-';
-    	} else if (($banPercentage >= 50) && ($banPercentage <= 59)) {
+    	} else if (($banPercentage >= 50) && ($banPercentage <= 59.99)) {
     		$banGP = 3;
     		$banGrade = 'B';
-    	} else if (($banPercentage >= 40) && ($banPercentage <= 49)) {
+    	} else if (($banPercentage >= 40) && ($banPercentage <= 49.99)) {
     		$banGP = 2;
     		$banGrade = 'C';
-    	} else if (($banPercentage >= 33.33) && ($banPercentage <= 39)) {
+    	} else if (($banPercentage >= 33.33) && ($banPercentage <= 39.99)) {
     		$banGP = 1;
     		$banGrade = 'D';
     	} else {
@@ -171,19 +171,19 @@ class SixToEightResultController extends Controller
     	} else if (($engPercentage >= 80) && ($engPercentage <= 100)) {
     		$engGP = 5;
     		$engGrade = 'A+';
-    	} else if (($engPercentage >= 70) && ($engPercentage <= 79)) {
+    	} else if (($engPercentage >= 70) && ($engPercentage <= 79.99)) {
     		$engGP = 4;
     		$engGrade = 'A';
-    	} else if (($engPercentage >= 60) && ($engPercentage <= 69)) {
+    	} else if (($engPercentage >= 60) && ($engPercentage <= 69.99)) {
     		$engGP = 3.5;
     		$engGrade = 'A-';
-    	} else if (($engPercentage >= 50) && ($engPercentage <= 59)) {
+    	} else if (($engPercentage >= 50) && ($engPercentage <= 59.99)) {
     		$engGP = 3;
     		$engGrade = 'B';
-    	} else if (($engPercentage >= 40) && ($engPercentage <= 49)) {
+    	} else if (($engPercentage >= 40) && ($engPercentage <= 49.99)) {
     		$engGP = 2;
     		$engGrade = 'C';
-    	} else if (($engPercentage >= 33.33) && ($engPercentage <= 39)) {
+    	} else if (($engPercentage >= 33.33) && ($engPercentage <= 39.99)) {
     		$engGP = 1;
     		$engGrade = 'D';
     	} else {
@@ -202,19 +202,19 @@ class SixToEightResultController extends Controller
     	} else if (($mathPercentage >= 80) && ($mathPercentage <= 100)) {
     		$mathGP = 5;
     		$mathGrade = 'A+';
-    	} else if (($mathPercentage >= 70) && ($mathPercentage <= 79)) {
+    	} else if (($mathPercentage >= 70) && ($mathPercentage <= 79.99)) {
     		$mathGP = 4;
     		$mathGrade = 'A';
-    	} else if (($mathPercentage >= 60) && ($mathPercentage <= 69)) {
+    	} else if (($mathPercentage >= 60) && ($mathPercentage <= 69.99)) {
     		$mathGP = 3.5;
     		$mathGrade = 'A-';
-    	} else if (($mathPercentage >= 50) && ($mathPercentage <= 59)) {
+    	} else if (($mathPercentage >= 50) && ($mathPercentage <= 59.99)) {
     		$mathGP = 3;
     		$mathGrade = 'B';
-    	} else if (($mathPercentage >= 40) && ($mathPercentage <= 49)) {
+    	} else if (($mathPercentage >= 40) && ($mathPercentage <= 49.99)) {
     		$mathGP = 2;
     		$mathGrade = 'C';
-    	} else if (($mathPercentage >= 33) && ($mathPercentage <= 39)) {
+    	} else if (($mathPercentage >= 33) && ($mathPercentage <= 39.99)) {
     		$mathGP = 1;
     		$mathGrade = 'D';
     	} else {
@@ -233,19 +233,19 @@ class SixToEightResultController extends Controller
     	} else if (($sciencePercentage >= 80) && ($sciencePercentage <= 100)) {
     		$scienceGP = 5;
     		$scienceGrade = 'A+';
-    	} else if (($sciencePercentage >= 70) && ($sciencePercentage <= 79)) {
+    	} else if (($sciencePercentage >= 70) && ($sciencePercentage <= 79.99)) {
     		$scienceGP = 4;
     		$scienceGrade = 'A';
-    	} else if (($sciencePercentage >= 60) && ($sciencePercentage <= 69)) {
+    	} else if (($sciencePercentage >= 60) && ($sciencePercentage <= 69.99)) {
     		$scienceGP = 3.5;
     		$scienceGrade = 'A-';
-    	} else if (($sciencePercentage >= 50) && ($sciencePercentage <= 59)) {
+    	} else if (($sciencePercentage >= 50) && ($sciencePercentage <= 59.99)) {
     		$scienceGP = 3;
     		$scienceGrade = 'B';
-    	} else if (($sciencePercentage >= 40) && ($sciencePercentage <= 49)) {
+    	} else if (($sciencePercentage >= 40) && ($sciencePercentage <= 49.99)) {
     		$scienceGP = 2;
     		$scienceGrade = 'C';
-    	} else if (($sciencePercentage >= 33) && ($sciencePercentage <= 39)) {
+    	} else if (($sciencePercentage >= 33) && ($sciencePercentage <= 39.99)) {
     		$scienceGP = 1;
     		$scienceGrade = 'D';
     	} else {
@@ -264,19 +264,19 @@ class SixToEightResultController extends Controller
     	} else if (($bangladeshPercentage >= 80) && ($bangladeshPercentage <= 100)) {
     		$bangladeshGP = 5;
     		$bangladeshGrade = 'A+';
-    	} else if (($bangladeshPercentage >= 70) && ($bangladeshPercentage <= 79)) {
+    	} else if (($bangladeshPercentage >= 70) && ($bangladeshPercentage <= 79.99)) {
     		$bangladeshGP = 4;
     		$bangladeshGrade = 'A';
-    	} else if (($bangladeshPercentage >= 60) && ($bangladeshPercentage <= 69)) {
+    	} else if (($bangladeshPercentage >= 60) && ($bangladeshPercentage <= 69.99)) {
     		$bangladeshGP = 3.5;
     		$bangladeshGrade = 'A-';
-    	} else if (($bangladeshPercentage >= 50) && ($bangladeshPercentage <= 59)) {
+    	} else if (($bangladeshPercentage >= 50) && ($bangladeshPercentage <= 59.99)) {
     		$bangladeshGP = 3;
     		$bangladeshGrade = 'B';
-    	} else if (($bangladeshPercentage >= 40) && ($bangladeshPercentage <= 49)) {
+    	} else if (($bangladeshPercentage >= 40) && ($bangladeshPercentage <= 49.99)) {
     		$bangladeshGP = 2;
     		$bangladeshGrade = 'C';
-    	} else if (($bangladeshPercentage >= 33) && ($bangladeshPercentage <= 39)) {
+    	} else if (($bangladeshPercentage >= 33) && ($bangladeshPercentage <= 39.99)) {
     		$bangladeshGP = 1;
     		$bangladeshGrade = 'D';
     	} else {
@@ -295,19 +295,19 @@ class SixToEightResultController extends Controller
     	} else if (($religionPercentage >= 80) && ($religionPercentage <= 100)) {
     		$religionGP = 5;
     		$religionGrade = 'A+';
-    	} else if (($religionPercentage >= 70) && ($religionPercentage <= 79)) {
+    	} else if (($religionPercentage >= 70) && ($religionPercentage <= 79.99)) {
     		$religionGP = 4;
     		$religionGrade = 'A';
-    	} else if (($religionPercentage >= 60) && ($religionPercentage <= 69)) {
+    	} else if (($religionPercentage >= 60) && ($religionPercentage <= 69.99)) {
     		$religionGP = 3.5;
     		$religionGrade = 'A-';
-    	} else if (($religionPercentage >= 50) && ($religionPercentage <= 59)) {
+    	} else if (($religionPercentage >= 50) && ($religionPercentage <= 59.99)) {
     		$religionGP = 3;
     		$religionGrade = 'B';
-    	} else if (($religionPercentage >= 40) && ($religionPercentage <= 49)) {
+    	} else if (($religionPercentage >= 40) && ($religionPercentage <= 49.99)) {
     		$religionGP = 2;
     		$religionGrade = 'C';
-    	} else if (($religionPercentage >= 33) && ($religionPercentage <= 39)) {
+    	} else if (($religionPercentage >= 33) && ($religionPercentage <= 39.99)) {
     		$religionGP = 1;
     		$religionGrade = 'D';
     	} else {
@@ -326,19 +326,19 @@ class SixToEightResultController extends Controller
     	} else if (($ictPercentage >= 80) && ($ictPercentage <= 100)) {
     		$ictGP = 5;
     		$ictGrade = 'A+';
-    	} else if (($ictPercentage >= 70) && ($ictPercentage <= 79)) {
+    	} else if (($ictPercentage >= 70) && ($ictPercentage <= 79.99)) {
     		$ictGP = 4;
     		$ictGrade = 'A';
-    	} else if (($ictPercentage >= 60) && ($ictPercentage <= 69)) {
+    	} else if (($ictPercentage >= 60) && ($ictPercentage <= 69.99)) {
     		$ictGP = 3.5;
     		$ictGrade = 'A-';
-    	} else if (($ictPercentage >= 50) && ($ictPercentage <= 59)) {
+    	} else if (($ictPercentage >= 50) && ($ictPercentage <= 59.99)) {
     		$ictGP = 3;
     		$ictGrade = 'B';
-    	} else if (($ictPercentage >= 40) && ($ictPercentage <= 49)) {
+    	} else if (($ictPercentage >= 40) && ($ictPercentage <= 49.99)) {
     		$ictGP = 2;
     		$ictGrade = 'C';
-    	} else if (($ictPercentage >= 34) && ($ictPercentage <= 39)) {
+    	} else if (($ictPercentage >= 34) && ($ictPercentage <= 39.99)) {
     		$ictGP = 1;
     		$ictGrade = 'D';
     	} else {
@@ -357,19 +357,19 @@ class SixToEightResultController extends Controller
     	} else if (($workPercentage >= 80) && ($workPercentage <= 100)) {
     		$workGP = 5;
     		$workGrade = 'A+';
-    	} else if (($workPercentage >= 70) && ($workPercentage <= 79)) {
+    	} else if (($workPercentage >= 70) && ($workPercentage <= 79.99)) {
     		$workGP = 4;
     		$workGrade = 'A';
-    	} else if (($workPercentage >= 60) && ($workPercentage <= 69)) {
+    	} else if (($workPercentage >= 60) && ($workPercentage <= 69.99)) {
     		$workGP = 3.5;
     		$workGrade = 'A-';
-    	} else if (($workPercentage >= 50) && ($workPercentage <= 59)) {
+    	} else if (($workPercentage >= 50) && ($workPercentage <= 59.99)) {
     		$workGP = 3;
     		$workGrade = 'B';
-    	} else if (($workPercentage >= 40) && ($workPercentage <= 49)) {
+    	} else if (($workPercentage >= 40) && ($workPercentage <= 49.99)) {
     		$workGP = 2;
     		$workGrade = 'C';
-    	} else if (($workPercentage >= 34) && ($workPercentage <= 39)) {
+    	} else if (($workPercentage >= 34) && ($workPercentage <= 39.99)) {
     		$workGP = 1;
     		$workGrade = 'D';
     	} else {
@@ -388,19 +388,19 @@ class SixToEightResultController extends Controller
     	} else if (($physicalPercentage >= 80) && ($physicalPercentage <= 100)) {
     		$physicalGP = 5;
     		$physicalGrade = 'A+';
-    	} else if (($physicalPercentage >= 70) && ($physicalPercentage <= 79)) {
+    	} else if (($physicalPercentage >= 70) && ($physicalPercentage <= 79.99)) {
     		$physicalGP = 4;
     		$physicalGrade = 'A';
-    	} else if (($physicalPercentage >= 60) && ($physicalPercentage <= 69)) {
+    	} else if (($physicalPercentage >= 60) && ($physicalPercentage <= 69.99)) {
     		$physicalGP = 3.5;
     		$physicalGrade = 'A-';
-    	} else if (($physicalPercentage >= 50) && ($physicalPercentage <= 59)) {
+    	} else if (($physicalPercentage >= 50) && ($physicalPercentage <= 59.99)) {
     		$physicalGP = 3;
     		$physicalGrade = 'B';
-    	} else if (($physicalPercentage >= 40) && ($physicalPercentage <= 49)) {
+    	} else if (($physicalPercentage >= 40) && ($physicalPercentage <= 49.99)) {
     		$physicalGP = 2;
     		$physicalGrade = 'C';
-    	} else if (($physicalPercentage >= 34) && ($physicalPercentage <= 39)) {
+    	} else if (($physicalPercentage >= 34) && ($physicalPercentage <= 39.99)) {
     		$physicalGP = 1;
     		$physicalGrade = 'D';
     	} else {
@@ -419,19 +419,19 @@ class SixToEightResultController extends Controller
     	} else if (($artsPercentage >= 80) && ($artsPercentage <= 100)) {
     		$artsGP = 5;
     		$artsGrade = 'A+';
-    	} else if (($artsPercentage >= 70) && ($artsPercentage <= 79)) {
+    	} else if (($artsPercentage >= 70) && ($artsPercentage <= 79.99)) {
     		$artsGP = 4;
     		$artsGrade = 'A';
-    	} else if (($artsPercentage >= 60) && ($artsPercentage <= 69)) {
+    	} else if (($artsPercentage >= 60) && ($artsPercentage <= 69.99)) {
     		$artsGP = 3.5;
     		$artsGrade = 'A-';
-    	} else if (($artsPercentage >= 50) && ($artsPercentage <= 59)) {
+    	} else if (($artsPercentage >= 50) && ($artsPercentage <= 59.99)) {
     		$artsGP = 3;
     		$artsGrade = 'B';
-    	} else if (($artsPercentage >= 40) && ($artsPercentage <= 49)) {
+    	} else if (($artsPercentage >= 40) && ($artsPercentage <= 49.99)) {
     		$artsGP = 2;
     		$artsGrade = 'C';
-    	} else if (($artsPercentage >= 34) && ($artsPercentage <= 39)) {
+    	} else if (($artsPercentage >= 34) && ($artsPercentage <= 39.99)) {
     		$artsGP = 1;
     		$artsGrade = 'D';
     	} else {
@@ -450,19 +450,19 @@ class SixToEightResultController extends Controller
     	} else if (($optionalPercentage >= 80) && ($optionalPercentage <= 100)) {
     		$optionalGP = 5;
     		$optionalGrade = 'A+';
-    	} else if (($optionalPercentage >= 70) && ($optionalPercentage <= 79)) {
+    	} else if (($optionalPercentage >= 70) && ($optionalPercentage <= 79.99)) {
     		$optionalGP = 4;
     		$optionalGrade = 'A';
-    	} else if (($optionalPercentage >= 60) && ($optionalPercentage <= 69)) {
+    	} else if (($optionalPercentage >= 60) && ($optionalPercentage <= 69.99)) {
     		$optionalGP = 3.5;
     		$optionalGrade = 'A-';
-    	} else if (($optionalPercentage >= 50) && ($optionalPercentage <= 59)) {
+    	} else if (($optionalPercentage >= 50) && ($optionalPercentage <= 59.99)) {
     		$optionalGP = 3;
     		$optionalGrade = 'B';
-    	} else if (($optionalPercentage >= 40) && ($optionalPercentage <= 49)) {
+    	} else if (($optionalPercentage >= 40) && ($optionalPercentage <= 49.99)) {
     		$optionalGP = 2;
     		$optionalGrade = 'C';
-    	} else if (($optionalPercentage >= 33) && ($optionalPercentage <= 39)) {
+    	} else if (($optionalPercentage >= 33) && ($optionalPercentage <= 39.99)) {
     		$optionalGP = 1;
     		$optionalGrade = 'D';
     	} else {
@@ -740,19 +740,19 @@ class SixToEightResultController extends Controller
     	} else if (($banPercentage >= 80) && ($banPercentage <= 100)) {
     		$banGP = 5;
     		$banGrade = 'A+';
-    	} else if (($banPercentage >= 70) && ($banPercentage <= 79)) {
+    	} else if (($banPercentage >= 70) && ($banPercentage <= 79.99)) {
     		$banGP = 4;
     		$banGrade = 'A';
-    	} else if (($banPercentage >= 60) && ($banPercentage <= 69)) {
+    	} else if (($banPercentage >= 60) && ($banPercentage <= 69.99)) {
     		$banGP = 3.5;
     		$banGrade = 'A-';
-    	} else if (($banPercentage >= 50) && ($banPercentage <= 59)) {
+    	} else if (($banPercentage >= 50) && ($banPercentage <= 59.99)) {
     		$banGP = 3;
     		$banGrade = 'B';
-    	} else if (($banPercentage >= 40) && ($banPercentage <= 49)) {
+    	} else if (($banPercentage >= 40) && ($banPercentage <= 49.99)) {
     		$banGP = 2;
     		$banGrade = 'C';
-    	} else if (($banPercentage >= 33.33) && ($banPercentage <= 39)) {
+    	} else if (($banPercentage >= 33.33) && ($banPercentage <= 39.99)) {
     		$banGP = 1;
     		$banGrade = 'D';
     	} else {
@@ -775,19 +775,19 @@ class SixToEightResultController extends Controller
     	} else if (($engPercentage >= 80) && ($engPercentage <= 100)) {
     		$engGP = 5;
     		$engGrade = 'A+';
-    	} else if (($engPercentage >= 70) && ($engPercentage <= 79)) {
+    	} else if (($engPercentage >= 70) && ($engPercentage <= 79.99)) {
     		$engGP = 4;
     		$engGrade = 'A';
-    	} else if (($engPercentage >= 60) && ($engPercentage <= 69)) {
+    	} else if (($engPercentage >= 60) && ($engPercentage <= 69.99)) {
     		$engGP = 3.5;
     		$engGrade = 'A-';
-    	} else if (($engPercentage >= 50) && ($engPercentage <= 59)) {
+    	} else if (($engPercentage >= 50) && ($engPercentage <= 59.99)) {
     		$engGP = 3;
     		$engGrade = 'B';
-    	} else if (($engPercentage >= 40) && ($engPercentage <= 49)) {
+    	} else if (($engPercentage >= 40) && ($engPercentage <= 49.99)) {
     		$engGP = 2;
     		$engGrade = 'C';
-    	} else if (($engPercentage >= 33.33) && ($engPercentage <= 39)) {
+    	} else if (($engPercentage >= 33.33) && ($engPercentage <= 39.99)) {
     		$engGP = 1;
     		$engGrade = 'D';
     	} else {
@@ -806,19 +806,19 @@ class SixToEightResultController extends Controller
     	} else if (($mathPercentage >= 80) && ($mathPercentage <= 100)) {
     		$mathGP = 5;
     		$mathGrade = 'A+';
-    	} else if (($mathPercentage >= 70) && ($mathPercentage <= 79)) {
+    	} else if (($mathPercentage >= 70) && ($mathPercentage <= 79.99)) {
     		$mathGP = 4;
     		$mathGrade = 'A';
-    	} else if (($mathPercentage >= 60) && ($mathPercentage <= 69)) {
+    	} else if (($mathPercentage >= 60) && ($mathPercentage <= 69.99)) {
     		$mathGP = 3.5;
     		$mathGrade = 'A-';
-    	} else if (($mathPercentage >= 50) && ($mathPercentage <= 59)) {
+    	} else if (($mathPercentage >= 50) && ($mathPercentage <= 59.99)) {
     		$mathGP = 3;
     		$mathGrade = 'B';
-    	} else if (($mathPercentage >= 40) && ($mathPercentage <= 49)) {
+    	} else if (($mathPercentage >= 40) && ($mathPercentage <= 49.99)) {
     		$mathGP = 2;
     		$mathGrade = 'C';
-    	} else if (($mathPercentage >= 33) && ($mathPercentage <= 39)) {
+    	} else if (($mathPercentage >= 33) && ($mathPercentage <= 39.99)) {
     		$mathGP = 1;
     		$mathGrade = 'D';
     	} else {
@@ -837,19 +837,19 @@ class SixToEightResultController extends Controller
     	} else if (($sciencePercentage >= 80) && ($sciencePercentage <= 100)) {
     		$scienceGP = 5;
     		$scienceGrade = 'A+';
-    	} else if (($sciencePercentage >= 70) && ($sciencePercentage <= 79)) {
+    	} else if (($sciencePercentage >= 70) && ($sciencePercentage <= 79.99)) {
     		$scienceGP = 4;
     		$scienceGrade = 'A';
-    	} else if (($sciencePercentage >= 60) && ($sciencePercentage <= 69)) {
+    	} else if (($sciencePercentage >= 60) && ($sciencePercentage <= 69.99)) {
     		$scienceGP = 3.5;
     		$scienceGrade = 'A-';
-    	} else if (($sciencePercentage >= 50) && ($sciencePercentage <= 59)) {
+    	} else if (($sciencePercentage >= 50) && ($sciencePercentage <= 59.99)) {
     		$scienceGP = 3;
     		$scienceGrade = 'B';
-    	} else if (($sciencePercentage >= 40) && ($sciencePercentage <= 49)) {
+    	} else if (($sciencePercentage >= 40) && ($sciencePercentage <= 49.99)) {
     		$scienceGP = 2;
     		$scienceGrade = 'C';
-    	} else if (($sciencePercentage >= 33) && ($sciencePercentage <= 39)) {
+    	} else if (($sciencePercentage >= 33) && ($sciencePercentage <= 39.99)) {
     		$scienceGP = 1;
     		$scienceGrade = 'D';
     	} else {
@@ -868,19 +868,19 @@ class SixToEightResultController extends Controller
     	} else if (($bangladeshPercentage >= 80) && ($bangladeshPercentage <= 100)) {
     		$bangladeshGP = 5;
     		$bangladeshGrade = 'A+';
-    	} else if (($bangladeshPercentage >= 70) && ($bangladeshPercentage <= 79)) {
+    	} else if (($bangladeshPercentage >= 70) && ($bangladeshPercentage <= 79.99)) {
     		$bangladeshGP = 4;
     		$bangladeshGrade = 'A';
-    	} else if (($bangladeshPercentage >= 60) && ($bangladeshPercentage <= 69)) {
+    	} else if (($bangladeshPercentage >= 60) && ($bangladeshPercentage <= 69.99)) {
     		$bangladeshGP = 3.5;
     		$bangladeshGrade = 'A-';
-    	} else if (($bangladeshPercentage >= 50) && ($bangladeshPercentage <= 59)) {
+    	} else if (($bangladeshPercentage >= 50) && ($bangladeshPercentage <= 59.99)) {
     		$bangladeshGP = 3;
     		$bangladeshGrade = 'B';
-    	} else if (($bangladeshPercentage >= 40) && ($bangladeshPercentage <= 49)) {
+    	} else if (($bangladeshPercentage >= 40) && ($bangladeshPercentage <= 49.99)) {
     		$bangladeshGP = 2;
     		$bangladeshGrade = 'C';
-    	} else if (($bangladeshPercentage >= 33) && ($bangladeshPercentage <= 39)) {
+    	} else if (($bangladeshPercentage >= 33) && ($bangladeshPercentage <= 39.99)) {
     		$bangladeshGP = 1;
     		$bangladeshGrade = 'D';
     	} else {
@@ -899,19 +899,19 @@ class SixToEightResultController extends Controller
     	} else if (($religionPercentage >= 80) && ($religionPercentage <= 100)) {
     		$religionGP = 5;
     		$religionGrade = 'A+';
-    	} else if (($religionPercentage >= 70) && ($religionPercentage <= 79)) {
+    	} else if (($religionPercentage >= 70) && ($religionPercentage <= 79.99)) {
     		$religionGP = 4;
     		$religionGrade = 'A';
-    	} else if (($religionPercentage >= 60) && ($religionPercentage <= 69)) {
+    	} else if (($religionPercentage >= 60) && ($religionPercentage <= 69.99)) {
     		$religionGP = 3.5;
     		$religionGrade = 'A-';
-    	} else if (($religionPercentage >= 50) && ($religionPercentage <= 59)) {
+    	} else if (($religionPercentage >= 50) && ($religionPercentage <= 59.99)) {
     		$religionGP = 3;
     		$religionGrade = 'B';
-    	} else if (($religionPercentage >= 40) && ($religionPercentage <= 49)) {
+    	} else if (($religionPercentage >= 40) && ($religionPercentage <= 49.99)) {
     		$religionGP = 2;
     		$religionGrade = 'C';
-    	} else if (($religionPercentage >= 33) && ($religionPercentage <= 39)) {
+    	} else if (($religionPercentage >= 33) && ($religionPercentage <= 39.99)) {
     		$religionGP = 1;
     		$religionGrade = 'D';
     	} else {
@@ -930,19 +930,19 @@ class SixToEightResultController extends Controller
     	} else if (($ictPercentage >= 80) && ($ictPercentage <= 100)) {
     		$ictGP = 5;
     		$ictGrade = 'A+';
-    	} else if (($ictPercentage >= 70) && ($ictPercentage <= 79)) {
+    	} else if (($ictPercentage >= 70) && ($ictPercentage <= 79.99)) {
     		$ictGP = 4;
     		$ictGrade = 'A';
-    	} else if (($ictPercentage >= 60) && ($ictPercentage <= 69)) {
+    	} else if (($ictPercentage >= 60) && ($ictPercentage <= 69.99)) {
     		$ictGP = 3.5;
     		$ictGrade = 'A-';
-    	} else if (($ictPercentage >= 50) && ($ictPercentage <= 59)) {
+    	} else if (($ictPercentage >= 50) && ($ictPercentage <= 59.99)) {
     		$ictGP = 3;
     		$ictGrade = 'B';
-    	} else if (($ictPercentage >= 40) && ($ictPercentage <= 49)) {
+    	} else if (($ictPercentage >= 40) && ($ictPercentage <= 49.99)) {
     		$ictGP = 2;
     		$ictGrade = 'C';
-    	} else if (($ictPercentage >= 34) && ($ictPercentage <= 39)) {
+    	} else if (($ictPercentage >= 34) && ($ictPercentage <= 39.99)) {
     		$ictGP = 1;
     		$ictGrade = 'D';
     	} else {
@@ -961,19 +961,19 @@ class SixToEightResultController extends Controller
     	} else if (($workPercentage >= 80) && ($workPercentage <= 100)) {
     		$workGP = 5;
     		$workGrade = 'A+';
-    	} else if (($workPercentage >= 70) && ($workPercentage <= 79)) {
+    	} else if (($workPercentage >= 70) && ($workPercentage <= 79.99)) {
     		$workGP = 4;
     		$workGrade = 'A';
-    	} else if (($workPercentage >= 60) && ($workPercentage <= 69)) {
+    	} else if (($workPercentage >= 60) && ($workPercentage <= 69.99)) {
     		$workGP = 3.5;
     		$workGrade = 'A-';
-    	} else if (($workPercentage >= 50) && ($workPercentage <= 59)) {
+    	} else if (($workPercentage >= 50) && ($workPercentage <= 59.99)) {
     		$workGP = 3;
     		$workGrade = 'B';
-    	} else if (($workPercentage >= 40) && ($workPercentage <= 49)) {
+    	} else if (($workPercentage >= 40) && ($workPercentage <= 49.99)) {
     		$workGP = 2;
     		$workGrade = 'C';
-    	} else if (($workPercentage >= 34) && ($workPercentage <= 39)) {
+    	} else if (($workPercentage >= 34) && ($workPercentage <= 39.99)) {
     		$workGP = 1;
     		$workGrade = 'D';
     	} else {
@@ -992,19 +992,19 @@ class SixToEightResultController extends Controller
     	} else if (($physicalPercentage >= 80) && ($physicalPercentage <= 100)) {
     		$physicalGP = 5;
     		$physicalGrade = 'A+';
-    	} else if (($physicalPercentage >= 70) && ($physicalPercentage <= 79)) {
+    	} else if (($physicalPercentage >= 70) && ($physicalPercentage <= 79.99)) {
     		$physicalGP = 4;
     		$physicalGrade = 'A';
-    	} else if (($physicalPercentage >= 60) && ($physicalPercentage <= 69)) {
+    	} else if (($physicalPercentage >= 60) && ($physicalPercentage <= 69.99)) {
     		$physicalGP = 3.5;
     		$physicalGrade = 'A-';
-    	} else if (($physicalPercentage >= 50) && ($physicalPercentage <= 59)) {
+    	} else if (($physicalPercentage >= 50) && ($physicalPercentage <= 59.99)) {
     		$physicalGP = 3;
     		$physicalGrade = 'B';
-    	} else if (($physicalPercentage >= 40) && ($physicalPercentage <= 49)) {
+    	} else if (($physicalPercentage >= 40) && ($physicalPercentage <= 49.99)) {
     		$physicalGP = 2;
     		$physicalGrade = 'C';
-    	} else if (($physicalPercentage >= 34) && ($physicalPercentage <= 39)) {
+    	} else if (($physicalPercentage >= 34) && ($physicalPercentage <= 39.99)) {
     		$physicalGP = 1;
     		$physicalGrade = 'D';
     	} else {
@@ -1023,19 +1023,19 @@ class SixToEightResultController extends Controller
     	} else if (($artsPercentage >= 80) && ($artsPercentage <= 100)) {
     		$artsGP = 5;
     		$artsGrade = 'A+';
-    	} else if (($artsPercentage >= 70) && ($artsPercentage <= 79)) {
+    	} else if (($artsPercentage >= 70) && ($artsPercentage <= 79.99)) {
     		$artsGP = 4;
     		$artsGrade = 'A';
-    	} else if (($artsPercentage >= 60) && ($artsPercentage <= 69)) {
+    	} else if (($artsPercentage >= 60) && ($artsPercentage <= 69.99)) {
     		$artsGP = 3.5;
     		$artsGrade = 'A-';
-    	} else if (($artsPercentage >= 50) && ($artsPercentage <= 59)) {
+    	} else if (($artsPercentage >= 50) && ($artsPercentage <= 59.99)) {
     		$artsGP = 3;
     		$artsGrade = 'B';
-    	} else if (($artsPercentage >= 40) && ($artsPercentage <= 49)) {
+    	} else if (($artsPercentage >= 40) && ($artsPercentage <= 49.99)) {
     		$artsGP = 2;
     		$artsGrade = 'C';
-    	} else if (($artsPercentage >= 34) && ($artsPercentage <= 39)) {
+    	} else if (($artsPercentage >= 34) && ($artsPercentage <= 39.99)) {
     		$artsGP = 1;
     		$artsGrade = 'D';
     	} else {
@@ -1054,19 +1054,19 @@ class SixToEightResultController extends Controller
     	} else if (($optionalPercentage >= 80) && ($optionalPercentage <= 100)) {
     		$optionalGP = 5;
     		$optionalGrade = 'A+';
-    	} else if (($optionalPercentage >= 70) && ($optionalPercentage <= 79)) {
+    	} else if (($optionalPercentage >= 70) && ($optionalPercentage <= 79.99)) {
     		$optionalGP = 4;
     		$optionalGrade = 'A';
-    	} else if (($optionalPercentage >= 60) && ($optionalPercentage <= 69)) {
+    	} else if (($optionalPercentage >= 60) && ($optionalPercentage <= 69.99)) {
     		$optionalGP = 3.5;
     		$optionalGrade = 'A-';
-    	} else if (($optionalPercentage >= 50) && ($optionalPercentage <= 59)) {
+    	} else if (($optionalPercentage >= 50) && ($optionalPercentage <= 59.99)) {
     		$optionalGP = 3;
     		$optionalGrade = 'B';
-    	} else if (($optionalPercentage >= 40) && ($optionalPercentage <= 49)) {
+    	} else if (($optionalPercentage >= 40) && ($optionalPercentage <= 49.99)) {
     		$optionalGP = 2;
     		$optionalGrade = 'C';
-    	} else if (($optionalPercentage >= 33) && ($optionalPercentage <= 39)) {
+    	} else if (($optionalPercentage >= 33) && ($optionalPercentage <= 39.99)) {
     		$optionalGP = 1;
     		$optionalGrade = 'D';
     	} else {
