@@ -194,7 +194,7 @@
 
                                 <div class="info-box-content">
                                     <span class="info-box-text" style="font-size: 18px;">VI Students</span>
-                                    <span class="info-box-number" style="font-size: 33px;">{{ $sixStudents }}</span>
+                                    <span class="info-box-number" style="font-size: 33px;">{{ $sixStudents }} <span style="font-size: 18px;"> for {{ date('Y') }}</span></span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -607,6 +607,385 @@
                         <div class="col-md-3 col-sm-6 col-xs-12">
                           <!-- small box -->
                           <div class="small-box bg-aqua" style="background-color: #008080 !important;">
+                            <div class="inner">
+                              <h3>{{ date('d/m/Y') }}</h3>
+
+                              <p><b>Date of Today</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-calendar"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- =========================================================== -->
+
+                      <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-user"></i></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text" style="font-size: 18px;">VI Students</span>
+                                    <span class="info-box-number" style="font-size: 33px;">{{ $sixStudentsTotal }}</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-user-circle"></i></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text" style="font-size: 18px;">VII Students</span>
+                                    <span class="info-box-number" style="font-size: 33px;">{{ $sevenStudentsTotal }}</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-user-o"></i></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text" style="font-size: 18px;">VIII Students</span>
+                                    <span class="info-box-number" style="font-size: 33px;">{{ $eightStudentsTotal }}</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-user-circle-o"></i></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text" style="font-size: 18px;">IX Students</span>
+                                    <span class="info-box-number" style="font-size: 33px;">{{ $nineStudentsTotal }}</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+
+                    <!-- =========================================================== -->
+
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-green">
+                            <span class="info-box-icon"><i class="fa fa-user-plus"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text" style="font-size: 18px;">X Students</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $tenStudentsTotal }}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-green">
+                            <span class="info-box-icon"><i class="fa fa-user-secret"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text" style="font-size: 16px;">Total Students</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $totalStudentsTotal }}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-green">
+                            <span class="info-box-icon"><i class="fa fa-area-chart"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text" style="font-size: 18px;">VI Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $sixResultsTotal }}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box bg-green">
+                            <span class="info-box-icon"><i class="fa fa-bar-chart"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text" style="font-size: 18px;">VII Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $sevenResultsTotal }}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- =========================================================== -->
+
+                      <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box">
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-bar-chart"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text" style="font-size: 18px;">VIII Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $eightResultsTotal }}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box">
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-file-text"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text" style="font-size: 18px;">IX Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $nineResultsTotal }}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box">
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text" style="font-size: 18px;">X Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $tenResultsTotal }}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <div class="info-box">
+                            <span class="info-box-icon bg-yellow"><i class="fa fa-clipboard"></i></span>
+
+                            <div class="info-box-content">
+                              <span class="info-box-text" style="font-size: 18px;">Total Results</span>
+                              <span class="info-box-number" style="font-size: 33px;">{{ $totalResultsTotal }}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                          <!-- /.info-box -->
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- =========================================================== -->
+
+                       <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua" style="background-color: #008080 !important;">
+                            <div class="inner">
+                              <h3>{{ $sixResultsFirstTotal }}</h3>
+
+                              <p><b>VI Results of First Term</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-hand-o-right"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua" style="background-color: #008080 !important;">
+                            <div class="inner">
+                              <!-- <h3>00<sup style="font-size: 20px">%</sup></h3> -->
+                              <h3>{{ $sevenResultsFirstTotal }}</h3>
+
+                              <p><b>VII Results of First Term</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-address-card"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua" style="background-color: #008080 !important;">
+                            <div class="inner">
+                              <h3>{{ $eightResultsFirstTotal }}</h3>
+
+                              <p><b>VIII Results of First Term</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-address-card-o"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua" style="background-color: #008080 !important;">
+                            <div class="inner">
+                              <h3>{{ $nineResultsFirstTotal }}</h3>
+
+                              <p><b>IX Results of First Term</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-users"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- =========================================================== -->
+
+
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua" style="background-color: gray !important;">
+                            <div class="inner">
+                              <h3>{{ $tenResultsFirstTotal }}</h3>
+
+                              <p><b>X Results of First Term</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-pencil"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua" style="background-color: gray !important;">
+                            <div class="inner">
+                              <!-- <h3>00<sup style="font-size: 20px">%</sup></h3> -->
+                              <h3>{{ $sixResultsAnnualTotal }}</h3>
+
+                              <p><b>VI Results of Annual</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-area-chart"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua" style="background-color: gray !important;">
+                            <div class="inner">
+                              <h3>{{ $sevenResultsAnnualTotal }}</h3>
+
+                              <p><b>VII Results of Annual</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-edit"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua" style="background-color: gray !important;">
+                            <div class="inner">
+                              <h3>{{ $eightResultsAnnualTotal }}</h3>
+
+                              <p><b>VIII Results of Annual</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-bar-chart"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- =========================================================== -->
+
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua">
+                            <div class="inner">
+                              <h3>{{ $nineResultsAnnualTotal }}</h3>
+
+                              <p><b>IX Results of Annual</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-file-text"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua">
+                            <div class="inner">
+                              <!-- <h3>00<sup style="font-size: 20px">%</sup></h3> -->
+                              <h3>{{ $tenResultsAnnualTotal }}</h3>
+
+                              <p><b>X Results of Annual</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-files-o"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua">
+                            <div class="inner">
+                              <h3>{{ date('Y') }}</h3>
+
+                              <p>All information are shown for <b>{{ date('Y') }}</b></p>
+                            </div>
+                            <div class="icon">
+                              <i class="fa fa-clipboard"></i>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                          <!-- small box -->
+                          <div class="small-box bg-aqua">
                             <div class="inner">
                               <h3>{{ date('d/m/Y') }}</h3>
 

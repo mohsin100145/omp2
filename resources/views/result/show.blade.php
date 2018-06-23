@@ -9,7 +9,7 @@
             /*}*/
             .print-margin{
                 margin-top: 0px;
-                font-size: 14pt;
+                font-size: 11px;
             }
             #pager,
             form,
@@ -110,7 +110,7 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <table class="table table-bordered table-striped table-hover">
+                <table class="table table-bordered table-striped table-hover table-condensed">
                     <thead>
                         <tr>
                             <th>SL</th>
@@ -450,10 +450,7 @@
                             <td></td>
                             <td>Optional Subject</td>
                             <td style="vertical-align: middle; text-align: center;">100</td>
-                            <td colspan="3" style="vertical-align: middle; text-align: center;">{{ $result->optional_note }}</td>
-                            @if ($result->group_id == 1)
-                                <td></td>
-                            @endif
+                            <td colspan="4" style="vertical-align: middle; text-align: center;">{{ $result->optional_note }}</td>
                             <td style="vertical-align: middle; text-align: center;">{{ $result->optional_total }}</td>
                             <td style="vertical-align: middle; text-align: center;">{{ $result->optional_gp }}</td>
                             <td style="vertical-align: middle; text-align: center;">{{ $result->optional_grade }}</td>   
