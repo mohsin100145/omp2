@@ -44,7 +44,7 @@
                     <td style="vertical-align: middle; text-align: center;"><b>{{ $result->gpa }}</b></td>
                     <td style="vertical-align: middle; text-align: center;"><b>{{ $result->fail_subjects }}</b></td>
                     <td style="vertical-align: middle; text-align: center;"><b>{{ $result->grade }}</b></td>
-                    <td style="vertical-align: middle; text-align: center;">{{ $result->marks_total_with_optional }}</td>
+                    <td style="vertical-align: middle; text-align: center;">{{ $result->marks_total }}</td>
                     <td style="vertical-align: middle; text-align: center;">{!! Html::link("result/$result->id",' View', ['class' => 'fa fa-eye btn btn-success']) !!}</td>
                 </tr>
             @endforeach

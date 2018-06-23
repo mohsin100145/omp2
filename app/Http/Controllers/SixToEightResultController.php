@@ -1255,8 +1255,9 @@ class SixToEightResultController extends Controller
             ->where('level_id', $request->level_id)
             ->where('year_id', $request->year_id)
             ->where('term_id', $request->term_id)
-            ->orderBy('gpa', 'desc')
             ->orderBy('fail_subjects', 'asc')
+            ->orderBy('gpa', 'desc')
+            ->orderBy('marks_total', 'desc')
             ->get();
         
         if(!count($results)) {
@@ -1288,6 +1289,7 @@ class SixToEightResultController extends Controller
             ->where('term_id', $request->term_id)
             ->where('fail_subjects', $request->fail_subjects)
             ->orderBy('gpa', 'desc')
+            ->orderBy('marks_total', 'desc')
             ->get();
         
         if(!count($results)) {

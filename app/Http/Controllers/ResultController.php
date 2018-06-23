@@ -2116,12 +2116,13 @@ class ResultController extends Controller
 
     public function classWiseResultShow(Request $request)
     {
-        $results = Result::with(['student.section', 'term'])
+        $results = Result::with(['student.section', 'student.group', 'term'])
             ->where('level_id', $request->level_id)
             ->where('year_id', $request->year_id)
             ->where('term_id', $request->term_id)
-            ->orderBy('gpa', 'desc')
             ->orderBy('fail_subjects', 'asc')
+            ->orderBy('gpa', 'desc')
+            ->orderBy('marks_total_with_optional', 'desc')
             ->get();
         
         if(!count($results)) {
@@ -2147,12 +2148,13 @@ class ResultController extends Controller
 
     public function classWiseFailResultShow(Request $request)
     {
-        $results = Result::with(['student.section', 'term'])
+        $results = Result::with(['student.section', 'student.group', 'term'])
             ->where('level_id', $request->level_id)
             ->where('year_id', $request->year_id)
             ->where('term_id', $request->term_id)
             ->where('fail_subjects', $request->fail_subjects)
             ->orderBy('gpa', 'desc')
+            ->orderBy('marks_total_with_optional', 'desc')
             ->get();
         
         if(!count($results)) {

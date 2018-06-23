@@ -45,4 +45,15 @@
 	    });
 	});
 </script>
+
+<script>
+	function validateForm() {
+	    var optionalTotal = document.forms["myForm"]["optional_total"].value;
+	    var optionalGp = document.forms["myForm"]["optional_gp"].value;
+	    if ( (optionalTotal != "") && (optionalGp == "") || (optionalTotal == "") && (optionalGp != "") ) {
+	        alert("Total Mark & GP of Optional Subject both must be filled out");
+		    return false;   
+	    }
+	}
+</script>
 @endsection

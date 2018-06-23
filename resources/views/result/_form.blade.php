@@ -1,7 +1,7 @@
 @if(isset($result))
-    {!! Form::model($result, ['url' => "result/$result->id", 'method' => 'put', 'class' => 'form-horizontal']) !!}
+    {!! Form::model($result, ['url' => "result/$result->id", 'method' => 'put', 'class' => 'form-horizontal', 'onsubmit' => 'return validateForm()', 'name' => 'myForm']) !!}
 @else
-    {!! Form::open(['url' => 'result', 'method' => 'post', 'class' => 'form-horizontal']) !!}
+    {!! Form::open(['url' => 'result', 'method' => 'post', 'class' => 'form-horizontal', 'onsubmit' => 'return validateForm()', 'name' => 'myForm']) !!}
 @endif
 <div class="required form-group {{ $errors->has('student_id') ? ' has-error' : '' }}">
     {!! Form::label('student_id', 'Student ID', ['class' => 'col-sm-3 control-label']) !!}

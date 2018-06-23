@@ -28,6 +28,7 @@
                             <th>Roll No</th>
                             <th>Class</th>
                             <th>Section</th>
+                            <th>Group</th>
                             <th>Term</th>
                             <th>Year</th>
                             {{--<th>Total Point</th>--}}
@@ -52,6 +53,7 @@
                             <td>{{ $result->student->roll_no }}</td>
                             <td>{{ $result->student->level->name }}</td>
                             <td>{{ $result->student->section->name }}</td>
+                            <td>{{ $result->student->group->name }}</td>
                             <td>{{ $result->term->name }}</td>
                             <td>{{ $result->student->year->year }}</td>
                             {{--<td>{{ $result->total_point }}</td>--}}

@@ -27,6 +27,7 @@
                 <th style="vertical-align: middle; text-align: center;">Student Name</th>
                 <th style="vertical-align: middle; text-align: center;">Previous Roll</th>
                 <th style="vertical-align: middle; text-align: center;">Section</th>
+                <th style="vertical-align: middle; text-align: center;">Group</th>
                 <th style="vertical-align: middle; text-align: center; width: 120px;">GPA</th>
                 <th style="vertical-align: middle; text-align: center; width: 115px;">Fail Subject(s)</th>
                 <th style="vertical-align: middle; text-align: center;">Grade</th>
@@ -41,6 +42,7 @@
                     <td style="vertical-align: middle; text-align: center;">{{ $result->student->name }}</td>
                     <td style="vertical-align: middle; text-align: center;">{{ $result->student->roll_no }}</td>
                     <td style="vertical-align: middle; text-align: center;">{{ $result->student->section->name }}</td>
+                    <td style="vertical-align: middle; text-align: center;">{{ $result->student->group->name }}</td>
                     <td style="vertical-align: middle; text-align: center;"><b>{{ $result->gpa }}</b></td>
                     <td style="vertical-align: middle; text-align: center;"><b>{{ $result->fail_subjects }}</b></td>
                     <td style="vertical-align: middle; text-align: center;"><b>{{ $result->grade }}</b></td>
